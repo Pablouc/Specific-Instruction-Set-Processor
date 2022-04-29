@@ -1,0 +1,12 @@
+module comp2(input [2:0] ain,bin, output logic [3:0] bout, aout);
+
+logic [3:0] bwire;
+
+assign aout[3]=1'b0;
+assign aout[2:0]=ain;
+
+assign bwire[3]=1'b1;
+assign bwire[2:0]=bin;
+assign bout=~bwire+1
+
+endmodule

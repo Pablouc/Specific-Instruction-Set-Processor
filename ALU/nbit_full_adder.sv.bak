@@ -1,0 +1,20 @@
+module nbit_full_adder(input logic [2:0] a, b, 
+							  input logic ci,
+							  output logic[2:0] s, 
+							  output logic co);
+
+logic [2:0] coWire;
+
+
+for(ii 0; ii=2; ii ii+1)begin 
+ if(ii==0)
+	full_adder f_instance(
+		a[ii],b[ii],ci, s[ii], coWire[ii]);
+ else
+   full_adder f_instance(
+		a[ii],b[ii],CoWire[ii-1], s[ii], coWire[ii]);		
+end	
+
+assign co = coWire[2];						  
+							  
+endmodule
