@@ -1,5 +1,5 @@
 Analysis & Elaboration report for Alu
-Thu Apr 28 10:47:16 2022
+Sat Apr 30 13:25:54 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -11,17 +11,12 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   3. Parallel Compilation
   4. Parameter Settings for User Entity Instance: Top-level Entity: |Alu_tb
   5. Parameter Settings for User Entity Instance: muxprueba:mux_tb
-  6. Parameter Settings for User Entity Instance: muxprueba:mux_tb|andGate:andGate_instance
-  7. Parameter Settings for User Entity Instance: muxprueba:mux_tb|nbit_full_adder:sum_instance
-  8. Parameter Settings for User Entity Instance: muxprueba:mux_tb|comp2:c_instance
-  9. Parameter Settings for User Entity Instance: muxprueba:mux_tb|nbit_full_adder:sub_instance
- 10. Parameter Settings for User Entity Instance: muxprueba:mux_tb|orGate:or_instance
- 11. Parameter Settings for User Entity Instance: muxprueba:mux_tb|xorGate:xor_instance
- 12. Parameter Settings for User Entity Instance: muxprueba:mux_tb|shiftLeft:sl
- 13. Parameter Settings for User Entity Instance: muxprueba:mux_tb|shifRight:sr
- 14. Analysis & Elaboration Settings
- 15. Port Connectivity Checks: "muxprueba:mux_tb"
- 16. Analysis & Elaboration Messages
+  6. Parameter Settings for User Entity Instance: muxprueba:mux_tb|nbit_full_adder:sum_instance
+  7. Parameter Settings for User Entity Instance: muxprueba:mux_tb|nbit_multiplier:multInst
+  8. Parameter Settings for User Entity Instance: muxprueba:mux_tb|nbit_divider:divInst
+  9. Analysis & Elaboration Settings
+ 10. Port Connectivity Checks: "muxprueba:mux_tb"
+ 11. Analysis & Elaboration Messages
 
 
 
@@ -48,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Thu Apr 28 10:47:16 2022       ;
+; Analysis & Elaboration Status ; Successful - Sat Apr 30 13:25:54 2022       ;
 ; Quartus Prime Version         ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                 ; Alu                                         ;
 ; Top-level Entity Name         ; Alu_tb                                      ;
@@ -84,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------+-------+-----------------------------------------------+
 ; Parameter Name ; Value ; Type                                          ;
 +----------------+-------+-----------------------------------------------+
-; WIDTH          ; 3     ; Signed Integer                                ;
+; WIDTH          ; 31    ; Signed Integer                                ;
 +----------------+-------+-----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -94,18 +89,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+--------------------------------------+
 ; Parameter Name ; Value ; Type                                 ;
 +----------------+-------+--------------------------------------+
-; WIDTH          ; 3     ; Signed Integer                       ;
+; WIDTH          ; 31    ; Signed Integer                       ;
 +----------------+-------+--------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: muxprueba:mux_tb|andGate:andGate_instance ;
-+----------------+-------+---------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                          ;
-+----------------+-------+---------------------------------------------------------------+
-; WIDTH          ; 3     ; Signed Integer                                                ;
-+----------------+-------+---------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -114,68 +99,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+-------------------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                              ;
 +----------------+-------+-------------------------------------------------------------------+
-; WIDTH          ; 3     ; Signed Integer                                                    ;
+; WIDTH          ; 31    ; Signed Integer                                                    ;
 +----------------+-------+-------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: muxprueba:mux_tb|comp2:c_instance ;
-+----------------+-------+-------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                  ;
-+----------------+-------+-------------------------------------------------------+
-; WIDTH          ; 3     ; Signed Integer                                        ;
-+----------------+-------+-------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: muxprueba:mux_tb|nbit_full_adder:sub_instance ;
-+----------------+-------+-------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                              ;
-+----------------+-------+-------------------------------------------------------------------+
-; WIDTH          ; 4     ; Signed Integer                                                    ;
-+----------------+-------+-------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: muxprueba:mux_tb|orGate:or_instance ;
-+----------------+-------+---------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                    ;
-+----------------+-------+---------------------------------------------------------+
-; WIDTH          ; 3     ; Signed Integer                                          ;
-+----------------+-------+---------------------------------------------------------+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: muxprueba:mux_tb|nbit_multiplier:multInst ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; WIDTH          ; 31    ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: muxprueba:mux_tb|xorGate:xor_instance ;
+; Parameter Settings for User Entity Instance: muxprueba:mux_tb|nbit_divider:divInst ;
 +----------------+-------+-----------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                      ;
 +----------------+-------+-----------------------------------------------------------+
-; WIDTH          ; 3     ; Signed Integer                                            ;
+; WIDTH          ; 31    ; Signed Integer                                            ;
 +----------------+-------+-----------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: muxprueba:mux_tb|shiftLeft:sl ;
-+----------------+-------+---------------------------------------------------+
-; Parameter Name ; Value ; Type                                              ;
-+----------------+-------+---------------------------------------------------+
-; WIDTH          ; 3     ; Signed Integer                                    ;
-+----------------+-------+---------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: muxprueba:mux_tb|shifRight:sr ;
-+----------------+-------+---------------------------------------------------+
-; Parameter Name ; Value ; Type                                              ;
-+----------------+-------+---------------------------------------------------+
-; WIDTH          ; 3     ; Signed Integer                                    ;
-+----------------+-------+---------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -286,164 +231,88 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Apr 28 10:47:04 2022
+    Info: Processing started: Sat Apr 30 13:25:44 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Alu -c Alu --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file muxprueba.sv
-    Info (12023): Found entity 1: muxprueba File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/muxprueba.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file andgate.sv
-    Info (12023): Found entity 1: andGate File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/andGate.sv Line: 1
-Warning (10229): Verilog HDL Expression warning at Alu_tb.sv(36): truncated literal to match 3 bits File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 36
+    Info (12023): Found entity 1: muxprueba File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/muxprueba.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu_tb.sv
-    Info (12023): Found entity 1: Alu_tb File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 1
+    Info (12023): Found entity 1: Alu_tb File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file full_adder.sv
-    Info (12023): Found entity 1: full_adder File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/full_adder.sv Line: 1
+    Info (12023): Found entity 1: full_adder File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/full_adder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file nbit_full_adder.sv
-    Info (12023): Found entity 1: nbit_full_adder File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/nbit_full_adder.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file xorgate.sv
-    Info (12023): Found entity 1: xorGate File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/xorGate.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file orgate.sv
-    Info (12023): Found entity 1: orGate File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/orGate.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file comp2.sv
-    Info (12023): Found entity 1: comp2 File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/comp2.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file shiftleft.sv
-    Info (12023): Found entity 1: shiftLeft File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/shiftLeft.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file shifright.sv
-    Info (12023): Found entity 1: shifRight File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/shifRight.sv Line: 1
+    Info (12023): Found entity 1: nbit_full_adder File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/nbit_full_adder.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file multb.sv
+    Info (12023): Found entity 1: mulTb File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/mulTb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file nbit_multiplier.sv
+    Info (12023): Found entity 1: nbit_multiplier File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/nbit_multiplier.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file nbit_divider.sv
+    Info (12023): Found entity 1: nbit_divider File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/nbit_divider.sv Line: 1
 Info (12127): Elaborating entity "Alu_tb" for the top level hierarchy
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(16): *******resultados para a=0111 y b=0010******* File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 16
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(19): resultado correcto en AND File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 19
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(20): resultado incorrecto en AND File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 20
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(25): resultado correcto en SUMA: 1001 File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 25
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(26): resultado incorrecto en SUMA File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 26
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(27): cero correcto: Bajo File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 27
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(28): cero incorrecto File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 28
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(29): acarreo correcto: Bajo File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 29
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(30): acarreo incorrecta File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 30
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(35): resultado correcto en RESTA: 0101 File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 35
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(36): resultado incorrecto en RESTA File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 36
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(37): cero correcto: Bajo File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 37
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(38): cero incorrecto File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 38
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(39): desbordamiento correcto: Activo File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 39
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(40): desbordamiento incorrecto File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 40
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(41): negativo correcto: Bajo File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 41
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(42): negativo incorrecto File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 42
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(47): resultado correcto en OR: 0111 File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 47
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(48): resultado incorrecto en OR File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 48
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(53): resultado correcto en XOR: 0101 File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 53
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(54): resultado incorrecto en XOR File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 54
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(59): resultado correcto en SHIFT LEFT: 1100 File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 59
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(60): resultado incorrecto en SHIFT LEFT File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 60
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(65): resultado correcto en SHIFT RIGHT: 0001 File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 65
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(66): resultado incorrecto en SHIFT RIGHT File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 66
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(74): *******resultados para a=0101 y b=0101******* File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 74
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(77): resultado correcto en AND File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 77
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(78): resultado incorrecto en AND File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 78
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(83): resultado correcto en SUMA: 1010 File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 83
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(84): resultado incorrecto en SUMA File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 84
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(85): cero correcto: Bajo File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 85
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(86): cero incorrecto File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 86
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(87): acarreo correcto: Bajo File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 87
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(88): acarreo incorrecta File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 88
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(93): resultado correcto en RESTA: 0 File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 93
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(94): resultado incorrecto en RESTA File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 94
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(95): cero correcto: Alto File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 95
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(96): cero incorrecto File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 96
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(97): desbordamiento correcto: Alto File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 97
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(98): desbordamiento incorrecto File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 98
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(99): negativo correcto: Bajo File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 99
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(100): negativo incorrecto File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 100
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(105): resultado correcto en OR: 0101 File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 105
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(106): resultado incorrecto en OR File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 106
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(111): resultado correcto en XOR: 0 File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 111
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(112): resultado incorrecto en XOR File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 112
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(117): resultado correcto en SHIFT LEFT: 0000 File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 117
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(118): resultado incorrecto en SHIFT LEFT File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 118
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(123): resultado correcto en SHIFT RIGHT: 0000 File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 123
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(124): resultado incorrecto en SHIFT RIGHT File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 124
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(131): *******resultados para a=1101 y b=0011******* File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 131
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(134): resultado correcto en AND File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 134
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(135): resultado incorrecto en AND File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 135
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(140): resultado correcto en SUMA: 0000 File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 140
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(141): resultado incorrecto en SUMA File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 141
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(142): cero correcto: Alto File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 142
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(143): cero incorrecto File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 143
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(144): acarreo correcto: Alto File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 144
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(145): acarreo incorrecta File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 145
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(150): resultado correcto en RESTA: 1010 File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 150
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(151): resultado incorrecto en RESTA File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 151
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(152): cero correcto: Bajo File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 152
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(153): cero incorrecto File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 153
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(154): desbordamiento correcto: Alto File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 154
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(155): desbordamiento incorrecto File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 155
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(156): negativo correcto: Bajo File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 156
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(157): negativo incorrecto File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 157
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(162): resultado correcto en OR: 1111 File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 162
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(163): resultado incorrecto en OR File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 163
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(168): resultado correcto en XOR: 1110 File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 168
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(169): resultado incorrecto en XOR File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 169
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(174): resultado correcto en SHIFT LEFT: 1000 File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 174
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(175): resultado incorrecto en SHIFT LEFT File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 175
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(180): resultado correcto en SHIFT RIGHT: 0001 File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 180
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(181): resultado incorrecto en SHIFT RIGHT File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 181
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(188): *******resultados para a=0001 y b=0010******* File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 188
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(191): resultado correcto en AND File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 191
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(192): resultado incorrecto en AND File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 192
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(197): resultado correcto en SUMA: 0011 File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 197
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(198): resultado incorrecto en SUMA File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 198
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(199): cero correcto: Bajo File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 199
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(200): cero incorrecto File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 200
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(201): acarreo correcto: Bajo File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 201
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(202): acarreo incorrecta File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 202
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(207): resultado correcto en RESTA: 0001 File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 207
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(208): resultado incorrecto en RESTA File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 208
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(209): cero correcto: Bajo File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 209
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(210): cero incorrecto File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 210
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(211): desbordamiento correcto: Bajo File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 211
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(212): desbordamiento incorrecto File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 212
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(213): negativo correcto: Alto File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 213
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(214): negativo incorrecto File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 214
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(219): resultado correcto en OR: 0011 File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 219
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(220): resultado incorrecto en OR File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 220
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(225): resultado correcto en XOR: 0011 File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 225
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(226): resultado incorrecto en XOR File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 226
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(231): resultado correcto en SHIFT LEFT: 0100 File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 231
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(232): resultado incorrecto en SHIFT LEFT File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 232
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(237): resultado correcto en SHIFT RIGHT: 0000 File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 237
-Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(238): resultado incorrecto en SHIFT RIGHT File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 238
-Info (12128): Elaborating entity "muxprueba" for hierarchy "muxprueba:mux_tb" File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/Alu_tb.sv Line: 9
-Warning (10230): Verilog HDL assignment warning at muxprueba.sv(90): truncated value with size 32 to match size of target (5) File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/muxprueba.sv Line: 90
-Warning (10240): Verilog HDL Always Construct warning at muxprueba.sv(42): inferring latch(es) for variable "out", which holds its previous value in one or more paths through the always construct File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/muxprueba.sv Line: 42
-Warning (10240): Verilog HDL Always Construct warning at muxprueba.sv(42): inferring latch(es) for variable "cero", which holds its previous value in one or more paths through the always construct File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/muxprueba.sv Line: 42
-Warning (10240): Verilog HDL Always Construct warning at muxprueba.sv(42): inferring latch(es) for variable "acarreo", which holds its previous value in one or more paths through the always construct File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/muxprueba.sv Line: 42
-Warning (10240): Verilog HDL Always Construct warning at muxprueba.sv(42): inferring latch(es) for variable "desbordamiento", which holds its previous value in one or more paths through the always construct File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/muxprueba.sv Line: 42
-Warning (10240): Verilog HDL Always Construct warning at muxprueba.sv(42): inferring latch(es) for variable "negativo", which holds its previous value in one or more paths through the always construct File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/muxprueba.sv Line: 42
-Warning (10240): Verilog HDL Always Construct warning at muxprueba.sv(42): inferring latch(es) for variable "co", which holds its previous value in one or more paths through the always construct File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/muxprueba.sv Line: 42
-Warning (10240): Verilog HDL Always Construct warning at muxprueba.sv(42): inferring latch(es) for variable "outSubToPos", which holds its previous value in one or more paths through the always construct File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/muxprueba.sv Line: 42
-Info (10041): Inferred latch for "co" at muxprueba.sv(42) File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/muxprueba.sv Line: 42
-Info (10041): Inferred latch for "negativo" at muxprueba.sv(42) File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/muxprueba.sv Line: 42
-Info (10041): Inferred latch for "desbordamiento" at muxprueba.sv(42) File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/muxprueba.sv Line: 42
-Info (10041): Inferred latch for "acarreo" at muxprueba.sv(42) File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/muxprueba.sv Line: 42
-Info (10041): Inferred latch for "cero" at muxprueba.sv(42) File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/muxprueba.sv Line: 42
-Info (10041): Inferred latch for "out[0]" at muxprueba.sv(42) File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/muxprueba.sv Line: 42
-Info (10041): Inferred latch for "out[1]" at muxprueba.sv(42) File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/muxprueba.sv Line: 42
-Info (10041): Inferred latch for "out[2]" at muxprueba.sv(42) File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/muxprueba.sv Line: 42
-Info (10041): Inferred latch for "out[3]" at muxprueba.sv(42) File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/muxprueba.sv Line: 42
-Info (12128): Elaborating entity "andGate" for hierarchy "muxprueba:mux_tb|andGate:andGate_instance" File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/muxprueba.sv Line: 21
-Info (12128): Elaborating entity "nbit_full_adder" for hierarchy "muxprueba:mux_tb|nbit_full_adder:sum_instance" File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/muxprueba.sv Line: 23
-Info (12128): Elaborating entity "full_adder" for hierarchy "muxprueba:mux_tb|nbit_full_adder:sum_instance|full_adder:geninstance[0].f1_instance" File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/nbit_full_adder.sv Line: 14
-Info (12128): Elaborating entity "comp2" for hierarchy "muxprueba:mux_tb|comp2:c_instance" File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/muxprueba.sv Line: 25
-Warning (10230): Verilog HDL assignment warning at comp2.sv(11): truncated value with size 32 to match size of target (4) File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/comp2.sv Line: 11
-Info (12128): Elaborating entity "nbit_full_adder" for hierarchy "muxprueba:mux_tb|nbit_full_adder:sub_instance" File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/muxprueba.sv Line: 27
-Info (12128): Elaborating entity "orGate" for hierarchy "muxprueba:mux_tb|orGate:or_instance" File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/muxprueba.sv Line: 29
-Info (12128): Elaborating entity "xorGate" for hierarchy "muxprueba:mux_tb|xorGate:xor_instance" File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/muxprueba.sv Line: 31
-Info (12128): Elaborating entity "shiftLeft" for hierarchy "muxprueba:mux_tb|shiftLeft:sl" File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/muxprueba.sv Line: 33
-Info (12128): Elaborating entity "shifRight" for hierarchy "muxprueba:mux_tb|shifRight:sr" File: C:/Users/Pablo/Desktop/Arqui/Proyecto2/lab3/muxprueba.sv Line: 35
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 4765 megabytes
-    Info: Processing ended: Thu Apr 28 10:47:16 2022
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:30
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(16): *******resultados para a=0111 y b=0010******* File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 16
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(21): resultado correcto en SUMA: 1001 File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 21
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(22): resultado incorrecto en SUMA File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 22
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(23): cero correcto: Bajo File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 23
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(24): cero incorrecto File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 24
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(25): acarreo correcto: Bajo File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 25
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(26): acarreo incorrecta File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 26
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(32): resultado correcto en MULTIPLICACIÓN: 0001 File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 32
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(33): resultado incorrecto en MULTIPLICACIÓN File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 33
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(38): resultado correcto en DIVISION: 0001 File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 38
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(39): resultado incorrecto en DIVISION File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 39
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(47): *******resultados para a=0101 y b=0101******* File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 47
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(51): resultado correcto en SUMA: 1010 File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 51
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(52): resultado incorrecto en SUMA File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 52
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(53): cero correcto: Bajo File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 53
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(54): cero incorrecto File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 54
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(55): acarreo correcto: Bajo File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 55
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(56): acarreo incorrecta File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 56
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(61): resultado correcto en MULTIPLICACIÓN: 0001 File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 61
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(62): resultado incorrecto en MULTIPLICACIÓN File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 62
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(67): resultado correcto en DIVISION: 0001 File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 67
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(68): resultado incorrecto en DIVISION File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 68
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(76): *******resultados para a=1101 y b=0011******* File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 76
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(80): resultado correcto en SUMA: 10000 File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 80
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(81): resultado incorrecto en SUMA File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 81
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(82): cero correcto: Bajo File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 82
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(83): cero incorrecto File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 83
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(84): acarreo correcto: Bajo File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 84
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(85): acarreo incorrecta File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 85
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(90): resultado correcto en MULTIPLICACIÓN: 0001 File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 90
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(91): resultado incorrecto en MULTIPLICACIÓN File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 91
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(96): resultado correcto en DIVISION: 0001 File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 96
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(97): resultado incorrecto en DIVISION File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 97
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(104): *******resultados para a=0001 y b=0010******* File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 104
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(108): resultado correcto en SUMA: 0011 File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 108
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(109): resultado incorrecto en SUMA File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 109
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(110): cero correcto: Bajo File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 110
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(111): cero incorrecto File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 111
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(112): acarreo correcto: Bajo File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 112
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(113): acarreo incorrecta File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 113
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(118): resultado correcto en MULTIPLICACIÓN: 0001 File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 118
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(119): resultado incorrecto en MULTIPLICACIÓN File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 119
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(124): resultado correcto en DIVISION: 0001 File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 124
+Info (10648): Verilog HDL Display System Task info at Alu_tb.sv(125): resultado incorrecto en DIVISION File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 125
+Info (12128): Elaborating entity "muxprueba" for hierarchy "muxprueba:mux_tb" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 9
+Warning (10240): Verilog HDL Always Construct warning at muxprueba.sv(28): inferring latch(es) for variable "cero", which holds its previous value in one or more paths through the always construct File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/muxprueba.sv Line: 28
+Warning (10240): Verilog HDL Always Construct warning at muxprueba.sv(28): inferring latch(es) for variable "acarreo", which holds its previous value in one or more paths through the always construct File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/muxprueba.sv Line: 28
+Warning (10240): Verilog HDL Always Construct warning at muxprueba.sv(28): inferring latch(es) for variable "desbordamiento", which holds its previous value in one or more paths through the always construct File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/muxprueba.sv Line: 28
+Warning (10240): Verilog HDL Always Construct warning at muxprueba.sv(28): inferring latch(es) for variable "negativo", which holds its previous value in one or more paths through the always construct File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/muxprueba.sv Line: 28
+Warning (10240): Verilog HDL Always Construct warning at muxprueba.sv(28): inferring latch(es) for variable "co", which holds its previous value in one or more paths through the always construct File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/muxprueba.sv Line: 28
+Info (10041): Inferred latch for "co" at muxprueba.sv(28) File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/muxprueba.sv Line: 28
+Info (10041): Inferred latch for "negativo" at muxprueba.sv(28) File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/muxprueba.sv Line: 28
+Info (10041): Inferred latch for "desbordamiento" at muxprueba.sv(28) File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/muxprueba.sv Line: 28
+Info (10041): Inferred latch for "acarreo" at muxprueba.sv(28) File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/muxprueba.sv Line: 28
+Info (10041): Inferred latch for "cero" at muxprueba.sv(28) File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/muxprueba.sv Line: 28
+Info (12128): Elaborating entity "nbit_full_adder" for hierarchy "muxprueba:mux_tb|nbit_full_adder:sum_instance" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/muxprueba.sv Line: 14
+Info (12128): Elaborating entity "full_adder" for hierarchy "muxprueba:mux_tb|nbit_full_adder:sum_instance|full_adder:geninstance[0].f1_instance" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/nbit_full_adder.sv Line: 14
+Info (12128): Elaborating entity "nbit_multiplier" for hierarchy "muxprueba:mux_tb|nbit_multiplier:multInst" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/muxprueba.sv Line: 17
+Info (12128): Elaborating entity "nbit_divider" for hierarchy "muxprueba:mux_tb|nbit_divider:divInst" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/muxprueba.sv Line: 19
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4760 megabytes
+    Info: Processing ended: Sat Apr 30 13:25:54 2022
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:25
 
 

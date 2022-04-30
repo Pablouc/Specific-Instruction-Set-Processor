@@ -5,14 +5,6 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -sv -work work +incdir+C:/LaboratoriosTaller/Lab3.1/lab3 {C:/LaboratoriosTaller/Lab3.1/lab3/muxprueba.sv}
-vlog -sv -work work +incdir+C:/LaboratoriosTaller/Lab3.1/lab3 {C:/LaboratoriosTaller/Lab3.1/lab3/andGate.sv}
-vlog -sv -work work +incdir+C:/LaboratoriosTaller/Lab3.1/lab3 {C:/LaboratoriosTaller/Lab3.1/lab3/Alu_tb.sv}
-vlog -sv -work work +incdir+C:/LaboratoriosTaller/Lab3.1/lab3 {C:/LaboratoriosTaller/Lab3.1/lab3/full_adder.sv}
-vlog -sv -work work +incdir+C:/LaboratoriosTaller/Lab3.1/lab3 {C:/LaboratoriosTaller/Lab3.1/lab3/nbit_full_adder.sv}
-vlog -sv -work work +incdir+C:/LaboratoriosTaller/Lab3.1/lab3 {C:/LaboratoriosTaller/Lab3.1/lab3/xorGate.sv}
-vlog -sv -work work +incdir+C:/LaboratoriosTaller/Lab3.1/lab3 {C:/LaboratoriosTaller/Lab3.1/lab3/orGate.sv}
-vlog -sv -work work +incdir+C:/LaboratoriosTaller/Lab3.1/lab3 {C:/LaboratoriosTaller/Lab3.1/lab3/comp2.sv}
-vlog -sv -work work +incdir+C:/LaboratoriosTaller/Lab3.1/lab3 {C:/LaboratoriosTaller/Lab3.1/lab3/shiftLeft.sv}
-vlog -sv -work work +incdir+C:/LaboratoriosTaller/Lab3.1/lab3 {C:/LaboratoriosTaller/Lab3.1/lab3/shifRight.sv}
+vlog -sv -work work +incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU {C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/mulTb.sv}
+vlog -sv -work work +incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU {C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/nbit_divider.sv}
 

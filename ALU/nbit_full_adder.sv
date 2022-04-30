@@ -1,4 +1,4 @@
-	module nbit_full_adder #(parameter WIDTH=3)(input logic [WIDTH:0] a, b, 
+module nbit_full_adder #(parameter WIDTH)(input logic [WIDTH:0] a, b, 
 							  input logic ci,
 							  output logic[WIDTH:0] s, 
 							  output logic co);
