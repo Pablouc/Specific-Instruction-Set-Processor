@@ -1,0 +1,16 @@
+module nbit_multiplier #(parameter WIDTH)(input logic [WIDTH:0] a, b ,output logic[WIDTH:0] out);
+
+logic [3:0] outwire
+logic [1:0] awire, bwire
+
+for i=0; i<WIDTH; i+2)begin:
+awire=[i+1,i];
+bwire=[i+1,i];
+
+twoBitMultiplier (awire, bwire, outwire);
+out[i+1,i]=outwire;
+
+end
+
+
+endmodule

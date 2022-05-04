@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at muxprueba.sv(27): always construct contains both blocking and non-blocking assignments File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/muxprueba.sv Line: 27

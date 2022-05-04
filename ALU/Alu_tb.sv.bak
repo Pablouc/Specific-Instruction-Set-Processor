@@ -1,0 +1,13 @@
+module Alu_tb();
+logic [2:0] a, b, opCode, out;
+
+muxTop mux_tb(a,b,opCode, out);
+
+initial begin
+
+a= 3'b001;
+b= 3'b111;
+opCode= 3'b000;
+
+end
+endmodule
