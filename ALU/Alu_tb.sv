@@ -6,7 +6,7 @@ logic [1:0] opCode;
 logic [WIDTH:0] out;
 logic ci, co, negativo, cero, acarreo, desbordamiento;
 
-muxprueba #(WIDTH) mux_tb(a,b,opCode,ci,out,co,negativo, cero, acarreo, desbordamiento);
+alu #(WIDTH) alu_instance(a,b,opCode,ci,out,co,negativo, cero, acarreo, desbordamiento);
 
 initial begin
 ////////////Primer caso///////

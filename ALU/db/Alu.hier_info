@@ -1,7 +1,7 @@
 |Alu_tb
 
 
-|Alu_tb|muxprueba:mux_tb
+|Alu_tb|alu:alu_instance
 a[0] => a[0].IN3
 a[1] => a[1].IN3
 a[2] => a[2].IN3
@@ -98,11 +98,8 @@ opCode[0] => Mux28.IN2
 opCode[0] => Mux29.IN2
 opCode[0] => Mux30.IN2
 opCode[0] => Mux31.IN2
+opCode[0] => Mux32.IN5
 opCode[0] => Decoder0.IN1
-opCode[0] => Mux32.IN4
-opCode[0] => Mux33.IN5
-opCode[0] => Mux34.IN5
-opCode[0] => Mux35.IN5
 opCode[1] => Mux0.IN1
 opCode[1] => Mux1.IN1
 opCode[1] => Mux2.IN1
@@ -135,11 +132,8 @@ opCode[1] => Mux28.IN1
 opCode[1] => Mux29.IN1
 opCode[1] => Mux30.IN1
 opCode[1] => Mux31.IN1
+opCode[1] => Mux32.IN4
 opCode[1] => Decoder0.IN0
-opCode[1] => Mux32.IN3
-opCode[1] => Mux33.IN4
-opCode[1] => Mux34.IN4
-opCode[1] => Mux35.IN4
 ci => ci.IN1
 out[0] <= Mux31.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= Mux30.DB_MAX_OUTPUT_PORT_TYPE
@@ -173,14 +167,14 @@ out[28] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
 out[29] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
 out[30] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 out[31] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
-co <= co$latch.DB_MAX_OUTPUT_PORT_TYPE
+co <= co.DB_MAX_OUTPUT_PORT_TYPE
 negativo <= <GND>
-cero <= cero$latch.DB_MAX_OUTPUT_PORT_TYPE
-acarreo <= acarreo$latch.DB_MAX_OUTPUT_PORT_TYPE
+cero <= Mux32.DB_MAX_OUTPUT_PORT_TYPE
+acarreo <= acarreo.DB_MAX_OUTPUT_PORT_TYPE
 desbordamiento <= <GND>
 
 
-|Alu_tb|muxprueba:mux_tb|nbit_full_adder:sum_instance
+|Alu_tb|alu:alu_instance|nbit_full_adder:sum_instance
 a[0] => a[0].IN1
 a[1] => a[1].IN1
 a[2] => a[2].IN1
@@ -281,7 +275,7 @@ s[31] <= full_adder:geninstance[31].f2_instance.port3
 co <= full_adder:geninstance[31].f2_instance.port4
 
 
-|Alu_tb|muxprueba:mux_tb|nbit_full_adder:sum_instance|full_adder:geninstance[0].f1_instance
+|Alu_tb|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[0].f1_instance
 a => xorAB.IN0
 a => co.IN0
 b => xorAB.IN1
@@ -292,7 +286,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 co <= co.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Alu_tb|muxprueba:mux_tb|nbit_full_adder:sum_instance|full_adder:geninstance[1].f3_instance
+|Alu_tb|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[1].f3_instance
 a => xorAB.IN0
 a => co.IN0
 b => xorAB.IN1
@@ -303,7 +297,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 co <= co.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Alu_tb|muxprueba:mux_tb|nbit_full_adder:sum_instance|full_adder:geninstance[2].f3_instance
+|Alu_tb|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[2].f3_instance
 a => xorAB.IN0
 a => co.IN0
 b => xorAB.IN1
@@ -314,7 +308,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 co <= co.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Alu_tb|muxprueba:mux_tb|nbit_full_adder:sum_instance|full_adder:geninstance[3].f3_instance
+|Alu_tb|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[3].f3_instance
 a => xorAB.IN0
 a => co.IN0
 b => xorAB.IN1
@@ -325,7 +319,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 co <= co.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Alu_tb|muxprueba:mux_tb|nbit_full_adder:sum_instance|full_adder:geninstance[4].f3_instance
+|Alu_tb|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[4].f3_instance
 a => xorAB.IN0
 a => co.IN0
 b => xorAB.IN1
@@ -336,7 +330,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 co <= co.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Alu_tb|muxprueba:mux_tb|nbit_full_adder:sum_instance|full_adder:geninstance[5].f3_instance
+|Alu_tb|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[5].f3_instance
 a => xorAB.IN0
 a => co.IN0
 b => xorAB.IN1
@@ -347,7 +341,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 co <= co.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Alu_tb|muxprueba:mux_tb|nbit_full_adder:sum_instance|full_adder:geninstance[6].f3_instance
+|Alu_tb|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[6].f3_instance
 a => xorAB.IN0
 a => co.IN0
 b => xorAB.IN1
@@ -358,7 +352,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 co <= co.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Alu_tb|muxprueba:mux_tb|nbit_full_adder:sum_instance|full_adder:geninstance[7].f3_instance
+|Alu_tb|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[7].f3_instance
 a => xorAB.IN0
 a => co.IN0
 b => xorAB.IN1
@@ -369,7 +363,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 co <= co.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Alu_tb|muxprueba:mux_tb|nbit_full_adder:sum_instance|full_adder:geninstance[8].f3_instance
+|Alu_tb|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[8].f3_instance
 a => xorAB.IN0
 a => co.IN0
 b => xorAB.IN1
@@ -380,7 +374,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 co <= co.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Alu_tb|muxprueba:mux_tb|nbit_full_adder:sum_instance|full_adder:geninstance[9].f3_instance
+|Alu_tb|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[9].f3_instance
 a => xorAB.IN0
 a => co.IN0
 b => xorAB.IN1
@@ -391,7 +385,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 co <= co.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Alu_tb|muxprueba:mux_tb|nbit_full_adder:sum_instance|full_adder:geninstance[10].f3_instance
+|Alu_tb|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[10].f3_instance
 a => xorAB.IN0
 a => co.IN0
 b => xorAB.IN1
@@ -402,7 +396,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 co <= co.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Alu_tb|muxprueba:mux_tb|nbit_full_adder:sum_instance|full_adder:geninstance[11].f3_instance
+|Alu_tb|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[11].f3_instance
 a => xorAB.IN0
 a => co.IN0
 b => xorAB.IN1
@@ -413,7 +407,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 co <= co.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Alu_tb|muxprueba:mux_tb|nbit_full_adder:sum_instance|full_adder:geninstance[12].f3_instance
+|Alu_tb|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[12].f3_instance
 a => xorAB.IN0
 a => co.IN0
 b => xorAB.IN1
@@ -424,7 +418,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 co <= co.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Alu_tb|muxprueba:mux_tb|nbit_full_adder:sum_instance|full_adder:geninstance[13].f3_instance
+|Alu_tb|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[13].f3_instance
 a => xorAB.IN0
 a => co.IN0
 b => xorAB.IN1
@@ -435,7 +429,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 co <= co.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Alu_tb|muxprueba:mux_tb|nbit_full_adder:sum_instance|full_adder:geninstance[14].f3_instance
+|Alu_tb|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[14].f3_instance
 a => xorAB.IN0
 a => co.IN0
 b => xorAB.IN1
@@ -446,7 +440,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 co <= co.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Alu_tb|muxprueba:mux_tb|nbit_full_adder:sum_instance|full_adder:geninstance[15].f3_instance
+|Alu_tb|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[15].f3_instance
 a => xorAB.IN0
 a => co.IN0
 b => xorAB.IN1
@@ -457,7 +451,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 co <= co.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Alu_tb|muxprueba:mux_tb|nbit_full_adder:sum_instance|full_adder:geninstance[16].f3_instance
+|Alu_tb|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[16].f3_instance
 a => xorAB.IN0
 a => co.IN0
 b => xorAB.IN1
@@ -468,7 +462,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 co <= co.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Alu_tb|muxprueba:mux_tb|nbit_full_adder:sum_instance|full_adder:geninstance[17].f3_instance
+|Alu_tb|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[17].f3_instance
 a => xorAB.IN0
 a => co.IN0
 b => xorAB.IN1
@@ -479,7 +473,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 co <= co.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Alu_tb|muxprueba:mux_tb|nbit_full_adder:sum_instance|full_adder:geninstance[18].f3_instance
+|Alu_tb|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[18].f3_instance
 a => xorAB.IN0
 a => co.IN0
 b => xorAB.IN1
@@ -490,7 +484,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 co <= co.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Alu_tb|muxprueba:mux_tb|nbit_full_adder:sum_instance|full_adder:geninstance[19].f3_instance
+|Alu_tb|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[19].f3_instance
 a => xorAB.IN0
 a => co.IN0
 b => xorAB.IN1
@@ -501,7 +495,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 co <= co.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Alu_tb|muxprueba:mux_tb|nbit_full_adder:sum_instance|full_adder:geninstance[20].f3_instance
+|Alu_tb|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[20].f3_instance
 a => xorAB.IN0
 a => co.IN0
 b => xorAB.IN1
@@ -512,7 +506,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 co <= co.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Alu_tb|muxprueba:mux_tb|nbit_full_adder:sum_instance|full_adder:geninstance[21].f3_instance
+|Alu_tb|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[21].f3_instance
 a => xorAB.IN0
 a => co.IN0
 b => xorAB.IN1
@@ -523,7 +517,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 co <= co.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Alu_tb|muxprueba:mux_tb|nbit_full_adder:sum_instance|full_adder:geninstance[22].f3_instance
+|Alu_tb|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[22].f3_instance
 a => xorAB.IN0
 a => co.IN0
 b => xorAB.IN1
@@ -534,7 +528,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 co <= co.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Alu_tb|muxprueba:mux_tb|nbit_full_adder:sum_instance|full_adder:geninstance[23].f3_instance
+|Alu_tb|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[23].f3_instance
 a => xorAB.IN0
 a => co.IN0
 b => xorAB.IN1
@@ -545,7 +539,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 co <= co.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Alu_tb|muxprueba:mux_tb|nbit_full_adder:sum_instance|full_adder:geninstance[24].f3_instance
+|Alu_tb|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[24].f3_instance
 a => xorAB.IN0
 a => co.IN0
 b => xorAB.IN1
@@ -556,7 +550,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 co <= co.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Alu_tb|muxprueba:mux_tb|nbit_full_adder:sum_instance|full_adder:geninstance[25].f3_instance
+|Alu_tb|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[25].f3_instance
 a => xorAB.IN0
 a => co.IN0
 b => xorAB.IN1
@@ -567,7 +561,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 co <= co.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Alu_tb|muxprueba:mux_tb|nbit_full_adder:sum_instance|full_adder:geninstance[26].f3_instance
+|Alu_tb|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[26].f3_instance
 a => xorAB.IN0
 a => co.IN0
 b => xorAB.IN1
@@ -578,7 +572,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 co <= co.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Alu_tb|muxprueba:mux_tb|nbit_full_adder:sum_instance|full_adder:geninstance[27].f3_instance
+|Alu_tb|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[27].f3_instance
 a => xorAB.IN0
 a => co.IN0
 b => xorAB.IN1
@@ -589,7 +583,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 co <= co.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Alu_tb|muxprueba:mux_tb|nbit_full_adder:sum_instance|full_adder:geninstance[28].f3_instance
+|Alu_tb|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[28].f3_instance
 a => xorAB.IN0
 a => co.IN0
 b => xorAB.IN1
@@ -600,7 +594,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 co <= co.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Alu_tb|muxprueba:mux_tb|nbit_full_adder:sum_instance|full_adder:geninstance[29].f3_instance
+|Alu_tb|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[29].f3_instance
 a => xorAB.IN0
 a => co.IN0
 b => xorAB.IN1
@@ -611,7 +605,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 co <= co.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Alu_tb|muxprueba:mux_tb|nbit_full_adder:sum_instance|full_adder:geninstance[30].f3_instance
+|Alu_tb|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[30].f3_instance
 a => xorAB.IN0
 a => co.IN0
 b => xorAB.IN1
@@ -622,7 +616,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 co <= co.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Alu_tb|muxprueba:mux_tb|nbit_full_adder:sum_instance|full_adder:geninstance[31].f2_instance
+|Alu_tb|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[31].f2_instance
 a => xorAB.IN0
 a => co.IN0
 b => xorAB.IN1
@@ -633,7 +627,7 @@ s <= s.DB_MAX_OUTPUT_PORT_TYPE
 co <= co.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Alu_tb|muxprueba:mux_tb|nbit_multiplier:multInst
+|Alu_tb|alu:alu_instance|nbit_multiplier:multInst
 a[0] => p[31].OUTPUTSELECT
 a[0] => p[30].OUTPUTSELECT
 a[0] => p[29].OUTPUTSELECT
@@ -1724,7 +1718,7 @@ out[30] <= Add29.DB_MAX_OUTPUT_PORT_TYPE
 out[31] <= Add30.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Alu_tb|muxprueba:mux_tb|nbit_divider:divInst
+|Alu_tb|alu:alu_instance|nbit_divider:divInst
 a[0] => Div0.IN31
 a[1] => Div0.IN30
 a[2] => Div0.IN29
