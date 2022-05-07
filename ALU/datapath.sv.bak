@@ -1,0 +1,24 @@
+module datapath(input logic clk, rst, regWrite, aluSrc, PCSrc, immSrc,input logic [1:0]  aluControl,
+					input logic [23:0] inst, input logic [15:0] PC );
+	
+	
+	logic [15:0] aluResult
+	logic ci, co, negativo, cero, acarreo, desbordamiento;
+	
+	//llamando al register file
+	regFile regfile(clk, regWrite, inst[15:12],inst[11:8],inst[19:16],aluResult, rd1, rd2);
+	
+	//haciendo pc+ 24bits(tamaño de la inst)
+	adder #(16)pc24(PC, 2'd24 );
+	
+	//Extensión de signo
+	extendSign (inst [11:0], immSrc,  extImm[23:0]);
+	
+	//Mux entrada b ALU
+	mux2a1 #(24) muxALU(rd2, extImm, aluSrc, srcBAlu);
+	
+	//El parametro debe ir en 23, no 24.
+	alu #(23) alu_instance(rd1,srcBAlu,aluControl,1'b0,aluResult,co,negativo, cero, acarreo, desbordamiento);
+	
+
+endmodule

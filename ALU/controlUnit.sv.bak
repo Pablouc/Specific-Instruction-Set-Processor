@@ -1,0 +1,8 @@
+module controlUnit(input logic[3:0] opcode, output logic regWrite, aluSrc, PCSrc, immSrc,
+						output logic [1:0] regSrc, aluControl);
+						
+						
+	
+
+
+endmodule 

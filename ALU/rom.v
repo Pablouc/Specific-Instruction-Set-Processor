@@ -4,7 +4,7 @@
 // MODULE: altsyncram 
 
 // ============================================================
-// File Name: rom.v
+// File Name: ROM.v
 // Megafunction Name(s):
 // 			altsyncram
 //
@@ -37,14 +37,14 @@
 // synopsys translate_off
 `timescale 1 ps / 1 ps
 // synopsys translate_on
-module rom (
+module ROM (
 	address,
 	clock,
 	q);
 
-	input	[7:0]  address;
+	input	[15:0]  address;
 	input	  clock;
-	output	[31:0]  q;
+	output	[23:0]  q;
 `ifndef ALTERA_RESERVED_QIS
 // synopsys translate_off
 `endif
@@ -53,8 +53,8 @@ module rom (
 // synopsys translate_on
 `endif
 
-	wire [31:0] sub_wire0;
-	wire [31:0] q = sub_wire0[31:0];
+	wire [23:0] sub_wire0;
+	wire [23:0] q = sub_wire0[23:0];
 
 	altsyncram	altsyncram_component (
 				.address_a (address),
@@ -72,7 +72,7 @@ module rom (
 				.clocken1 (1'b1),
 				.clocken2 (1'b1),
 				.clocken3 (1'b1),
-				.data_a ({32{1'b1}}),
+				.data_a ({24{1'b1}}),
 				.data_b (1'b1),
 				.eccstatus (),
 				.q_b (),
@@ -88,12 +88,12 @@ module rom (
 		altsyncram_component.intended_device_family = "Cyclone V",
 		altsyncram_component.lpm_hint = "ENABLE_RUNTIME_MOD=NO",
 		altsyncram_component.lpm_type = "altsyncram",
-		altsyncram_component.numwords_a = 256,
+		altsyncram_component.numwords_a = 65536,
 		altsyncram_component.operation_mode = "ROM",
 		altsyncram_component.outdata_aclr_a = "NONE",
 		altsyncram_component.outdata_reg_a = "UNREGISTERED",
-		altsyncram_component.widthad_a = 8,
-		altsyncram_component.width_a = 32,
+		altsyncram_component.widthad_a = 16,
+		altsyncram_component.width_a = 24,
 		altsyncram_component.width_byteena_a = 1;
 
 
@@ -120,15 +120,15 @@ endmodule
 // Retrieval info: PRIVATE: JTAG_ID STRING "NONE"
 // Retrieval info: PRIVATE: MAXIMUM_DEPTH NUMERIC "0"
 // Retrieval info: PRIVATE: MIFfilename STRING "rom.mif"
-// Retrieval info: PRIVATE: NUMWORDS_A NUMERIC "256"
+// Retrieval info: PRIVATE: NUMWORDS_A NUMERIC "65536"
 // Retrieval info: PRIVATE: RAM_BLOCK_TYPE NUMERIC "0"
 // Retrieval info: PRIVATE: RegAddr NUMERIC "1"
 // Retrieval info: PRIVATE: RegOutput NUMERIC "0"
 // Retrieval info: PRIVATE: SYNTH_WRAPPER_GEN_POSTFIX STRING "0"
 // Retrieval info: PRIVATE: SingleClock NUMERIC "1"
 // Retrieval info: PRIVATE: UseDQRAM NUMERIC "0"
-// Retrieval info: PRIVATE: WidthAddr NUMERIC "8"
-// Retrieval info: PRIVATE: WidthData NUMERIC "32"
+// Retrieval info: PRIVATE: WidthAddr NUMERIC "16"
+// Retrieval info: PRIVATE: WidthData NUMERIC "24"
 // Retrieval info: PRIVATE: rden NUMERIC "0"
 // Retrieval info: LIBRARY: altera_mf altera_mf.altera_mf_components.all
 // Retrieval info: CONSTANT: ADDRESS_ACLR_A STRING "NONE"
@@ -138,23 +138,23 @@ endmodule
 // Retrieval info: CONSTANT: INTENDED_DEVICE_FAMILY STRING "Cyclone V"
 // Retrieval info: CONSTANT: LPM_HINT STRING "ENABLE_RUNTIME_MOD=NO"
 // Retrieval info: CONSTANT: LPM_TYPE STRING "altsyncram"
-// Retrieval info: CONSTANT: NUMWORDS_A NUMERIC "256"
+// Retrieval info: CONSTANT: NUMWORDS_A NUMERIC "65536"
 // Retrieval info: CONSTANT: OPERATION_MODE STRING "ROM"
 // Retrieval info: CONSTANT: OUTDATA_ACLR_A STRING "NONE"
 // Retrieval info: CONSTANT: OUTDATA_REG_A STRING "UNREGISTERED"
-// Retrieval info: CONSTANT: WIDTHAD_A NUMERIC "8"
-// Retrieval info: CONSTANT: WIDTH_A NUMERIC "32"
+// Retrieval info: CONSTANT: WIDTHAD_A NUMERIC "16"
+// Retrieval info: CONSTANT: WIDTH_A NUMERIC "24"
 // Retrieval info: CONSTANT: WIDTH_BYTEENA_A NUMERIC "1"
-// Retrieval info: USED_PORT: address 0 0 8 0 INPUT NODEFVAL "address[7..0]"
+// Retrieval info: USED_PORT: address 0 0 16 0 INPUT NODEFVAL "address[15..0]"
 // Retrieval info: USED_PORT: clock 0 0 0 0 INPUT VCC "clock"
-// Retrieval info: USED_PORT: q 0 0 32 0 OUTPUT NODEFVAL "q[31..0]"
-// Retrieval info: CONNECT: @address_a 0 0 8 0 address 0 0 8 0
+// Retrieval info: USED_PORT: q 0 0 24 0 OUTPUT NODEFVAL "q[23..0]"
+// Retrieval info: CONNECT: @address_a 0 0 16 0 address 0 0 16 0
 // Retrieval info: CONNECT: @clock0 0 0 0 0 clock 0 0 0 0
-// Retrieval info: CONNECT: q 0 0 32 0 @q_a 0 0 32 0
-// Retrieval info: GEN_FILE: TYPE_NORMAL rom.v TRUE
-// Retrieval info: GEN_FILE: TYPE_NORMAL rom.inc FALSE
-// Retrieval info: GEN_FILE: TYPE_NORMAL rom.cmp FALSE
-// Retrieval info: GEN_FILE: TYPE_NORMAL rom.bsf FALSE
-// Retrieval info: GEN_FILE: TYPE_NORMAL rom_inst.v FALSE
-// Retrieval info: GEN_FILE: TYPE_NORMAL rom_bb.v TRUE
+// Retrieval info: CONNECT: q 0 0 24 0 @q_a 0 0 24 0
+// Retrieval info: GEN_FILE: TYPE_NORMAL ROM.v TRUE
+// Retrieval info: GEN_FILE: TYPE_NORMAL ROM.inc FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL ROM.cmp FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL ROM.bsf FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL ROM_inst.v FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL ROM_bb.v TRUE
 // Retrieval info: LIB_FILE: altera_mf
