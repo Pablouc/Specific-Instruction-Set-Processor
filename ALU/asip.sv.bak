@@ -1,0 +1,10 @@
+module asip(input logic clk,, rst input logic [23:0] inst, output logic[15:0] pc, aluRes);
+
+	logic regWrite, aluSrc, PCSrc, immSrc;
+	logic [1:0] regSrc, aluControl;
+
+		
+	
+	
+
+endmodule 
