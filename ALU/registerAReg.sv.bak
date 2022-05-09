@@ -1,0 +1,10 @@
+module registerAROM(input logic [23:0] rd1, input logic [23:0] rd2, input logic [23:0] extend, input logic clk, input logic flag
+	output logic [23:0] SrcA, output logic [23:0] SrcB, output logic [23:0] ExtImm, output logic flagOut ):
+	always_ff @(posedge clk) begin        
+       assign SrcA = rd1;
+		 assign SrcB = rd2;
+		 assign ExtImm = extend;
+		 assign flagOut = flag;
+		 //assign MemWrite = MemW & zeroFlag; any flag
+	end
+endmodule;

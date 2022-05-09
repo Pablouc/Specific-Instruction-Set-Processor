@@ -1,37 +1,50 @@
-Analysis & Elaboration report for Alu
-Sun May 08 21:53:15 2022
-Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Analysis & Synthesis report for Alu
+Mon May  9 15:22:28 2022
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
 ---------------------
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Analysis & Elaboration IP Cores Summary
-  5. Source assignments for processor:procesador|ROM:meminstructions|altsyncram:altsyncram_component|altsyncram_s1g1:auto_generated
-  6. Source assignments for processor:procesador|RAM:memdata|altsyncram:altsyncram_component|altsyncram_u9o1:auto_generated
-  7. Parameter Settings for User Entity Instance: processor:procesador|ROM:meminstructions|altsyncram:altsyncram_component
-  8. Parameter Settings for User Entity Instance: processor:procesador|RAM:memdata|altsyncram:altsyncram_component
-  9. Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|controlUnit:controller|condLogic:conditional|flopenr:flagreg1
- 10. Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|datapath:datapath|ffNextValue:pcRegister
- 11. Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|datapath:datapath|adder:pcAdder
- 12. Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|datapath:datapath|mux2a1:muxRegFile
- 13. Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|datapath:datapath|mux2a1:muxALU
- 14. Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|datapath:datapath|mux2a1:muxMemALU
- 15. Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance
- 16. Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_full_adder:sum_instance
- 17. Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_multiplier:multInst
- 18. Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_divider:divInst
- 19. altsyncram Parameter Settings by Entity Instance
- 20. Analysis & Elaboration Settings
- 21. Port Connectivity Checks: "processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance"
- 22. Port Connectivity Checks: "processor:procesador|asip:myProcessor|datapath:datapath|adder:pcAdder"
- 23. Port Connectivity Checks: "processor:procesador|asip:myProcessor"
- 24. Port Connectivity Checks: "processor:procesador"
- 25. Analysis & Elaboration Messages
- 26. Analysis & Elaboration Suppressed Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Source assignments for ROM:meminstructions|altsyncram:altsyncram_component|altsyncram_s1g1:auto_generated
+ 13. Source assignments for RAM:memdata|altsyncram:altsyncram_component|altsyncram_u9o1:auto_generated
+ 14. Parameter Settings for User Entity Instance: ROM:meminstructions|altsyncram:altsyncram_component
+ 15. Parameter Settings for User Entity Instance: asip:myProcessor|datapath:datapath|ffNextValue:pcRegister
+ 16. Parameter Settings for User Entity Instance: asip:myProcessor|datapath:datapath|adder:pcAdder
+ 17. Parameter Settings for User Entity Instance: asip:myProcessor|datapath:datapath|mux2a1:muxRegFile
+ 18. Parameter Settings for User Entity Instance: asip:myProcessor|datapath:datapath|mux2a1:muxALU
+ 19. Parameter Settings for User Entity Instance: asip:myProcessor|datapath:datapath|alu:alu_instance
+ 20. Parameter Settings for User Entity Instance: asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_full_adder:sum_instance
+ 21. Parameter Settings for User Entity Instance: asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_multiplier:multInst
+ 22. Parameter Settings for User Entity Instance: asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_divider:divInst
+ 23. Parameter Settings for User Entity Instance: asip:myProcessor|condLogic:conditional|flopenr:flagreg1
+ 24. Parameter Settings for User Entity Instance: asip:myProcessor|mux2a1:muxMemALU
+ 25. Parameter Settings for User Entity Instance: RAM:memdata|altsyncram:altsyncram_component
+ 26. Parameter Settings for Inferred Entity Instance: asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_divider:divInst|lpm_divide:Div0
+ 27. altsyncram Parameter Settings by Entity Instance
+ 28. Port Connectivity Checks: "asip:myProcessor|mux2a1:muxMemALU"
+ 29. Port Connectivity Checks: "asip:myProcessor|registerAMem:regMem"
+ 30. Port Connectivity Checks: "asip:myProcessor|registerAALU:regALU"
+ 31. Port Connectivity Checks: "asip:myProcessor|datapath:datapath|alu:alu_instance"
+ 32. Port Connectivity Checks: "asip:myProcessor|datapath:datapath|adder:pcAdder"
+ 33. Port Connectivity Checks: "asip:myProcessor|datapath:datapath"
+ 34. Port Connectivity Checks: "asip:myProcessor|controlUnit:controller|decoder:deco"
+ 35. Port Connectivity Checks: "asip:myProcessor"
+ 36. Post-Synthesis Netlist Statistics for Top Partition
+ 37. Elapsed Time Per Partition
+ 38. Analysis & Synthesis Messages
+ 39. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -55,328 +68,36 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-----------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                              ;
-+-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Sun May 08 21:53:15 2022       ;
-; Quartus Prime Version         ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Revision Name                 ; Alu                                         ;
-; Top-level Entity Name         ; processor_tb                                ;
-; Family                        ; Cyclone V                                   ;
-; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
-; Total registers               ; N/A until Partition Merge                   ;
-; Total pins                    ; N/A until Partition Merge                   ;
-; Total virtual pins            ; N/A until Partition Merge                   ;
-; Total block memory bits       ; N/A until Partition Merge                   ;
-; Total PLLs                    ; N/A until Partition Merge                   ;
-; Total DLLs                    ; N/A until Partition Merge                   ;
-+-------------------------------+---------------------------------------------+
-
-
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration IP Cores Summary                                                                                                  ;
-+--------+--------------+---------+--------------+--------------+--------------------------------------------------------+-----------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                        ; IP Include File ;
-+--------+--------------+---------+--------------+--------------+--------------------------------------------------------+-----------------+
-; Altera ; RAM: 1-PORT  ; 20.1    ; N/A          ; N/A          ; |processor_tb|processor:procesador|RAM:memdata         ; RAM.v           ;
-; Altera ; ROM: 1-PORT  ; 20.1    ; N/A          ; N/A          ; |processor_tb|processor:procesador|ROM:meminstructions ; ROM.v           ;
-+--------+--------------+---------+--------------+--------------+--------------------------------------------------------+-----------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for processor:procesador|ROM:meminstructions|altsyncram:altsyncram_component|altsyncram_s1g1:auto_generated ;
-+---------------------------------+--------------------+------+------------------------------------------------------------------+
-; Assignment                      ; Value              ; From ; To                                                               ;
-+---------------------------------+--------------------+------+------------------------------------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                ;
-+---------------------------------+--------------------+------+------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for processor:procesador|RAM:memdata|altsyncram:altsyncram_component|altsyncram_u9o1:auto_generated ;
-+---------------------------------+--------------------+------+----------------------------------------------------------+
-; Assignment                      ; Value              ; From ; To                                                       ;
-+---------------------------------+--------------------+------+----------------------------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                        ;
-+---------------------------------+--------------------+------+----------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: processor:procesador|ROM:meminstructions|altsyncram:altsyncram_component ;
-+------------------------------------+----------------------+-----------------------------------------------------------+
-; Parameter Name                     ; Value                ; Type                                                      ;
-+------------------------------------+----------------------+-----------------------------------------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                                   ;
-; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                                ;
-; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                              ;
-; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                              ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                            ;
-; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                   ;
-; OPERATION_MODE                     ; ROM                  ; Untyped                                                   ;
-; WIDTH_A                            ; 24                   ; Signed Integer                                            ;
-; WIDTHAD_A                          ; 16                   ; Signed Integer                                            ;
-; NUMWORDS_A                         ; 65536                ; Signed Integer                                            ;
-; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                                   ;
-; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                                   ;
-; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                                   ;
-; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                   ;
-; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                   ;
-; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                   ;
-; WIDTH_B                            ; 1                    ; Untyped                                                   ;
-; WIDTHAD_B                          ; 1                    ; Untyped                                                   ;
-; NUMWORDS_B                         ; 1                    ; Untyped                                                   ;
-; INDATA_REG_B                       ; CLOCK1               ; Untyped                                                   ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                                   ;
-; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                   ;
-; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                                   ;
-; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                                   ;
-; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                   ;
-; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                   ;
-; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                   ;
-; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                   ;
-; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                   ;
-; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                   ;
-; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                   ;
-; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                            ;
-; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                                   ;
-; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                                   ;
-; BYTE_SIZE                          ; 8                    ; Untyped                                                   ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                                   ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                   ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                   ;
-; INIT_FILE                          ; rom.mif              ; Untyped                                                   ;
-; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                   ;
-; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                                   ;
-; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                                   ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                                   ;
-; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                                   ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                                   ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                                   ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                                   ;
-; ENABLE_ECC                         ; FALSE                ; Untyped                                                   ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                                   ;
-; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                                   ;
-; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                                                   ;
-; CBXI_PARAMETER                     ; altsyncram_s1g1      ; Untyped                                                   ;
-+------------------------------------+----------------------+-----------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: processor:procesador|RAM:memdata|altsyncram:altsyncram_component ;
-+------------------------------------+----------------------+---------------------------------------------------+
-; Parameter Name                     ; Value                ; Type                                              ;
-+------------------------------------+----------------------+---------------------------------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                           ;
-; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                        ;
-; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                      ;
-; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                      ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                    ;
-; WIDTH_BYTEENA                      ; 1                    ; Untyped                                           ;
-; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                                           ;
-; WIDTH_A                            ; 24                   ; Signed Integer                                    ;
-; WIDTHAD_A                          ; 16                   ; Signed Integer                                    ;
-; NUMWORDS_A                         ; 65536                ; Signed Integer                                    ;
-; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                           ;
-; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                           ;
-; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                           ;
-; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                           ;
-; INDATA_ACLR_A                      ; NONE                 ; Untyped                                           ;
-; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                           ;
-; WIDTH_B                            ; 1                    ; Untyped                                           ;
-; WIDTHAD_B                          ; 1                    ; Untyped                                           ;
-; NUMWORDS_B                         ; 1                    ; Untyped                                           ;
-; INDATA_REG_B                       ; CLOCK1               ; Untyped                                           ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                           ;
-; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                           ;
-; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                           ;
-; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                           ;
-; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                           ;
-; INDATA_ACLR_B                      ; NONE                 ; Untyped                                           ;
-; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                           ;
-; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                           ;
-; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                           ;
-; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                           ;
-; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                           ;
-; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                    ;
-; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                           ;
-; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                           ;
-; BYTE_SIZE                          ; 8                    ; Untyped                                           ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                           ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                           ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                           ;
-; INIT_FILE                          ; ram.mif              ; Untyped                                           ;
-; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                           ;
-; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                           ;
-; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                           ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                           ;
-; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                           ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                           ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                           ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                           ;
-; ENABLE_ECC                         ; FALSE                ; Untyped                                           ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                           ;
-; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                           ;
-; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                                           ;
-; CBXI_PARAMETER                     ; altsyncram_u9o1      ; Untyped                                           ;
-+------------------------------------+----------------------+---------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|controlUnit:controller|condLogic:conditional|flopenr:flagreg1 ;
-+----------------+-------+-------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                    ;
-+----------------+-------+-------------------------------------------------------------------------------------------------------------------------+
-; M              ; 1     ; Signed Integer                                                                                                          ;
-+----------------+-------+-------------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|datapath:datapath|ffNextValue:pcRegister ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-; M              ; 16    ; Signed Integer                                                                                     ;
-+----------------+-------+----------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|datapath:datapath|adder:pcAdder ;
-+----------------+-------+-------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                      ;
-+----------------+-------+-------------------------------------------------------------------------------------------+
-; M              ; 16    ; Signed Integer                                                                            ;
-+----------------+-------+-------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|datapath:datapath|mux2a1:muxRegFile ;
-+----------------+-------+-----------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                          ;
-+----------------+-------+-----------------------------------------------------------------------------------------------+
-; M              ; 4     ; Signed Integer                                                                                ;
-+----------------+-------+-----------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|datapath:datapath|mux2a1:muxALU ;
-+----------------+-------+-------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                      ;
-+----------------+-------+-------------------------------------------------------------------------------------------+
-; M              ; 24    ; Signed Integer                                                                            ;
-+----------------+-------+-------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|datapath:datapath|mux2a1:muxMemALU ;
-+----------------+-------+----------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                         ;
-+----------------+-------+----------------------------------------------------------------------------------------------+
-; M              ; 24    ; Signed Integer                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance ;
-+----------------+-------+----------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                         ;
-+----------------+-------+----------------------------------------------------------------------------------------------+
-; WIDTH          ; 23    ; Signed Integer                                                                               ;
-+----------------+-------+----------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_full_adder:sum_instance ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                      ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------+
-; WIDTH          ; 23    ; Signed Integer                                                                                                            ;
-+----------------+-------+---------------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_multiplier:multInst ;
-+----------------+-------+-----------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                                  ;
-+----------------+-------+-----------------------------------------------------------------------------------------------------------------------+
-; WIDTH          ; 23    ; Signed Integer                                                                                                        ;
-+----------------+-------+-----------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_divider:divInst ;
-+----------------+-------+-------------------------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                                              ;
-+----------------+-------+-------------------------------------------------------------------------------------------------------------------+
-; WIDTH          ; 23    ; Signed Integer                                                                                                    ;
-+----------------+-------+-------------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------------------------------------------------------------------+
-; altsyncram Parameter Settings by Entity Instance                                                                     ;
-+-------------------------------------------+--------------------------------------------------------------------------+
-; Name                                      ; Value                                                                    ;
-+-------------------------------------------+--------------------------------------------------------------------------+
-; Number of entity instances                ; 2                                                                        ;
-; Entity Instance                           ; processor:procesador|ROM:meminstructions|altsyncram:altsyncram_component ;
-;     -- OPERATION_MODE                     ; ROM                                                                      ;
-;     -- WIDTH_A                            ; 24                                                                       ;
-;     -- NUMWORDS_A                         ; 65536                                                                    ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                             ;
-;     -- WIDTH_B                            ; 1                                                                        ;
-;     -- NUMWORDS_B                         ; 1                                                                        ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                                                   ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                             ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                     ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                ;
-; Entity Instance                           ; processor:procesador|RAM:memdata|altsyncram:altsyncram_component         ;
-;     -- OPERATION_MODE                     ; SINGLE_PORT                                                              ;
-;     -- WIDTH_A                            ; 24                                                                       ;
-;     -- NUMWORDS_A                         ; 65536                                                                    ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                             ;
-;     -- WIDTH_B                            ; 1                                                                        ;
-;     -- NUMWORDS_B                         ; 1                                                                        ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                                                   ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                             ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                     ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                ;
-+-------------------------------------------+--------------------------------------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Mon May  9 15:22:28 2022       ;
+; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name                   ; Alu                                         ;
+; Top-level Entity Name           ; processor                                   ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 460                                         ;
+; Total pins                      ; 58                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 3,145,728                                   ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                                           ;
+; Analysis & Synthesis Settings                                                                                             ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; processor_tb       ; Alu                ;
+; Top-level entity name                                                           ; processor          ; Alu                ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -457,12 +178,559 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                               ;
++----------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                 ; Library ;
++----------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------------------+---------+
+; full_adder.sv                    ; yes             ; User SystemVerilog HDL File            ; /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/full_adder.sv                             ;         ;
+; nbit_full_adder.sv               ; yes             ; User SystemVerilog HDL File            ; /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/nbit_full_adder.sv                        ;         ;
+; nbit_multiplier.sv               ; yes             ; User SystemVerilog HDL File            ; /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/nbit_multiplier.sv                        ;         ;
+; nbit_divider.sv                  ; yes             ; User SystemVerilog HDL File            ; /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/nbit_divider.sv                           ;         ;
+; rom.mif                          ; yes             ; User Memory Initialization File        ; /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/rom.mif                                   ;         ;
+; regFile.sv                       ; yes             ; User SystemVerilog HDL File            ; /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/regFile.sv                                ;         ;
+; alu.sv                           ; yes             ; User SystemVerilog HDL File            ; /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/alu.sv                                    ;         ;
+; adder.sv                         ; yes             ; User SystemVerilog HDL File            ; /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/adder.sv                                  ;         ;
+; extendSign.sv                    ; yes             ; User SystemVerilog HDL File            ; /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/extendSign.sv                             ;         ;
+; processor.sv                     ; yes             ; User SystemVerilog HDL File            ; /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/processor.sv                              ;         ;
+; asip.sv                          ; yes             ; User SystemVerilog HDL File            ; /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/asip.sv                                   ;         ;
+; controlUnit.sv                   ; yes             ; User SystemVerilog HDL File            ; /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/controlUnit.sv                            ;         ;
+; decoder.sv                       ; yes             ; User SystemVerilog HDL File            ; /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/decoder.sv                                ;         ;
+; mux2a1.sv                        ; yes             ; User SystemVerilog HDL File            ; /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/mux2a1.sv                                 ;         ;
+; datapath.sv                      ; yes             ; User SystemVerilog HDL File            ; /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/datapath.sv                               ;         ;
+; condLogic.sv                     ; yes             ; User SystemVerilog HDL File            ; /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/condLogic.sv                              ;         ;
+; flopenr.sv                       ; yes             ; User SystemVerilog HDL File            ; /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/flopenr.sv                                ;         ;
+; ffNextValue.sv                   ; yes             ; User SystemVerilog HDL File            ; /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/ffNextValue.sv                            ;         ;
+; rom.v                            ; yes             ; Auto-Found Wizard-Generated File       ; /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/rom.v                                     ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; /home/josudelatico/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; /home/josudelatico/intelFPGA_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; /home/josudelatico/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; /home/josudelatico/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                           ; /home/josudelatico/intelFPGA_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; /home/josudelatico/intelFPGA_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; /home/josudelatico/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; /home/josudelatico/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; /home/josudelatico/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_s1g1.tdf           ; yes             ; Auto-Generated Megafunction            ; /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/db/altsyncram_s1g1.tdf                    ;         ;
+; db/decode_61a.tdf                ; yes             ; Auto-Generated Megafunction            ; /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/db/decode_61a.tdf                         ;         ;
+; db/mux_bhb.tdf                   ; yes             ; Auto-Generated Megafunction            ; /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/db/mux_bhb.tdf                            ;         ;
+; registerAROM.sv                  ; yes             ; Auto-Found SystemVerilog HDL File      ; /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/registerAROM.sv                           ;         ;
+; registerAReg.sv                  ; yes             ; Auto-Found SystemVerilog HDL File      ; /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/registerAReg.sv                           ;         ;
+; registerAALU.sv                  ; yes             ; Auto-Found SystemVerilog HDL File      ; /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/registerAALU.sv                           ;         ;
+; registerAMem.sv                  ; yes             ; Auto-Found SystemVerilog HDL File      ; /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/registerAMem.sv                           ;         ;
+; ram.v                            ; yes             ; Auto-Found Wizard-Generated File       ; /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/ram.v                                     ;         ;
+; db/altsyncram_u9o1.tdf           ; yes             ; Auto-Generated Megafunction            ; /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/db/altsyncram_u9o1.tdf                    ;         ;
+; ram.mif                          ; yes             ; Auto-Found Memory Initialization File  ; /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/ram.mif                                   ;         ;
+; db/decode_dla.tdf                ; yes             ; Auto-Generated Megafunction            ; /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/db/decode_dla.tdf                         ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                           ; /home/josudelatico/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_divide.tdf        ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                           ; /home/josudelatico/intelFPGA_lite/20.1/quartus/libraries/megafunctions/abs_divider.inc       ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                           ; /home/josudelatico/intelFPGA_lite/20.1/quartus/libraries/megafunctions/sign_div_unsign.inc   ;         ;
+; db/lpm_divide_5dm.tdf            ; yes             ; Auto-Generated Megafunction            ; /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/db/lpm_divide_5dm.tdf                     ;         ;
+; db/sign_div_unsign_bnh.tdf       ; yes             ; Auto-Generated Megafunction            ; /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/db/sign_div_unsign_bnh.tdf                ;         ;
+; db/alt_u_div_s2f.tdf             ; yes             ; Auto-Generated Megafunction            ; /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/db/alt_u_div_s2f.tdf                      ;         ;
++----------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 801       ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 1288      ;
+;     -- 7 input functions                    ; 8         ;
+;     -- 6 input functions                    ; 271       ;
+;     -- 5 input functions                    ; 408       ;
+;     -- 4 input functions                    ; 278       ;
+;     -- <=3 input functions                  ; 323       ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 460       ;
+;                                             ;           ;
+; I/O pins                                    ; 58        ;
+; Total MLAB memory bits                      ; 0         ;
+; Total block memory bits                     ; 3145728   ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 844       ;
+; Total fan-out                               ; 13566     ;
+; Average fan-out                             ; 6.03      ;
++---------------------------------------------+-----------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                         ;
++---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                 ; Entity Name         ; Library Name ;
++---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |processor                                              ; 1288 (1)            ; 460 (0)                   ; 3145728           ; 0          ; 58   ; 0            ; |processor                                                                                                                                                                          ; processor           ; work         ;
+;    |RAM:memdata|                                        ; 80 (0)              ; 3 (0)                     ; 1572864           ; 0          ; 0    ; 0            ; |processor|RAM:memdata                                                                                                                                                              ; RAM                 ; work         ;
+;       |altsyncram:altsyncram_component|                 ; 80 (0)              ; 3 (0)                     ; 1572864           ; 0          ; 0    ; 0            ; |processor|RAM:memdata|altsyncram:altsyncram_component                                                                                                                              ; altsyncram          ; work         ;
+;          |altsyncram_u9o1:auto_generated|               ; 80 (0)              ; 3 (3)                     ; 1572864           ; 0          ; 0    ; 0            ; |processor|RAM:memdata|altsyncram:altsyncram_component|altsyncram_u9o1:auto_generated                                                                                               ; altsyncram_u9o1     ; work         ;
+;             |decode_61a:rden_decode|                    ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processor|RAM:memdata|altsyncram:altsyncram_component|altsyncram_u9o1:auto_generated|decode_61a:rden_decode                                                                        ; decode_61a          ; work         ;
+;             |mux_bhb:mux2|                              ; 72 (72)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processor|RAM:memdata|altsyncram:altsyncram_component|altsyncram_u9o1:auto_generated|mux_bhb:mux2                                                                                  ; mux_bhb             ; work         ;
+;    |ROM:meminstructions|                                ; 80 (0)              ; 3 (0)                     ; 1572864           ; 0          ; 0    ; 0            ; |processor|ROM:meminstructions                                                                                                                                                      ; ROM                 ; work         ;
+;       |altsyncram:altsyncram_component|                 ; 80 (0)              ; 3 (0)                     ; 1572864           ; 0          ; 0    ; 0            ; |processor|ROM:meminstructions|altsyncram:altsyncram_component                                                                                                                      ; altsyncram          ; work         ;
+;          |altsyncram_s1g1:auto_generated|               ; 80 (0)              ; 3 (3)                     ; 1572864           ; 0          ; 0    ; 0            ; |processor|ROM:meminstructions|altsyncram:altsyncram_component|altsyncram_s1g1:auto_generated                                                                                       ; altsyncram_s1g1     ; work         ;
+;             |decode_61a:rden_decode|                    ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processor|ROM:meminstructions|altsyncram:altsyncram_component|altsyncram_s1g1:auto_generated|decode_61a:rden_decode                                                                ; decode_61a          ; work         ;
+;             |mux_bhb:mux2|                              ; 72 (72)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processor|ROM:meminstructions|altsyncram:altsyncram_component|altsyncram_s1g1:auto_generated|mux_bhb:mux2                                                                          ; mux_bhb             ; work         ;
+;    |asip:myProcessor|                                   ; 1127 (0)            ; 430 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |processor|asip:myProcessor                                                                                                                                                         ; asip                ; work         ;
+;       |controlUnit:controller|                          ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processor|asip:myProcessor|controlUnit:controller                                                                                                                                  ; controlUnit         ; work         ;
+;          |decoder:deco|                                 ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processor|asip:myProcessor|controlUnit:controller|decoder:deco                                                                                                                     ; decoder             ; work         ;
+;       |datapath:datapath|                               ; 1098 (0)            ; 369 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |processor|asip:myProcessor|datapath:datapath                                                                                                                                       ; datapath            ; work         ;
+;          |adder:pcAdder|                                ; 15 (15)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processor|asip:myProcessor|datapath:datapath|adder:pcAdder                                                                                                                         ; adder               ; work         ;
+;          |alu:alu_instance|                             ; 840 (16)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processor|asip:myProcessor|datapath:datapath|alu:alu_instance                                                                                                                      ; alu                 ; work         ;
+;             |nbit_divider:divInst|                      ; 647 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processor|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_divider:divInst                                                                                                 ; nbit_divider        ; work         ;
+;                |lpm_divide:Div0|                        ; 647 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processor|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_divider:divInst|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;                   |lpm_divide_5dm:auto_generated|       ; 647 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processor|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_divider:divInst|lpm_divide:Div0|lpm_divide_5dm:auto_generated                                                   ; lpm_divide_5dm      ; work         ;
+;                      |sign_div_unsign_bnh:divider|      ; 647 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processor|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_divider:divInst|lpm_divide:Div0|lpm_divide_5dm:auto_generated|sign_div_unsign_bnh:divider                       ; sign_div_unsign_bnh ; work         ;
+;                         |alt_u_div_s2f:divider|         ; 647 (647)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processor|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_divider:divInst|lpm_divide:Div0|lpm_divide_5dm:auto_generated|sign_div_unsign_bnh:divider|alt_u_div_s2f:divider ; alt_u_div_s2f       ; work         ;
+;             |nbit_full_adder:sum_instance|              ; 20 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processor|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_full_adder:sum_instance                                                                                         ; nbit_full_adder     ; work         ;
+;                |full_adder:geninstance[10].f3_instance| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processor|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[10].f3_instance                                                  ; full_adder          ; work         ;
+;                |full_adder:geninstance[11].f3_instance| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processor|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[11].f3_instance                                                  ; full_adder          ; work         ;
+;                |full_adder:geninstance[12].f3_instance| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processor|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[12].f3_instance                                                  ; full_adder          ; work         ;
+;                |full_adder:geninstance[13].f3_instance| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processor|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[13].f3_instance                                                  ; full_adder          ; work         ;
+;                |full_adder:geninstance[14].f3_instance| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processor|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[14].f3_instance                                                  ; full_adder          ; work         ;
+;                |full_adder:geninstance[15].f3_instance| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processor|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[15].f3_instance                                                  ; full_adder          ; work         ;
+;                |full_adder:geninstance[1].f3_instance|  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processor|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[1].f3_instance                                                   ; full_adder          ; work         ;
+;                |full_adder:geninstance[2].f3_instance|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processor|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[2].f3_instance                                                   ; full_adder          ; work         ;
+;                |full_adder:geninstance[3].f3_instance|  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processor|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[3].f3_instance                                                   ; full_adder          ; work         ;
+;                |full_adder:geninstance[4].f3_instance|  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processor|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[4].f3_instance                                                   ; full_adder          ; work         ;
+;                |full_adder:geninstance[5].f3_instance|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processor|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[5].f3_instance                                                   ; full_adder          ; work         ;
+;                |full_adder:geninstance[6].f3_instance|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processor|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[6].f3_instance                                                   ; full_adder          ; work         ;
+;                |full_adder:geninstance[7].f3_instance|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processor|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[7].f3_instance                                                   ; full_adder          ; work         ;
+;                |full_adder:geninstance[8].f3_instance|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processor|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[8].f3_instance                                                   ; full_adder          ; work         ;
+;                |full_adder:geninstance[9].f3_instance|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processor|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[9].f3_instance                                                   ; full_adder          ; work         ;
+;             |nbit_multiplier:multInst|                  ; 157 (157)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processor|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_multiplier:multInst                                                                                             ; nbit_multiplier     ; work         ;
+;          |extendSign:extSign|                           ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processor|asip:myProcessor|datapath:datapath|extendSign:extSign                                                                                                                    ; extendSign          ; work         ;
+;          |ffNextValue:pcRegister|                       ; 1 (1)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |processor|asip:myProcessor|datapath:datapath|ffNextValue:pcRegister                                                                                                                ; ffNextValue         ; work         ;
+;          |mux2a1:muxALU|                                ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processor|asip:myProcessor|datapath:datapath|mux2a1:muxALU                                                                                                                         ; mux2a1              ; work         ;
+;          |mux2a1:muxRegFile|                            ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processor|asip:myProcessor|datapath:datapath|mux2a1:muxRegFile                                                                                                                     ; mux2a1              ; work         ;
+;          |regFile:regfile|                              ; 218 (218)           ; 288 (288)                 ; 0                 ; 0          ; 0    ; 0            ; |processor|asip:myProcessor|datapath:datapath|regFile:regfile                                                                                                                       ; regFile             ; work         ;
+;          |registerAReg:comb_3|                          ; 2 (2)               ; 65 (65)                   ; 0                 ; 0          ; 0    ; 0            ; |processor|asip:myProcessor|datapath:datapath|registerAReg:comb_3                                                                                                                   ; registerAReg        ; work         ;
+;       |mux2a1:muxMemALU|                                ; 24 (24)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |processor|asip:myProcessor|mux2a1:muxMemALU                                                                                                                                        ; mux2a1              ; work         ;
+;       |registerAALU:regALU|                             ; 0 (0)               ; 19 (19)                   ; 0                 ; 0          ; 0    ; 0            ; |processor|asip:myProcessor|registerAALU:regALU                                                                                                                                     ; registerAALU        ; work         ;
+;       |registerAMem:regMem|                             ; 0 (0)               ; 42 (42)                   ; 0                 ; 0          ; 0    ; 0            ; |processor|asip:myProcessor|registerAMem:regMem                                                                                                                                     ; registerAMem        ; work         ;
+;    |registerAROM:reg1|                                  ; 0 (0)               ; 24 (24)                   ; 0                 ; 0          ; 0    ; 0            ; |processor|registerAROM:reg1                                                                                                                                                        ; registerAROM        ; work         ;
++---------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                   ;
++-----------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+---------+---------+
+; Name                                                                                          ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size    ; MIF     ;
++-----------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+---------+---------+
+; RAM:memdata|altsyncram:altsyncram_component|altsyncram_u9o1:auto_generated|ALTSYNCRAM         ; AUTO ; Single Port ; 65536        ; 24           ; --           ; --           ; 1572864 ; ram.mif ;
+; ROM:meminstructions|altsyncram:altsyncram_component|altsyncram_s1g1:auto_generated|ALTSYNCRAM ; AUTO ; ROM         ; 65536        ; 24           ; --           ; --           ; 1572864 ; rom.mif ;
++-----------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+---------+---------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                  ;
++-----------------------------------------------------------------------+---------------------------------------------+
+; Register name                                                         ; Reason for Removal                          ;
++-----------------------------------------------------------------------+---------------------------------------------+
+; asip:myProcessor|registerAALU:regALU|WD[1..23]                        ; Stuck at GND due to stuck port data_in      ;
+; asip:myProcessor|condLogic:conditional|flopenr:flagreg1|q[0]          ; Stuck at GND due to stuck port clock_enable ;
+; asip:myProcessor|datapath:datapath|registerAReg:comb_3|ExtImm[12..23] ; Stuck at GND due to stuck port data_in      ;
+; Total Number of Removed Registers = 36                                ;                                             ;
++-----------------------------------------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 460   ;
+; Number of registers using Synchronous Clear  ; 336   ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 16    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 288   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |processor|asip:myProcessor|datapath:datapath|regFile:regfile|rf[0][1]                                                           ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |processor|asip:myProcessor|datapath:datapath|regFile:regfile|rf[1][10]                                                          ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |processor|asip:myProcessor|datapath:datapath|regFile:regfile|rf[2][1]                                                           ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |processor|asip:myProcessor|datapath:datapath|regFile:regfile|rf[3][13]                                                          ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |processor|asip:myProcessor|datapath:datapath|regFile:regfile|rf[4][17]                                                          ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |processor|asip:myProcessor|datapath:datapath|regFile:regfile|rf[5][7]                                                           ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |processor|asip:myProcessor|datapath:datapath|regFile:regfile|rf[6][2]                                                           ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |processor|asip:myProcessor|datapath:datapath|regFile:regfile|rf[7][5]                                                           ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |processor|asip:myProcessor|datapath:datapath|regFile:regfile|rf[8][9]                                                           ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |processor|asip:myProcessor|datapath:datapath|regFile:regfile|rf[9][13]                                                          ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |processor|asip:myProcessor|datapath:datapath|regFile:regfile|rf[10][18]                                                         ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |processor|asip:myProcessor|datapath:datapath|regFile:regfile|rf[11][11]                                                         ;
+; 16:1               ; 24 bits   ; 240 LEs       ; 192 LEs              ; 48 LEs                 ; Yes        ; |processor|asip:myProcessor|datapath:datapath|registerAReg:comb_3|SrcB[11]                                                       ;
+; 16:1               ; 24 bits   ; 240 LEs       ; 192 LEs              ; 48 LEs                 ; Yes        ; |processor|asip:myProcessor|datapath:datapath|registerAReg:comb_3|SrcA[0]                                                        ;
+; 8:1                ; 24 bits   ; 120 LEs       ; 120 LEs              ; 0 LEs                  ; Yes        ; |processor|asip:myProcessor|registerAMem:regMem|ReadData[2]                                                                      ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |processor|asip:myProcessor|datapath:datapath|alu:alu_instance|Mux17                                                             ;
+; 8:1                ; 24 bits   ; 120 LEs       ; 120 LEs              ; 0 LEs                  ; No         ; |processor|ROM:meminstructions|altsyncram:altsyncram_component|altsyncram_s1g1:auto_generated|mux_bhb:mux2|l3_w14_n0_mux_dataout ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Source assignments for ROM:meminstructions|altsyncram:altsyncram_component|altsyncram_s1g1:auto_generated ;
++---------------------------------+--------------------+------+---------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                          ;
++---------------------------------+--------------------+------+---------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                           ;
++---------------------------------+--------------------+------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Source assignments for RAM:memdata|altsyncram:altsyncram_component|altsyncram_u9o1:auto_generated ;
++---------------------------------+--------------------+------+-------------------------------------+
+; Assignment                      ; Value              ; From ; To                                  ;
++---------------------------------+--------------------+------+-------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                   ;
++---------------------------------+--------------------+------+-------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ROM:meminstructions|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+--------------------------------------+
+; Parameter Name                     ; Value                ; Type                                 ;
++------------------------------------+----------------------+--------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                              ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                           ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                         ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                         ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                       ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                              ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                              ;
+; WIDTH_A                            ; 24                   ; Signed Integer                       ;
+; WIDTHAD_A                          ; 16                   ; Signed Integer                       ;
+; NUMWORDS_A                         ; 65536                ; Signed Integer                       ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                              ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                              ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                              ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                              ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                              ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                              ;
+; WIDTH_B                            ; 1                    ; Untyped                              ;
+; WIDTHAD_B                          ; 1                    ; Untyped                              ;
+; NUMWORDS_B                         ; 1                    ; Untyped                              ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                              ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                              ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                              ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                              ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                              ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                              ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                              ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                              ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                              ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                              ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                              ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                              ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                       ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                              ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                              ;
+; BYTE_SIZE                          ; 8                    ; Untyped                              ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                              ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                              ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                              ;
+; INIT_FILE                          ; rom.mif              ; Untyped                              ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                              ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                              ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                              ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                              ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                              ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                              ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                              ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                              ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                              ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                              ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                              ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                              ;
+; CBXI_PARAMETER                     ; altsyncram_s1g1      ; Untyped                              ;
++------------------------------------+----------------------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: asip:myProcessor|datapath:datapath|ffNextValue:pcRegister ;
++----------------+-------+-------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                          ;
++----------------+-------+-------------------------------------------------------------------------------+
+; M              ; 16    ; Signed Integer                                                                ;
++----------------+-------+-------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: asip:myProcessor|datapath:datapath|adder:pcAdder ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; M              ; 16    ; Signed Integer                                                       ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: asip:myProcessor|datapath:datapath|mux2a1:muxRegFile ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; M              ; 4     ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: asip:myProcessor|datapath:datapath|mux2a1:muxALU ;
++----------------+-------+----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                 ;
++----------------+-------+----------------------------------------------------------------------+
+; M              ; 24    ; Signed Integer                                                       ;
++----------------+-------+----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: asip:myProcessor|datapath:datapath|alu:alu_instance ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; WIDTH          ; 23    ; Signed Integer                                                          ;
++----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_full_adder:sum_instance ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                 ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+; WIDTH          ; 23    ; Signed Integer                                                                                       ;
++----------------+-------+------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_multiplier:multInst ;
++----------------+-------+--------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                             ;
++----------------+-------+--------------------------------------------------------------------------------------------------+
+; WIDTH          ; 23    ; Signed Integer                                                                                   ;
++----------------+-------+--------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_divider:divInst ;
++----------------+-------+----------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                         ;
++----------------+-------+----------------------------------------------------------------------------------------------+
+; WIDTH          ; 23    ; Signed Integer                                                                               ;
++----------------+-------+----------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: asip:myProcessor|condLogic:conditional|flopenr:flagreg1 ;
++----------------+-------+-----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                        ;
++----------------+-------+-----------------------------------------------------------------------------+
+; M              ; 1     ; Signed Integer                                                              ;
++----------------+-------+-----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: asip:myProcessor|mux2a1:muxMemALU ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; M              ; 24    ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: RAM:memdata|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+------------------------------+
+; Parameter Name                     ; Value                ; Type                         ;
++------------------------------------+----------------------+------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                      ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                   ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                 ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                 ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE               ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                      ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                      ;
+; WIDTH_A                            ; 24                   ; Signed Integer               ;
+; WIDTHAD_A                          ; 16                   ; Signed Integer               ;
+; NUMWORDS_A                         ; 65536                ; Signed Integer               ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                      ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                      ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                      ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                      ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                      ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                      ;
+; WIDTH_B                            ; 1                    ; Untyped                      ;
+; WIDTHAD_B                          ; 1                    ; Untyped                      ;
+; NUMWORDS_B                         ; 1                    ; Untyped                      ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                      ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                      ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                      ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                      ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                      ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                      ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                      ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                      ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                      ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                      ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                      ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                      ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer               ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                      ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                      ;
+; BYTE_SIZE                          ; 8                    ; Untyped                      ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                      ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                      ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                      ;
+; INIT_FILE                          ; ram.mif              ; Untyped                      ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                      ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                      ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                      ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                      ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                      ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                      ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                      ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                      ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                      ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                      ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                      ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                      ;
+; CBXI_PARAMETER                     ; altsyncram_u9o1      ; Untyped                      ;
++------------------------------------+----------------------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_divider:divInst|lpm_divide:Div0 ;
++------------------------+----------------+-------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                                            ;
++------------------------+----------------+-------------------------------------------------------------------------------------------------+
+; LPM_WIDTHN             ; 24             ; Untyped                                                                                         ;
+; LPM_WIDTHD             ; 24             ; Untyped                                                                                         ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                         ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                                                         ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                                                         ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                                                         ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                                                         ;
+; CBXI_PARAMETER         ; lpm_divide_5dm ; Untyped                                                                                         ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                                                         ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                                                         ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                                                    ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                                                  ;
++------------------------+----------------+-------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                ;
++-------------------------------------------+-----------------------------------------------------+
+; Name                                      ; Value                                               ;
++-------------------------------------------+-----------------------------------------------------+
+; Number of entity instances                ; 2                                                   ;
+; Entity Instance                           ; ROM:meminstructions|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                                 ;
+;     -- WIDTH_A                            ; 24                                                  ;
+;     -- NUMWORDS_A                         ; 65536                                               ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                        ;
+;     -- WIDTH_B                            ; 1                                                   ;
+;     -- NUMWORDS_B                         ; 1                                                   ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                              ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                        ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                           ;
+; Entity Instance                           ; RAM:memdata|altsyncram:altsyncram_component         ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                         ;
+;     -- WIDTH_A                            ; 24                                                  ;
+;     -- NUMWORDS_A                         ; 65536                                               ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                        ;
+;     -- WIDTH_B                            ; 1                                                   ;
+;     -- NUMWORDS_B                         ; 1                                                   ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                              ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                        ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                           ;
++-------------------------------------------+-----------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "asip:myProcessor|mux2a1:muxMemALU"                                                                                                            ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                        ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
+; d1   ; Input ; Warning  ; Input port expression (16 bits) is smaller than the input port (24 bits) it drives.  Extra input bit(s) "d1[23..16]" will be connected to GND. ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "asip:myProcessor|registerAMem:regMem"                                                                                                             ;
++---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                                        ;
++---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
+; WA3M    ; Input  ; Warning  ; Input port expression (4 bits) is smaller than the input port (24 bits) it drives.  Extra input bit(s) "WA3M[23..4]" will be connected to GND. ;
+; AluOutW ; Output ; Warning  ; Output or bidir port (24 bits) is wider than the port expression (16 bits) it drives; bit(s) "AluOutW[23..16]" have no fanouts                 ;
+; WA3W    ; Output ; Warning  ; Output or bidir port (24 bits) is wider than the port expression (4 bits) it drives; bit(s) "WA3W[23..4]" have no fanouts                      ;
+; WA3W    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                            ;
+; PCSrcW  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                            ;
++---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "asip:myProcessor|registerAALU:regALU"                                                                                                                    ;
++-----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                             ;
++-----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; writeData ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (24 bits) it drives.  Extra input bit(s) "writeData[23..1]" will be connected to GND. ;
+; WA3E      ; Input  ; Warning  ; Input port expression (4 bits) is smaller than the input port (24 bits) it drives.  Extra input bit(s) "WA3E[23..4]" will be connected to GND.      ;
+; WA3M      ; Output ; Warning  ; Output or bidir port (24 bits) is wider than the port expression (4 bits) it drives; bit(s) "WA3M[23..4]" have no fanouts                           ;
++-----------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +--------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance"                     ;
+; Port Connectivity Checks: "asip:myProcessor|datapath:datapath|alu:alu_instance"                                          ;
 +----------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port           ; Type   ; Severity ; Details                                                                             ;
 +----------------+--------+----------+-------------------------------------------------------------------------------------+
 ; ci             ; Input  ; Info     ; Stuck at GND                                                                        ;
+; out[23..16]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; co             ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; negativo       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; acarreo        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
@@ -470,95 +738,154 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "processor:procesador|asip:myProcessor|datapath:datapath|adder:pcAdder" ;
-+----------+-------+----------+---------------------------------------------------------------------+
-; Port     ; Type  ; Severity ; Details                                                             ;
-+----------+-------+----------+---------------------------------------------------------------------+
-; b[15..1] ; Input ; Info     ; Stuck at GND                                                        ;
-; b[0]     ; Input ; Info     ; Stuck at VCC                                                        ;
-+----------+-------+----------+---------------------------------------------------------------------+
++------------------------------------------------------------------------------+
+; Port Connectivity Checks: "asip:myProcessor|datapath:datapath|adder:pcAdder" ;
++----------+-------+----------+------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                        ;
++----------+-------+----------+------------------------------------------------+
+; b[15..1] ; Input ; Info     ; Stuck at GND                                   ;
+; b[0]     ; Input ; Info     ; Stuck at VCC                                   ;
++----------+-------+----------+------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "processor:procesador|asip:myProcessor"                                                ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                             ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; result ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "asip:myProcessor|datapath:datapath"                                                                                       ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                   ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
+; data ; Output ; Warning  ; Output or bidir port (24 bits) is wider than the port expression (1 bits) it drives; bit(s) "data[23..1]" have no fanouts ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "processor:procesador"                                                                 ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                             ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; aluRes ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; pc     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; inst   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "asip:myProcessor|controlUnit:controller|decoder:deco"                                     ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; flagUpdate ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "asip:myProcessor"                                                                      ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; resultW ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 460                         ;
+;     CLR               ; 16                          ;
+;     ENA SCLR          ; 288                         ;
+;     SCLR              ; 48                          ;
+;     plain             ; 108                         ;
+; arriav_lcell_comb     ; 1288                        ;
+;     arith             ; 416                         ;
+;         0 data inputs ; 47                          ;
+;         1 data inputs ; 14                          ;
+;         2 data inputs ; 1                           ;
+;         4 data inputs ; 23                          ;
+;         5 data inputs ; 331                         ;
+;     extend            ; 8                           ;
+;         7 data inputs ; 8                           ;
+;     normal            ; 824                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 99                          ;
+;         3 data inputs ; 121                         ;
+;         4 data inputs ; 254                         ;
+;         5 data inputs ; 77                          ;
+;         6 data inputs ; 271                         ;
+;     shared            ; 40                          ;
+;         0 data inputs ; 2                           ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 33                          ;
+;         4 data inputs ; 1                           ;
+; boundary_port         ; 58                          ;
+; stratixv_ram_block    ; 384                         ;
+;                       ;                             ;
+; Max LUT depth         ; 58.60                       ;
+; Average LUT depth     ; 23.48                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:04     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
-    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sun May 08 21:53:03 2022
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Alu -c Alu --analysis_and_elaboration
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Mon May  9 15:22:03 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Alu -c Alu
+Warning (125092): Tcl Script File ROM.qip not found
+    Info (125063): set_global_assignment -name QIP_FILE ROM.qip
+Warning (125092): Tcl Script File RAM.qip not found
+    Info (125063): set_global_assignment -name QIP_FILE RAM.qip
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file alu_tb.sv
-    Info (12023): Found entity 1: Alu_tb File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 1
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file Alu_tb.sv
+    Info (12023): Found entity 1: Alu_tb File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/Alu_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file full_adder.sv
-    Info (12023): Found entity 1: full_adder File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/full_adder.sv Line: 1
+    Info (12023): Found entity 1: full_adder File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/full_adder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file nbit_full_adder.sv
-    Info (12023): Found entity 1: nbit_full_adder File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/nbit_full_adder.sv Line: 1
+    Info (12023): Found entity 1: nbit_full_adder File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/nbit_full_adder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file nbit_multiplier.sv
-    Info (12023): Found entity 1: nbit_multiplier File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/nbit_multiplier.sv Line: 1
+    Info (12023): Found entity 1: nbit_multiplier File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/nbit_multiplier.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file nbit_divider.sv
-    Info (12023): Found entity 1: nbit_divider File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/nbit_divider.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file regfile.sv
-    Info (12023): Found entity 1: regFile File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/regFile.sv Line: 1
+    Info (12023): Found entity 1: nbit_divider File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/nbit_divider.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file regFile.sv
+    Info (12023): Found entity 1: regFile File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/regFile.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
-    Info (12023): Found entity 1: alu File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/alu.sv Line: 1
+    Info (12023): Found entity 1: alu File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/alu.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file adder.sv
-    Info (12023): Found entity 1: adder File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/adder.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file extendsign.sv
-    Info (12023): Found entity 1: extendSign File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/extendSign.sv Line: 1
+    Info (12023): Found entity 1: adder File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/adder.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file extendSign.sv
+    Info (12023): Found entity 1: extendSign File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/extendSign.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file processor.sv
-    Info (12023): Found entity 1: processor File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/processor.sv Line: 1
+    Info (12023): Found entity 1: processor File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/processor.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file asip.sv
-    Info (12023): Found entity 1: asip File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/asip.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file controlunit.sv
-    Info (12023): Found entity 1: controlUnit File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/controlUnit.sv Line: 1
+    Info (12023): Found entity 1: asip File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/asip.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file controlUnit.sv
+    Info (12023): Found entity 1: controlUnit File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/controlUnit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file decoder.sv
-    Info (12023): Found entity 1: decoder File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/decoder.sv Line: 1
+    Info (12023): Found entity 1: decoder File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/decoder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux2a1.sv
-    Info (12023): Found entity 1: mux2a1 File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/mux2a1.sv Line: 1
+    Info (12023): Found entity 1: mux2a1 File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/mux2a1.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file datapath.sv
-    Info (12023): Found entity 1: datapath File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/datapath.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file condlogic.sv
-    Info (12023): Found entity 1: condLogic File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/condLogic.sv Line: 1
+    Info (12023): Found entity 1: datapath File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/datapath.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file condLogic.sv
+    Info (12023): Found entity 1: condLogic File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/condLogic.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file flopenr.sv
-    Info (12023): Found entity 1: flopenr File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/flopenr.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file ffnextvalue.sv
-    Info (12023): Found entity 1: ffNextValue File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/ffNextValue.sv Line: 1
+    Info (12023): Found entity 1: flopenr File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/flopenr.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ffNextValue.sv
+    Info (12023): Found entity 1: ffNextValue File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/ffNextValue.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file processor_tb.sv
-    Info (12023): Found entity 1: processor_tb File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/processor_tb.sv Line: 3
-Info (12021): Found 1 design units, including 1 entities, in source file rom.v
-    Info (12023): Found entity 1: ROM File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/ROM.v Line: 40
-Info (12021): Found 1 design units, including 1 entities, in source file ram.v
-    Info (12023): Found entity 1: RAM File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/RAM.v Line: 40
-Info (12127): Elaborating entity "processor_tb" for the top level hierarchy
-Warning (10755): Verilog HDL warning at processor_tb.sv(11): assignments to clk create a combinational loop File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/processor_tb.sv Line: 11
-Info (12128): Elaborating entity "processor" for hierarchy "processor:procesador" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/processor_tb.sv Line: 9
-Info (12128): Elaborating entity "ROM" for hierarchy "processor:procesador|ROM:meminstructions" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/processor.sv Line: 8
-Info (12128): Elaborating entity "altsyncram" for hierarchy "processor:procesador|ROM:meminstructions|altsyncram:altsyncram_component" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/ROM.v Line: 82
-Info (12130): Elaborated megafunction instantiation "processor:procesador|ROM:meminstructions|altsyncram:altsyncram_component" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/ROM.v Line: 82
-Info (12133): Instantiated megafunction "processor:procesador|ROM:meminstructions|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/ROM.v Line: 82
+    Info (12023): Found entity 1: processor_tb File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/processor_tb.sv Line: 3
+Warning (10236): Verilog HDL Implicit Net warning at asip.sv(16): created implicit net for "data" File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/asip.sv Line: 16
+Warning (10236): Verilog HDL Implicit Net warning at asip.sv(18): created implicit net for "flagUpdate" File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/asip.sv Line: 18
+Critical Warning (10846): Verilog HDL Instantiation warning at datapath.sv(31): instance has no name File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/datapath.sv Line: 31
+Info (12127): Elaborating entity "processor" for the top level hierarchy
+Warning (12125): Using design file rom.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: ROM File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/rom.v Line: 40
+Info (12128): Elaborating entity "ROM" for hierarchy "ROM:meminstructions" File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/processor.sv Line: 8
+Info (12128): Elaborating entity "altsyncram" for hierarchy "ROM:meminstructions|altsyncram:altsyncram_component" File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/rom.v Line: 82
+Info (12130): Elaborated megafunction instantiation "ROM:meminstructions|altsyncram:altsyncram_component" File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/rom.v Line: 82
+Info (12133): Instantiated megafunction "ROM:meminstructions|altsyncram:altsyncram_component" with the following parameter: File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/rom.v Line: 82
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
@@ -574,18 +901,54 @@ Info (12133): Instantiated megafunction "processor:procesador|ROM:meminstruction
     Info (12134): Parameter "width_a" = "24"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_s1g1.tdf
-    Info (12023): Found entity 1: altsyncram_s1g1 File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/db/altsyncram_s1g1.tdf Line: 32
-Info (12128): Elaborating entity "altsyncram_s1g1" for hierarchy "processor:procesador|ROM:meminstructions|altsyncram:altsyncram_component|altsyncram_s1g1:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+    Info (12023): Found entity 1: altsyncram_s1g1 File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/db/altsyncram_s1g1.tdf Line: 32
+Info (12128): Elaborating entity "altsyncram_s1g1" for hierarchy "ROM:meminstructions|altsyncram:altsyncram_component|altsyncram_s1g1:auto_generated" File: /home/josudelatico/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_61a.tdf
-    Info (12023): Found entity 1: decode_61a File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/db/decode_61a.tdf Line: 23
-Info (12128): Elaborating entity "decode_61a" for hierarchy "processor:procesador|ROM:meminstructions|altsyncram:altsyncram_component|altsyncram_s1g1:auto_generated|decode_61a:rden_decode" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/db/altsyncram_s1g1.tdf Line: 40
+    Info (12023): Found entity 1: decode_61a File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/db/decode_61a.tdf Line: 23
+Info (12128): Elaborating entity "decode_61a" for hierarchy "ROM:meminstructions|altsyncram:altsyncram_component|altsyncram_s1g1:auto_generated|decode_61a:rden_decode" File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/db/altsyncram_s1g1.tdf Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_bhb.tdf
-    Info (12023): Found entity 1: mux_bhb File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/db/mux_bhb.tdf Line: 23
-Info (12128): Elaborating entity "mux_bhb" for hierarchy "processor:procesador|ROM:meminstructions|altsyncram:altsyncram_component|altsyncram_s1g1:auto_generated|mux_bhb:mux2" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/db/altsyncram_s1g1.tdf Line: 41
-Info (12128): Elaborating entity "RAM" for hierarchy "processor:procesador|RAM:memdata" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/processor.sv Line: 10
-Info (12128): Elaborating entity "altsyncram" for hierarchy "processor:procesador|RAM:memdata|altsyncram:altsyncram_component" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/RAM.v Line: 86
-Info (12130): Elaborated megafunction instantiation "processor:procesador|RAM:memdata|altsyncram:altsyncram_component" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/RAM.v Line: 86
-Info (12133): Instantiated megafunction "processor:procesador|RAM:memdata|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/RAM.v Line: 86
+    Info (12023): Found entity 1: mux_bhb File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/db/mux_bhb.tdf Line: 23
+Info (12128): Elaborating entity "mux_bhb" for hierarchy "ROM:meminstructions|altsyncram:altsyncram_component|altsyncram_s1g1:auto_generated|mux_bhb:mux2" File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/db/altsyncram_s1g1.tdf Line: 41
+Warning (12125): Using design file registerAROM.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: registerAROM File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/registerAROM.sv Line: 1
+Info (12128): Elaborating entity "registerAROM" for hierarchy "registerAROM:reg1" File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/processor.sv Line: 10
+Info (12128): Elaborating entity "asip" for hierarchy "asip:myProcessor" File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/processor.sv Line: 12
+Info (12128): Elaborating entity "controlUnit" for hierarchy "asip:myProcessor|controlUnit:controller" File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/asip.sv Line: 13
+Info (12128): Elaborating entity "decoder" for hierarchy "asip:myProcessor|controlUnit:controller|decoder:deco" File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/controlUnit.sv Line: 7
+Info (12128): Elaborating entity "datapath" for hierarchy "asip:myProcessor|datapath:datapath" File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/asip.sv Line: 16
+Info (12128): Elaborating entity "regFile" for hierarchy "asip:myProcessor|datapath:datapath|regFile:regfile" File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/datapath.sv Line: 15
+Info (12128): Elaborating entity "ffNextValue" for hierarchy "asip:myProcessor|datapath:datapath|ffNextValue:pcRegister" File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/datapath.sv Line: 19
+Info (12128): Elaborating entity "adder" for hierarchy "asip:myProcessor|datapath:datapath|adder:pcAdder" File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/datapath.sv Line: 20
+Info (12128): Elaborating entity "extendSign" for hierarchy "asip:myProcessor|datapath:datapath|extendSign:extSign" File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/datapath.sv Line: 23
+Warning (10230): Verilog HDL assignment warning at extendSign.sv(9): truncated value with size 32 to match size of target (24) File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/extendSign.sv Line: 9
+Info (12128): Elaborating entity "mux2a1" for hierarchy "asip:myProcessor|datapath:datapath|mux2a1:muxRegFile" File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/datapath.sv Line: 26
+Warning (12125): Using design file registerAReg.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: registerAReg File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/registerAReg.sv Line: 1
+Info (12128): Elaborating entity "registerAReg" for hierarchy "asip:myProcessor|datapath:datapath|registerAReg:comb_3" File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/datapath.sv Line: 31
+Info (12128): Elaborating entity "mux2a1" for hierarchy "asip:myProcessor|datapath:datapath|mux2a1:muxALU" File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/datapath.sv Line: 34
+Info (12128): Elaborating entity "alu" for hierarchy "asip:myProcessor|datapath:datapath|alu:alu_instance" File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/datapath.sv Line: 37
+Info (12128): Elaborating entity "nbit_full_adder" for hierarchy "asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_full_adder:sum_instance" File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/alu.sv Line: 15
+Info (12128): Elaborating entity "full_adder" for hierarchy "asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[0].f1_instance" File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/nbit_full_adder.sv Line: 14
+Info (12128): Elaborating entity "nbit_multiplier" for hierarchy "asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_multiplier:multInst" File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/alu.sv Line: 17
+Warning (10230): Verilog HDL assignment warning at nbit_multiplier.sv(5): truncated value with size 32 to match size of target (24) File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/nbit_multiplier.sv Line: 5
+Warning (10230): Verilog HDL assignment warning at nbit_multiplier.sv(7): truncated value with size 32 to match size of target (24) File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/nbit_multiplier.sv Line: 7
+Info (12128): Elaborating entity "nbit_divider" for hierarchy "asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_divider:divInst" File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/alu.sv Line: 19
+Info (12128): Elaborating entity "condLogic" for hierarchy "asip:myProcessor|condLogic:conditional" File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/asip.sv Line: 18
+Warning (10034): Output port "PCSrc" at condLogic.sv(2) has no driver File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/condLogic.sv Line: 2
+Info (12128): Elaborating entity "flopenr" for hierarchy "asip:myProcessor|condLogic:conditional|flopenr:flagreg1" File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/condLogic.sv Line: 9
+Warning (12125): Using design file registerAALU.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: registerAALU File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/registerAALU.sv Line: 1
+Info (12128): Elaborating entity "registerAALU" for hierarchy "asip:myProcessor|registerAALU:regALU" File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/asip.sv Line: 21
+Warning (10034): Output port "memWriteM" at registerAALU.sv(4) has no driver File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/registerAALU.sv Line: 4
+Warning (12125): Using design file registerAMem.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: registerAMem File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/registerAMem.sv Line: 1
+Info (12128): Elaborating entity "registerAMem" for hierarchy "asip:myProcessor|registerAMem:regMem" File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/asip.sv Line: 24
+Warning (12125): Using design file ram.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: RAM File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/ram.v Line: 40
+Info (12128): Elaborating entity "RAM" for hierarchy "RAM:memdata" File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/processor.sv Line: 14
+Info (12128): Elaborating entity "altsyncram" for hierarchy "RAM:memdata|altsyncram:altsyncram_component" File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/ram.v Line: 86
+Info (12130): Elaborated megafunction instantiation "RAM:memdata|altsyncram:altsyncram_component" File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/ram.v Line: 86
+Info (12133): Instantiated megafunction "RAM:memdata|altsyncram:altsyncram_component" with the following parameter: File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/ram.v Line: 86
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
     Info (12134): Parameter "init_file" = "ram.mif"
@@ -602,45 +965,45 @@ Info (12133): Instantiated megafunction "processor:procesador|RAM:memdata|altsyn
     Info (12134): Parameter "width_a" = "24"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_u9o1.tdf
-    Info (12023): Found entity 1: altsyncram_u9o1 File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/db/altsyncram_u9o1.tdf Line: 34
-Info (12128): Elaborating entity "altsyncram_u9o1" for hierarchy "processor:procesador|RAM:memdata|altsyncram:altsyncram_component|altsyncram_u9o1:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+    Info (12023): Found entity 1: altsyncram_u9o1 File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/db/altsyncram_u9o1.tdf Line: 34
+Info (12128): Elaborating entity "altsyncram_u9o1" for hierarchy "RAM:memdata|altsyncram:altsyncram_component|altsyncram_u9o1:auto_generated" File: /home/josudelatico/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_dla.tdf
-    Info (12023): Found entity 1: decode_dla File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/db/decode_dla.tdf Line: 23
-Info (12128): Elaborating entity "decode_dla" for hierarchy "processor:procesador|RAM:memdata|altsyncram:altsyncram_component|altsyncram_u9o1:auto_generated|decode_dla:decode3" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/db/altsyncram_u9o1.tdf Line: 44
-Info (12128): Elaborating entity "asip" for hierarchy "processor:procesador|asip:myProcessor" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/processor.sv Line: 12
-Info (12128): Elaborating entity "controlUnit" for hierarchy "processor:procesador|asip:myProcessor|controlUnit:controller" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/asip.sv Line: 8
-Info (12128): Elaborating entity "decoder" for hierarchy "processor:procesador|asip:myProcessor|controlUnit:controller|decoder:deco" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/controlUnit.sv Line: 7
-Info (12128): Elaborating entity "condLogic" for hierarchy "processor:procesador|asip:myProcessor|controlUnit:controller|condLogic:conditional" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/controlUnit.sv Line: 8
-Warning (10034): Output port "PCSrc" at condLogic.sv(2) has no driver File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/condLogic.sv Line: 2
-Info (12128): Elaborating entity "flopenr" for hierarchy "processor:procesador|asip:myProcessor|controlUnit:controller|condLogic:conditional|flopenr:flagreg1" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/condLogic.sv Line: 9
-Info (12128): Elaborating entity "datapath" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/asip.sv Line: 11
-Info (12128): Elaborating entity "regFile" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|regFile:regfile" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/datapath.sv Line: 12
-Info (12128): Elaborating entity "ffNextValue" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|ffNextValue:pcRegister" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/datapath.sv Line: 15
-Info (12128): Elaborating entity "adder" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|adder:pcAdder" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/datapath.sv Line: 16
-Info (12128): Elaborating entity "extendSign" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|extendSign:extSign" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/datapath.sv Line: 19
-Warning (10230): Verilog HDL assignment warning at extendSign.sv(9): truncated value with size 32 to match size of target (24) File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/extendSign.sv Line: 9
-Info (12128): Elaborating entity "mux2a1" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|mux2a1:muxRegFile" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/datapath.sv Line: 22
-Info (12128): Elaborating entity "mux2a1" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|mux2a1:muxALU" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/datapath.sv Line: 25
-Info (12128): Elaborating entity "alu" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/datapath.sv Line: 31
-Info (12128): Elaborating entity "nbit_full_adder" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_full_adder:sum_instance" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/alu.sv Line: 15
-Info (12128): Elaborating entity "full_adder" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[0].f1_instance" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/nbit_full_adder.sv Line: 14
-Info (12128): Elaborating entity "nbit_multiplier" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_multiplier:multInst" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/alu.sv Line: 17
-Warning (10230): Verilog HDL assignment warning at nbit_multiplier.sv(5): truncated value with size 32 to match size of target (24) File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/nbit_multiplier.sv Line: 5
-Warning (10230): Verilog HDL assignment warning at nbit_multiplier.sv(7): truncated value with size 32 to match size of target (24) File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/nbit_multiplier.sv Line: 7
-Info (12128): Elaborating entity "nbit_divider" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_divider:divInst" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/alu.sv Line: 19
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "clk" is missing source, defaulting to GND File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/processor_tb.sv Line: 5
-Info (144001): Generated suppressed messages file C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/output_files/Alu.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 4812 megabytes
-    Info: Processing ended: Sun May 08 21:53:15 2022
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:27
+    Info (12023): Found entity 1: decode_dla File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/db/decode_dla.tdf Line: 23
+Info (12128): Elaborating entity "decode_dla" for hierarchy "RAM:memdata|altsyncram:altsyncram_component|altsyncram_u9o1:auto_generated|decode_dla:decode3" File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/db/altsyncram_u9o1.tdf Line: 44
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_divider:divInst|Div0" File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/nbit_divider.sv Line: 2
+Info (12130): Elaborated megafunction instantiation "asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_divider:divInst|lpm_divide:Div0" File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/nbit_divider.sv Line: 2
+Info (12133): Instantiated megafunction "asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_divider:divInst|lpm_divide:Div0" with the following parameter: File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/nbit_divider.sv Line: 2
+    Info (12134): Parameter "LPM_WIDTHN" = "24"
+    Info (12134): Parameter "LPM_WIDTHD" = "24"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_5dm.tdf
+    Info (12023): Found entity 1: lpm_divide_5dm File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/db/lpm_divide_5dm.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_bnh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_bnh File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/db/sign_div_unsign_bnh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_s2f.tdf
+    Info (12023): Found entity 1: alt_u_div_s2f File: /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/db/alt_u_div_s2f.tdf Line: 23
+Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/output_files/Alu.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 2094 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 56 output pins
+    Info (21061): Implemented 1652 logic cells
+    Info (21064): Implemented 384 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
+    Info: Peak virtual memory: 485 megabytes
+    Info: Processing ended: Mon May  9 15:22:28 2022
+    Info: Elapsed time: 00:00:25
+    Info: Total CPU time (on all processors): 00:00:45
 
 
-+--------------------------------------------+
-; Analysis & Elaboration Suppressed Messages ;
-+--------------------------------------------+
-The suppressed messages can be found in C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/output_files/Alu.map.smsg.
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in /home/josudelatico/Desktop/ProyectoArquiGrupal/ALU/output_files/Alu.map.smsg.
 
 
