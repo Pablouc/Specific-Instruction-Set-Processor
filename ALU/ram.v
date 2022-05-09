@@ -4,7 +4,7 @@
 // MODULE: altsyncram 
 
 // ============================================================
-// File Name: ram.v
+// File Name: RAM.v
 // Megafunction Name(s):
 // 			altsyncram
 //
@@ -37,7 +37,7 @@
 // synopsys translate_off
 `timescale 1 ps / 1 ps
 // synopsys translate_on
-module ram (
+module RAM (
 	address,
 	clock,
 	data,
@@ -166,10 +166,10 @@ endmodule
 // Retrieval info: CONNECT: @data_a 0 0 24 0 data 0 0 24 0
 // Retrieval info: CONNECT: @wren_a 0 0 0 0 wren 0 0 0 0
 // Retrieval info: CONNECT: q 0 0 24 0 @q_a 0 0 24 0
-// Retrieval info: GEN_FILE: TYPE_NORMAL ram.v TRUE
-// Retrieval info: GEN_FILE: TYPE_NORMAL ram.inc FALSE
-// Retrieval info: GEN_FILE: TYPE_NORMAL ram.cmp FALSE
-// Retrieval info: GEN_FILE: TYPE_NORMAL ram.bsf FALSE
-// Retrieval info: GEN_FILE: TYPE_NORMAL ram_inst.v FALSE
-// Retrieval info: GEN_FILE: TYPE_NORMAL ram_bb.v TRUE
+// Retrieval info: GEN_FILE: TYPE_NORMAL RAM.v TRUE
+// Retrieval info: GEN_FILE: TYPE_NORMAL RAM.inc FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL RAM.cmp FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL RAM.bsf FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL RAM_inst.v FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL RAM_bb.v TRUE
 // Retrieval info: LIB_FILE: altera_mf

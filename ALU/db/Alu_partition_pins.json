@@ -4,75 +4,235 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "out[0]",
+					"name" : "aluRes[0]",
 					"strict" : false
 				},
 				{
-					"name" : "out[1]",
+					"name" : "aluRes[1]",
 					"strict" : false
 				},
 				{
-					"name" : "out[2]",
+					"name" : "aluRes[2]",
 					"strict" : false
 				},
 				{
-					"name" : "out[3]",
+					"name" : "aluRes[3]",
 					"strict" : false
 				},
 				{
-					"name" : "co",
+					"name" : "aluRes[4]",
 					"strict" : false
 				},
 				{
-					"name" : "cero",
+					"name" : "aluRes[5]",
 					"strict" : false
 				},
 				{
-					"name" : "acarreo",
+					"name" : "aluRes[6]",
 					"strict" : false
 				},
 				{
-					"name" : "ci",
+					"name" : "aluRes[7]",
 					"strict" : false
 				},
 				{
-					"name" : "a[0]",
+					"name" : "aluRes[8]",
 					"strict" : false
 				},
 				{
-					"name" : "b[0]",
+					"name" : "aluRes[9]",
 					"strict" : false
 				},
 				{
-					"name" : "opCode[0]",
+					"name" : "aluRes[10]",
 					"strict" : false
 				},
 				{
-					"name" : "opCode[1]",
+					"name" : "aluRes[11]",
 					"strict" : false
 				},
 				{
-					"name" : "b[3]",
+					"name" : "aluRes[12]",
 					"strict" : false
 				},
 				{
-					"name" : "b[1]",
+					"name" : "aluRes[13]",
 					"strict" : false
 				},
 				{
-					"name" : "a[1]",
+					"name" : "aluRes[14]",
 					"strict" : false
 				},
 				{
-					"name" : "b[2]",
+					"name" : "aluRes[15]",
 					"strict" : false
 				},
 				{
-					"name" : "a[2]",
+					"name" : "pc[0]",
 					"strict" : false
 				},
 				{
-					"name" : "a[3]",
+					"name" : "pc[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[7]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[8]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[9]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[10]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[11]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[12]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[13]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[14]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[15]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[0]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[1]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[2]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[3]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[4]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[5]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[6]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[7]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[8]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[9]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[10]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[11]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[12]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[13]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[14]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[15]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[16]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[17]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[18]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[19]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[20]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[21]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[22]",
+					"strict" : false
+				},
+				{
+					"name" : "inst[23]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
 					"strict" : false
 				}
 			]

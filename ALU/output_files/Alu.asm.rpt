@@ -1,5 +1,5 @@
 Assembler report for Alu
-Mon May 02 13:44:19 2022
+Sun May 08 20:43:55 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -38,9 +38,9 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon May 02 13:44:19 2022 ;
+; Assembler Status      ; Successful - Sun May 08 20:43:55 2022 ;
 ; Revision Name         ; Alu                                   ;
-; Top-level Entity Name ; muxprueba                             ;
+; Top-level Entity Name ; processor                             ;
 ; Family                ; Cyclone V                             ;
 ; Device                ; 5CSEMA5F31C6                          ;
 +-----------------------+---------------------------------------+
@@ -67,8 +67,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------+------------------------------------------------------------------------------------------+
 ; Option         ; Setting                                                                                  ;
 +----------------+------------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x00B00653                                                                               ;
-; Checksum       ; 0x00B00653                                                                               ;
+; JTAG usercode  ; 0x07E4E7E6                                                                               ;
+; Checksum       ; 0x07E4E7E6                                                                               ;
 +----------------+------------------------------------------------------------------------------------------+
 
 
@@ -78,14 +78,14 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon May 02 13:44:05 2022
+    Info: Processing started: Sun May 08 20:43:37 2022
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Alu -c Alu
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4835 megabytes
-    Info: Processing ended: Mon May 02 13:44:19 2022
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:08
+    Info: Peak virtual memory: 4889 megabytes
+    Info: Processing ended: Sun May 08 20:43:55 2022
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:14
 
 
