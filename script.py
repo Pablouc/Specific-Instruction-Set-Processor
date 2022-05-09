@@ -93,13 +93,29 @@ def entera():
             pixel=0.299*j[0]+0.587*j[1]+0.114*j[2]
             linea.append(int(pixel))
         imagen_grises.append(linea)
-    
+    gg=np.array(imagen_cuadrante)
+    plt.imshow(gg, cmap='gray', vmin = 0, vmax = 255, interpolation="bilinear")
+    plt.show()
 
 
 
-    gg=np.array(imagen_grises)
+
+
+
+
+
+
+
+
+
+
+
+
+
     out = np.zeros((384, 384, 3))
-    gg2=interpolate_bilinear_integer(img, 96, 96, out, 384, 384)
+    gg2=interpolate_bilinear_integer(img, 96, 96, out, 96, 96)
+    #gg2=gg2.tolist()
+    print(gg2)
 
     """"
     mat=[]
@@ -129,10 +145,8 @@ def entera():
 
     #ff=[[45,45,45],[23,90,213]]
     #imgplot = plt.imshow(imagen_cuadrante)
-    plt.imshow(imagen_grises, cmap='gray', vmin = 0, vmax = 255, interpolation="bilinear")
+    plt.imshow(gg2, cmap='gray', vmin = 0, vmax = 255, interpolation="none")
     
-    plt.show()
-
 def flotante():
         #cantidad de matrices:alto
     #cantidad de filas:ancho
@@ -160,13 +174,23 @@ def flotante():
             pixel=0.299*j[0]+0.587*j[1]+0.114*j[2]
             linea.append(int(pixel))
         imagen_grises.append(linea)
-    
-
-
-
     gg=np.array(imagen_grises)
+    plt.imshow(gg, cmap='gray', vmin = 0, vmax = 255, interpolation="bilinear")
+    plt.show()
+
+
+
+
+
+
+
+
+
+
+
     out = np.zeros((384, 384, 3))
-    gg2=interpolate_bilinear_flotante(img, 96, 96, out, 384, 384)
+    gg2=interpolate_bilinear_flotante(img, 96, 96, out, 96, 96)
+    gg2=gg2.tolist()
 
     """"
     mat=[]
@@ -196,9 +220,9 @@ def flotante():
 
     #ff=[[45,45,45],[23,90,213]]
     #imgplot = plt.imshow(imagen_cuadrante)
-    plt.imshow(imagen_grises, cmap='gray', vmin = 0, vmax = 255, interpolation="bilinear")
-    
-    plt.show()
+
+
+    plt.imshow(gg2, cmap='gray', vmin = 0, vmax = 255, interpolation="none")
 
 def interpolate_bilinear_integer(array_in, width_in, height_in, array_out, width_out, height_out):
     for i in range(height_out):
@@ -224,9 +248,9 @@ def interpolate_bilinear_integer(array_in, width_in, height_in, array_out, width
             y_next = min(y_next, height_in - 1)
             
             # Distances between neighbour nodes in input space
-            Dy_next = y_next - y_in;
+            Dy_next = y_next - y_in
             Dy_prev = 1. - Dy_next; # because next - prev = 1
-            Dx_next = x_next - x_in;
+            Dx_next = x_next - x_in
             Dx_prev = 1. - Dx_next; # because next - prev = 1
             
             # Interpolate over 3 RGB layers
@@ -262,9 +286,9 @@ def interpolate_bilinear_flotante(array_in, width_in, height_in, array_out, widt
             y_next = min(y_next, height_in - 1)
             
             # Distances between neighbour nodes in input space
-            Dy_next = y_next - y_in;
+            Dy_next = y_next - y_in
             Dy_prev = 1. - Dy_next; # because next - prev = 1
-            Dx_next = x_next - x_in;
+            Dx_next = x_next - x_in
             Dx_prev = 1. - Dx_next; # because next - prev = 1
 
             x_prev = int(np.floor(x_in))
@@ -277,4 +301,8 @@ def interpolate_bilinear_flotante(array_in, width_in, height_in, array_out, widt
                 array_out[i][j][c] = Dy_prev * (array_in[y_next][x_prev][c] * Dx_next + array_in[y_next][x_next][c] * Dx_prev) \
                 + Dy_next * (array_in[y_prev][x_prev][c] * Dx_next + array_in[y_prev][x_next][c] * Dx_prev)
                 
+    print(array_out)
     return array_out
+
+
+entera()
