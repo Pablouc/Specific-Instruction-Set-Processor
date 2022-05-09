@@ -1,9 +1,9 @@
 module datapath(input logic clk, rst, regWrite, aluSrc, PCSrc, immSrc,memToReg, memWrite,ra2Src, 
 					input logic [1:0]  aluControl,input logic [23:0] inst,rdMemData, 
-					output logic [23:0] result,rd2, output logic [15:0] aluRes, PC, output logic cero );
+					output logic [23:0] result,data, output logic [15:0] aluRes, PC, output logic cero );
 	
 	
-	logic [23:0] aluResult, rd1, extImm, srcBAlu;
+	logic [23:0] aluResult, rd1,rd2, extImm, srcBAlu;
 	logic [15:0] pcNext;
 	logic [3:0] ra2;
 	logic ci, co, negativo, acarreo, desbordamiento;
@@ -32,5 +32,6 @@ module datapath(input logic clk, rst, regWrite, aluSrc, PCSrc, immSrc,memToReg, 
 	
 	//aluRes es para el pc.
 	assign aluRes= aluResult[15:0];
+	assign data = rd2;
 	
 endmodule
