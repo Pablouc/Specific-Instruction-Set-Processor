@@ -1,13 +1,14 @@
-module asip(input logic clk, rst , input logic [23:0] inst, output logic[15:0] PC, aluRes);
-
-	logic regWrite, aluSrc, PCSrc, immSrc, aluZero;
+module asip(input logic clk, rst , input logic [23:0] inst, rdMemData, output logic[15:0] PC, aluRes,
+				output logic [23:0] result,rd2, output logic memWrite);
+				
+	logic regWrite, aluSrc, PCSrc, immSrc, aluZero, memToReg, ra2Src;
 	logic [1:0] regSrc, aluControl;
 	
-	controlUnit controller(clk, rst, aluZero, inst[23:20], regWrite, aluSrc, PCSrc, immSrc, aluControl);
+	controlUnit controller(clk, rst, aluZero, inst[23:20], regWrite, aluSrc, PCSrc, immSrc,memToReg, 
+									memWrite,ra2Src, aluControl);
 	
-	datapath datapath(clk, rst, regWrite, aluSrc, PCSrc, immSrc, aluControl, inst, aluRes,PC, aluZero);
-
-		
+	datapath datapath(clk,rst,regWrite,aluSrc, PCSrc,immSrc,memToReg,memWrite,ra2Src,  aluControl,
+							inst,rdMemData,result,rd2, aluRes,PC, aluZero);
 	
 	
 

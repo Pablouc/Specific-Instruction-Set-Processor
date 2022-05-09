@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEMA5F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY processor_tb
+set_global_assignment -name TOP_LEVEL_ENTITY processor
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:49:48  AUGUST 29, 2021"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
@@ -62,7 +62,6 @@ set_global_assignment -name SYSTEMVERILOG_FILE alu.sv
 set_global_assignment -name SYSTEMVERILOG_FILE adder.sv
 set_global_assignment -name SYSTEMVERILOG_FILE extendSign.sv
 set_global_assignment -name SYSTEMVERILOG_FILE processor.sv
-set_global_assignment -name QIP_FILE ram.qip
 set_global_assignment -name SYSTEMVERILOG_FILE asip.sv
 set_global_assignment -name SYSTEMVERILOG_FILE controlUnit.sv
 set_global_assignment -name SYSTEMVERILOG_FILE decoder.sv
@@ -73,6 +72,7 @@ set_global_assignment -name SYSTEMVERILOG_FILE flopenr.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ffNextValue.sv
 set_global_assignment -name SYSTEMVERILOG_FILE processor_tb.sv
 set_global_assignment -name QIP_FILE ROM.qip
+set_global_assignment -name QIP_FILE RAM.qip
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

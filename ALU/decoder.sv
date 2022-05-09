@@ -1,5 +1,5 @@
 module decoder(input logic [3:0] opcode, output logic regWrite, aluSrc, PCSrc, immSrc, flagUpdate,
-						output  logic [1:0]  aluControl);
+					memToReg,memWrite,ra2Src, output  logic [1:0]  aluControl);
 
 						
 //flagUpdate es un enable para actualizar o no las flags.						
@@ -15,8 +15,11 @@ case(opcode)
 	aluSrc= 1'b0;
 	PCSrc=1'b0;
 	flagUpdate=1'b1;
+	memToReg=1'b1;
+	ra2Src=1'b0;
 	//para que no hayan latches
 	immSrc=1'b0;
+	memWrite=1'b0;
 	end
 
 4'b0001:begin
@@ -25,9 +28,13 @@ case(opcode)
 	regWrite=1'b1;
 	aluSrc= 1'b1;
 	PCSrc=1'b0;
+	memToReg=1'b1;
 	//extensión de signo[7:0]
 	immSrc=1'b0;
 	flagUpdate=1'b1;
+	//para que no hayan latches
+	memWrite=1'b0;
+	ra2Src=1'b0;
 	end
 
 4'b0010:begin
@@ -37,8 +44,11 @@ case(opcode)
 	aluSrc= 1'b0;
 	PCSrc=1'b0;
 	flagUpdate=1'b1;
+	memToReg=1'b1;
+	ra2Src=1'b0;
 	//para que no hayan latches
 	immSrc=1'b0;
+	memWrite=1'b0;
 	end
 
 4'b0011:begin
@@ -47,34 +57,58 @@ case(opcode)
 	regWrite=1'b1;
 	aluSrc= 1'b1;
 	PCSrc=1'b0;
+	memToReg=1'b1;
 	//extensión de signo[7:0]
 	immSrc=1'b0;
 	flagUpdate=1'b1;
+	//para que no hayan latches
+	memWrite=1'b0;
+	ra2Src=1'b0;
 	end
 
 4'b0100:begin
 	//suma
-	aluControl=2'b01;
+	aluControl=2'b00;
 	regWrite=1'b1;
 	aluSrc= 1'b0;
 	PCSrc=1'b0;
 	flagUpdate=1'b1;
+	memToReg=1'b1;
+	ra2Src=1'b0;
 	//para que no hayan latches
 	immSrc=1'b0;
+	memWrite=1'b0;
 	end
 
 4'b0101:begin
-	//suma
-	aluControl=2'b01;
+	//Load 
+	aluControl=2'b00;
 	regWrite=1'b1;
 	aluSrc= 1'b1;
 	PCSrc=1'b0;
-	//extensión de signo[7:0]
-	immSrc=1'b0;
 	flagUpdate=1'b1;
+	//extensión de signo[11:0]
+	immSrc=1'b1;
+	memToReg=1'b0;
+	//para que no hayan latches
+	memWrite=1'b0;
+	ra2Src=1'b0;
+
 	end
 
-//4'b0110:
+4'b0110:begin
+	//Store
+	aluControl=2'b00;
+	regWrite=1'b0;
+	aluSrc= 1'b1;
+	PCSrc=1'b0;
+	flagUpdate=1'b1;
+	memToReg=1'b0;
+	//extensión de signo[11:0]
+	immSrc=1'b1;
+	memWrite=1'b1;
+	ra2Src=1'b1;
+	end
 
 //4'b0111:
 
@@ -92,7 +126,19 @@ case(opcode)
 
 //4'b1110:
 
-//4'b1111:
+4'b1111:begin
+	//suma con inmediato
+	aluControl=2'b00;
+	regWrite=1'b1;
+	aluSrc= 1'b1;
+	PCSrc=1'b0;
+	flagUpdate=1'b1;
+	memToReg=1'b1;
+	//para que no hayan latches
+	immSrc=1'b0;
+	memWrite=1'b0;
+	ra2Src=1'b0;
+	end
 
 default:begin 
 	aluControl=2'b00;
@@ -101,6 +147,9 @@ default:begin
 	PCSrc=1'b0;
 	immSrc=1'b0;
 	flagUpdate=1'b0;
+	memToReg=1'b1;
+	memWrite=1'b0;
+	ra2Src=1'b0;
 	end
 
 endcase
