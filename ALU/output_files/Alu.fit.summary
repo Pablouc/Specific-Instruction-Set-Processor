@@ -1,12 +1,12 @@
-Fitter Status : Successful - Sun May 08 20:43:31 2022
+Fitter Status : Successful - Mon May 09 21:35:16 2022
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : Alu
 Top-level Entity Name : processor
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 971 / 32,070 ( 3 % )
-Total registers : 388
+Logic utilization (in ALMs) : 847 / 32,070 ( 3 % )
+Total registers : 505
 Total pins : 58 / 457 ( 13 % )
 Total virtual pins : 0
 Total block memory bits : 3,145,728 / 4,065,280 ( 77 % )

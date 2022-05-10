@@ -1,15 +1,16 @@
 module processor(input logic clk, reset, output logic[15:0] aluRes,pc, output logic [23:0]inst);
 
 	
-	logic [23:0] rdMemData,data, result;
-	logic [15:0] address;
-	logic memWrite;
+	logic [23:0] instrD,rdMemData,memWD, result;
+	logic [15:0] A;
+	logic memWriteM;
 	
 	ROM meminstructions(pc,clk, inst);
 
-	RAM memdata(aluRes,~clk, data, memWrite, rdMemData);
+	registerAROM reg1(inst,clk,instrD);
 	
-	asip myProcessor(clk,reset, inst,rdMemData, pc, aluRes,result,data, memWrite);
+	asip myProcessor(clk,reset, instrD,rdMemData, pc, aluRes,result,memWD, A,memWriteM);
 	 
+	RAM memdata(A,~clk, memWD, memWriteM, rdMemData);
 
 endmodule 

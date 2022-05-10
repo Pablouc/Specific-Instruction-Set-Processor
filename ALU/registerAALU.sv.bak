@@ -1,0 +1,10 @@
+module registerAROM(input logic [23:0] aluResult, input logic [23:0] writeData, input logic [23:0] WA3E, input logic clk, input logic flag
+	output logic [23:0] A, output logic [23:0] WD, output logic [23:0] WA3M, output logic flagOut ):
+	always_ff @(posedge clk) begin        
+       assign A = aluResult;
+		 assign WD = writeData;
+		 assign WA3M = WA3E;
+		 assign flagOut = flag;
+		 //assign MemWrite = MemW & zeroFlag; any flag
+	end
+endmodule;

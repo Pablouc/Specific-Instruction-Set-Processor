@@ -1,11 +1,10 @@
-module controlUnit(input logic clk, rst, aluZero, input logic[3:0] opcode, 
-					output logic regWrite, aluSrc, PCSrc, immSrc,memToReg,memWrite,ra2Src, 
+module controlUnit(input logic clk, rst, input logic[3:0] opcode, 
+					output logic aluSrc, immSrc,memToReg,ra2Src, PCS, regW, memWriteSrc, 
 					output logic [1:0]  aluControl);
 						
-logic PCS, regW, flagUpdate, memWriteSrc;
+logic flagUpdate;
 			
 	decoder deco(opcode, regW, aluSrc, PCS, immSrc,flagUpdate,memToReg,memWriteSrc,ra2Src, aluControl);
-   condLogic conditional(clk, rst, flagUpdate,aluZero, PCS, regW,memWriteSrc, PCSrc, regWrite, memWrite);
 
 
 endmodule 
