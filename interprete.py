@@ -279,12 +279,18 @@ def interprete():
     count = 0
 
     #output file(name can be changed to compare binary vs decimal output)
-    output = open("output_decimal.rbf", 'w')
+    output = open("rom.mif", 'w')
 
-        #read every line
+    output.write("""WIDTH=24;
+DEPTH=65536;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=UNS;
+
+CONTENT BEGIN\n""")
+
+    #read every line
     while True:
-        count += 1
-    
         # Get next line from file
         line = file1.readline()
 
@@ -295,10 +301,16 @@ def interprete():
 
         #converts binary string to decimal
         decimal=int(line,2)
-        #converts decimal to fixed lenght string
-        output.write(str(decimal).zfill(8))
-        #line jump (can be deleted)
-        output.write("\n")
+
+        #for space
+        spaces="       :   "
+        spaces=spaces[len(str(count)):]
+
+        output.write("    "+str(count)+spaces+str(decimal)+";\n")
+        count += 1
+
+    output.write("    ["+str(count)+"..65535]  :   0;\n")
+    output.write("END;")
 
 interprete()
 
