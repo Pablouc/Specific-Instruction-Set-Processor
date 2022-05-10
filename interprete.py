@@ -47,7 +47,7 @@ def interprete():
     count = 0
 
     #output file
-    output = open("output.rbf", "a")
+    output = open("output_binary.rbf", "a")
 
     #read every line
     while True:
@@ -136,22 +136,73 @@ def interprete():
         #add
         if (line.find("add")!=-1):
             list_line=line.split()
-            #opcode
-            output.write("0100")
-            #rd
-            output.write(register_num(list_line[1]))
-            #rs1
-            output.write(register_num(list_line[2]))
-            #rs2
-            output.write("0000")
-            #immediate
-            output.write("00000000")
 
-            #line jump (can be deleted)
-            output.write("\n")
+            #with immediate
+            if(list_line[3].isnumeric()):
+                #opcode
+                output.write("1111")
+                #rd
+                output.write(register_num(list_line[1]))
+                #rs1
+                output.write(register_num(list_line[2]))
+                #rs2
+                output.write("0000")
+                #immediate
+                binary_num=getbinary(int(list_line[3]), 8)
+                output.write(str(binary_num))
+
+                #line jump (can be deleted)
+                output.write("\n")
+
+            #no immediate
+            else:
+                #opcode
+                output.write("0100")
+                #rd
+                output.write(register_num(list_line[1]))
+                #rs1
+                output.write(register_num(list_line[2]))
+                #rs2
+                output.write(register_num(list_line[3]))
+                #immediate
+                output.write("00000000")
+                #line jump (can be deleted)
+                output.write("\n")
 
         #load
         if (line.find("ld")!=-1):
+            list_line=line.split()
+            
+            #with immediate
+            if(len(list_line)>3):
+                #opcode
+                output.write("0101")
+                #rd
+                output.write(register_num(list_line[1]))
+                #rs1
+                output.write(register_num(list_line[2]))
+                #immediate
+                binary_num=getbinary(int(list_line[3]), 12)
+                output.write(str(binary_num))
+
+                #line jump (can be deleted)
+                output.write("\n")
+
+            #no immediate
+            else:
+                #opcode
+                output.write("0101")
+                #rd
+                output.write(register_num(list_line[1]))
+                #rs1
+                output.write(register_num(list_line[2]))
+                #immediate
+                output.write("000000000000")
+                #line jump (can be deleted)
+                output.write("\n")
+
+        #store
+        if (line.find("str")!=-1):
             list_line=line.split()
             
             #r-i
@@ -172,39 +223,7 @@ def interprete():
             #r-r
             else:
                 #opcode
-                output.write("0101")
-                #rd
-                output.write(register_num(list_line[1]))
-                #rs1
-                output.write(register_num(list_line[2]))
-                #immediate
-                output.write("000000000000")
-                #line jump (can be deleted)
-                output.write("\n")
-
-        #store
-        if (line.find("str")!=-1):
-            list_line=line.split()
-            
-            #r-i
-            if(len(list_line)>3):
-                #opcode
-                output.write("1000")
-                #rd
-                output.write(register_num(list_line[1]))
-                #rs1
-                output.write(register_num(list_line[2]))
-                #immediate
-                binary_num=getbinary(int(list_line[3]), 12)
-                output.write(str(binary_num))
-
-                #line jump (can be deleted)
-                output.write("\n")
-
-            #r-r
-            else:
-                #opcode
-                output.write("0111")
+                output.write("0110")
                 #rd
                 output.write(register_num(list_line[1]))
                 #rs1
@@ -219,7 +238,7 @@ def interprete():
         if (line.find("br")!=-1):
             list_line=line.split()
             #opcode
-            output.write("1001")
+            output.write("0111")
             #rb
             output.write(register_num(list_line[1]))
             #rs1
@@ -236,7 +255,7 @@ def interprete():
         if (line.find("bcnd")!=-1):
             list_line=line.split()
             #opcode
-            output.write("1010")
+            output.write("1000")
             #rb
             output.write(register_num(list_line[1]))
             #rs1
@@ -249,9 +268,37 @@ def interprete():
             #line jump (can be deleted)
             output.write("\n")
 
-
-    
     file1.close()
+    output.close()
+
+    #binary to decimal
+
+    #input file 
+
+    file1 = open("output_binary.rbf", 'r')
+    count = 0
+
+    #output file(name can be changed to compare binary vs decimal output)
+    output = open("output_decimal.rbf", 'w')
+
+        #read every line
+    while True:
+        count += 1
+    
+        # Get next line from file
+        line = file1.readline()
+
+        # if line is empty
+        # end of file is reached
+        if not line:
+           break
+
+        #converts binary string to decimal
+        decimal=int(line,2)
+        #converts decimal to fixed lenght string
+        output.write(str(decimal).zfill(8))
+        #line jump (can be deleted)
+        output.write("\n")
 
 interprete()
 
