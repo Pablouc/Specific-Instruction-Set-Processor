@@ -1,9 +1,11 @@
 module registerAReg(input logic [23:0] rd1, input logic [23:0] rd2, input logic [3:0] ra3, input logic [23:0] extend, 
-			input logic clk, regWrite, aluSrc, PCSrc,memToReg, memWrite, 
+			input logic clk,rst, regWrite, aluSrc, PCSrc,memToReg, memWrite, 
 			input logic [1:0]  aluControl, output logic [23:0] SrcA, SrcB, 
 			output logic [3:0] WA3E, output logic [23:0] ExtImm, output logic regWriteE, aluSrcE, PCSrcE,memToRegE, memWriteE,
 			output logic [1:0]  aluControlE);
-	always_ff @(posedge clk) begin        
+	always_ff @(posedge clk, posedge rst) 
+	   if (rst) PCSrcE<=0;
+		else begin       
        SrcA <= rd1;
 		 SrcB <= rd2;
 		 ExtImm <= extend;
