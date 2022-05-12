@@ -1,0 +1,11 @@
+module hazardUnit(input logic pcSrc,input logic[3:0] opcode,  
+						output logic stallF); //, stallD, stallE, stallM );
+
+						
+
+
+assign stallF = ((opcode==4'b0111) & (pcSrc != 1'b1)) ? 1'b1 : 1'b0;
+			
+
+
+endmodule

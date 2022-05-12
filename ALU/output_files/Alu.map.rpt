@@ -1,5 +1,5 @@
 Analysis & Elaboration report for Alu
-Tue May 10 23:34:33 2022
+Thu May 12 10:23:24 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -62,7 +62,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Tue May 10 23:34:33 2022       ;
+; Analysis & Elaboration Status ; Successful - Thu May 12 10:23:24 2022       ;
 ; Quartus Prime Version         ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                 ; Alu                                         ;
 ; Top-level Entity Name         ; processor_tb                                ;
@@ -549,59 +549,61 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue May 10 23:34:22 2022
+    Info: Processing started: Thu May 12 10:23:13 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Alu -c Alu --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file alu_tb.sv
-    Info (12023): Found entity 1: Alu_tb File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 1
+    Info (12023): Found entity 1: Alu_tb File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/Alu_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file full_adder.sv
-    Info (12023): Found entity 1: full_adder File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/full_adder.sv Line: 1
+    Info (12023): Found entity 1: full_adder File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/full_adder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file nbit_full_adder.sv
-    Info (12023): Found entity 1: nbit_full_adder File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/nbit_full_adder.sv Line: 1
+    Info (12023): Found entity 1: nbit_full_adder File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/nbit_full_adder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file nbit_multiplier.sv
-    Info (12023): Found entity 1: nbit_multiplier File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/nbit_multiplier.sv Line: 1
+    Info (12023): Found entity 1: nbit_multiplier File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/nbit_multiplier.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file nbit_divider.sv
-    Info (12023): Found entity 1: nbit_divider File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/nbit_divider.sv Line: 1
+    Info (12023): Found entity 1: nbit_divider File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/nbit_divider.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file regfile.sv
-    Info (12023): Found entity 1: regFile File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/regFile.sv Line: 1
+    Info (12023): Found entity 1: regFile File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/regFile.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
-    Info (12023): Found entity 1: alu File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/alu.sv Line: 1
+    Info (12023): Found entity 1: alu File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/alu.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file adder.sv
-    Info (12023): Found entity 1: adder File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/adder.sv Line: 1
+    Info (12023): Found entity 1: adder File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/adder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file extendsign.sv
-    Info (12023): Found entity 1: extendSign File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/extendSign.sv Line: 1
+    Info (12023): Found entity 1: extendSign File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/extendSign.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file processor.sv
-    Info (12023): Found entity 1: processor File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/processor.sv Line: 1
+    Info (12023): Found entity 1: processor File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/processor.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file asip.sv
-    Info (12023): Found entity 1: asip File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/asip.sv Line: 1
+    Info (12023): Found entity 1: asip File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/asip.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file controlunit.sv
-    Info (12023): Found entity 1: controlUnit File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/controlUnit.sv Line: 1
+    Info (12023): Found entity 1: controlUnit File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/controlUnit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file decoder.sv
-    Info (12023): Found entity 1: decoder File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/decoder.sv Line: 1
+    Info (12023): Found entity 1: decoder File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/decoder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux2a1.sv
-    Info (12023): Found entity 1: mux2a1 File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/mux2a1.sv Line: 1
+    Info (12023): Found entity 1: mux2a1 File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/mux2a1.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file datapath.sv
-    Info (12023): Found entity 1: datapath File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/datapath.sv Line: 1
+    Info (12023): Found entity 1: datapath File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/datapath.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file condlogic.sv
-    Info (12023): Found entity 1: condLogic File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/condLogic.sv Line: 1
+    Info (12023): Found entity 1: condLogic File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/condLogic.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file flopenr.sv
-    Info (12023): Found entity 1: flopenr File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/flopenr.sv Line: 1
+    Info (12023): Found entity 1: flopenr File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/flopenr.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file ffnextvalue.sv
-    Info (12023): Found entity 1: ffNextValue File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/ffNextValue.sv Line: 1
+    Info (12023): Found entity 1: ffNextValue File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/ffNextValue.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file processor_tb.sv
-    Info (12023): Found entity 1: processor_tb File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/processor_tb.sv Line: 3
+    Info (12023): Found entity 1: processor_tb File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/processor_tb.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file rom.v
-    Info (12023): Found entity 1: ROM File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/ROM.v Line: 40
+    Info (12023): Found entity 1: ROM File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/ROM.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file ram.v
-    Info (12023): Found entity 1: RAM File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/RAM.v Line: 40
+    Info (12023): Found entity 1: RAM File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/RAM.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file hazardunit.sv
+    Info (12023): Found entity 1: hazardUnit File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/hazardUnit.sv Line: 1
 Info (12127): Elaborating entity "processor_tb" for the top level hierarchy
-Warning (10755): Verilog HDL warning at processor_tb.sv(12): assignments to clk create a combinational loop File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/processor_tb.sv Line: 12
-Info (12128): Elaborating entity "processor" for hierarchy "processor:procesador" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/processor_tb.sv Line: 9
-Info (12128): Elaborating entity "ROM" for hierarchy "processor:procesador|ROM:meminstructions" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/processor.sv Line: 8
-Info (12128): Elaborating entity "altsyncram" for hierarchy "processor:procesador|ROM:meminstructions|altsyncram:altsyncram_component" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/ROM.v Line: 82
-Info (12130): Elaborated megafunction instantiation "processor:procesador|ROM:meminstructions|altsyncram:altsyncram_component" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/ROM.v Line: 82
-Info (12133): Instantiated megafunction "processor:procesador|ROM:meminstructions|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/ROM.v Line: 82
+Warning (10755): Verilog HDL warning at processor_tb.sv(12): assignments to clk create a combinational loop File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/processor_tb.sv Line: 12
+Info (12128): Elaborating entity "processor" for hierarchy "processor:procesador" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/processor_tb.sv Line: 9
+Info (12128): Elaborating entity "ROM" for hierarchy "processor:procesador|ROM:meminstructions" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/processor.sv Line: 8
+Info (12128): Elaborating entity "altsyncram" for hierarchy "processor:procesador|ROM:meminstructions|altsyncram:altsyncram_component" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/ROM.v Line: 82
+Info (12130): Elaborated megafunction instantiation "processor:procesador|ROM:meminstructions|altsyncram:altsyncram_component" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/ROM.v Line: 82
+Info (12133): Instantiated megafunction "processor:procesador|ROM:meminstructions|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/ROM.v Line: 82
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
@@ -617,51 +619,52 @@ Info (12133): Instantiated megafunction "processor:procesador|ROM:meminstruction
     Info (12134): Parameter "width_a" = "24"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_s1g1.tdf
-    Info (12023): Found entity 1: altsyncram_s1g1 File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/db/altsyncram_s1g1.tdf Line: 32
+    Info (12023): Found entity 1: altsyncram_s1g1 File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/db/altsyncram_s1g1.tdf Line: 32
 Info (12128): Elaborating entity "altsyncram_s1g1" for hierarchy "processor:procesador|ROM:meminstructions|altsyncram:altsyncram_component|altsyncram_s1g1:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_61a.tdf
-    Info (12023): Found entity 1: decode_61a File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/db/decode_61a.tdf Line: 23
-Info (12128): Elaborating entity "decode_61a" for hierarchy "processor:procesador|ROM:meminstructions|altsyncram:altsyncram_component|altsyncram_s1g1:auto_generated|decode_61a:rden_decode" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/db/altsyncram_s1g1.tdf Line: 40
+    Info (12023): Found entity 1: decode_61a File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/db/decode_61a.tdf Line: 23
+Info (12128): Elaborating entity "decode_61a" for hierarchy "processor:procesador|ROM:meminstructions|altsyncram:altsyncram_component|altsyncram_s1g1:auto_generated|decode_61a:rden_decode" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/db/altsyncram_s1g1.tdf Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_bhb.tdf
-    Info (12023): Found entity 1: mux_bhb File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/db/mux_bhb.tdf Line: 23
-Info (12128): Elaborating entity "mux_bhb" for hierarchy "processor:procesador|ROM:meminstructions|altsyncram:altsyncram_component|altsyncram_s1g1:auto_generated|mux_bhb:mux2" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/db/altsyncram_s1g1.tdf Line: 41
+    Info (12023): Found entity 1: mux_bhb File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/db/mux_bhb.tdf Line: 23
+Info (12128): Elaborating entity "mux_bhb" for hierarchy "processor:procesador|ROM:meminstructions|altsyncram:altsyncram_component|altsyncram_s1g1:auto_generated|mux_bhb:mux2" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/db/altsyncram_s1g1.tdf Line: 41
 Warning (12125): Using design file registerarom.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: registerAROM File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/registerarom.sv Line: 1
-Info (12128): Elaborating entity "registerAROM" for hierarchy "processor:procesador|registerAROM:reg1" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/processor.sv Line: 10
-Info (12128): Elaborating entity "asip" for hierarchy "processor:procesador|asip:myProcessor" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/processor.sv Line: 12
-Info (12128): Elaborating entity "controlUnit" for hierarchy "processor:procesador|asip:myProcessor|controlUnit:controller" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/asip.sv Line: 13
-Info (12128): Elaborating entity "decoder" for hierarchy "processor:procesador|asip:myProcessor|controlUnit:controller|decoder:deco" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/controlUnit.sv Line: 8
-Info (12128): Elaborating entity "datapath" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/asip.sv Line: 18
-Info (12128): Elaborating entity "regFile" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|regFile:regfile" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/datapath.sv Line: 15
-Info (12128): Elaborating entity "adder" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|adder:pcAdder" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/datapath.sv Line: 19
-Info (12128): Elaborating entity "mux2a1" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|mux2a1:muxPcSrc" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/datapath.sv Line: 21
-Info (12128): Elaborating entity "ffNextValue" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|ffNextValue:pcRegister" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/datapath.sv Line: 22
-Info (12128): Elaborating entity "extendSign" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|extendSign:extSign" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/datapath.sv Line: 25
-Warning (10230): Verilog HDL assignment warning at extendSign.sv(9): truncated value with size 32 to match size of target (24) File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/extendSign.sv Line: 9
-Info (12128): Elaborating entity "mux2a1" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|mux2a1:muxA1RegFile" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/datapath.sv Line: 28
+    Info (12023): Found entity 1: registerAROM File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/registerarom.sv Line: 1
+Info (12128): Elaborating entity "registerAROM" for hierarchy "processor:procesador|registerAROM:reg1" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/processor.sv Line: 10
+Info (12128): Elaborating entity "asip" for hierarchy "processor:procesador|asip:myProcessor" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/processor.sv Line: 12
+Info (12128): Elaborating entity "controlUnit" for hierarchy "processor:procesador|asip:myProcessor|controlUnit:controller" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/asip.sv Line: 13
+Info (12128): Elaborating entity "decoder" for hierarchy "processor:procesador|asip:myProcessor|controlUnit:controller|decoder:deco" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/controlUnit.sv Line: 8
+Info (12128): Elaborating entity "hazardUnit" for hierarchy "processor:procesador|asip:myProcessor|hazardUnit:hazardU" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/asip.sv Line: 16
+Info (12128): Elaborating entity "datapath" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/asip.sv Line: 21
+Info (12128): Elaborating entity "regFile" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|regFile:regfile" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/datapath.sv Line: 15
+Info (12128): Elaborating entity "adder" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|adder:pcAdder" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/datapath.sv Line: 19
+Info (12128): Elaborating entity "mux2a1" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|mux2a1:muxPcSrc" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/datapath.sv Line: 21
+Info (12128): Elaborating entity "ffNextValue" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|ffNextValue:pcRegister" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/datapath.sv Line: 22
+Info (12128): Elaborating entity "extendSign" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|extendSign:extSign" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/datapath.sv Line: 25
+Warning (10230): Verilog HDL assignment warning at extendSign.sv(9): truncated value with size 32 to match size of target (24) File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/extendSign.sv Line: 9
+Info (12128): Elaborating entity "mux2a1" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|mux2a1:muxA1RegFile" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/datapath.sv Line: 28
 Warning (12125): Using design file registerareg.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: registerAReg File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/registerareg.sv Line: 1
-Info (12128): Elaborating entity "registerAReg" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|registerAReg:regARefFile" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/datapath.sv Line: 36
-Info (12128): Elaborating entity "mux2a1" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|mux2a1:muxALU" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/datapath.sv Line: 39
-Info (12128): Elaborating entity "alu" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/datapath.sv Line: 42
-Info (12128): Elaborating entity "nbit_full_adder" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_full_adder:sum_instance" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/alu.sv Line: 15
-Info (12128): Elaborating entity "full_adder" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[0].f1_instance" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/nbit_full_adder.sv Line: 14
-Info (12128): Elaborating entity "nbit_multiplier" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_multiplier:multInst" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/alu.sv Line: 17
-Warning (10230): Verilog HDL assignment warning at nbit_multiplier.sv(5): truncated value with size 32 to match size of target (24) File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/nbit_multiplier.sv Line: 5
-Warning (10230): Verilog HDL assignment warning at nbit_multiplier.sv(7): truncated value with size 32 to match size of target (24) File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/nbit_multiplier.sv Line: 7
-Info (12128): Elaborating entity "nbit_divider" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_divider:divInst" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/alu.sv Line: 19
-Info (12128): Elaborating entity "condLogic" for hierarchy "processor:procesador|asip:myProcessor|condLogic:conditional" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/asip.sv Line: 22
-Info (12128): Elaborating entity "flopenr" for hierarchy "processor:procesador|asip:myProcessor|condLogic:conditional|flopenr:flagreg1" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/condLogic.sv Line: 9
+    Info (12023): Found entity 1: registerAReg File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/registerareg.sv Line: 1
+Info (12128): Elaborating entity "registerAReg" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|registerAReg:regARefFile" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/datapath.sv Line: 36
+Info (12128): Elaborating entity "mux2a1" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|mux2a1:muxALU" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/datapath.sv Line: 39
+Info (12128): Elaborating entity "alu" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/datapath.sv Line: 42
+Info (12128): Elaborating entity "nbit_full_adder" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_full_adder:sum_instance" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/alu.sv Line: 15
+Info (12128): Elaborating entity "full_adder" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[0].f1_instance" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/nbit_full_adder.sv Line: 14
+Info (12128): Elaborating entity "nbit_multiplier" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_multiplier:multInst" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/alu.sv Line: 17
+Warning (10230): Verilog HDL assignment warning at nbit_multiplier.sv(5): truncated value with size 32 to match size of target (24) File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/nbit_multiplier.sv Line: 5
+Warning (10230): Verilog HDL assignment warning at nbit_multiplier.sv(7): truncated value with size 32 to match size of target (24) File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/nbit_multiplier.sv Line: 7
+Info (12128): Elaborating entity "nbit_divider" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_divider:divInst" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/alu.sv Line: 19
+Info (12128): Elaborating entity "condLogic" for hierarchy "processor:procesador|asip:myProcessor|condLogic:conditional" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/asip.sv Line: 25
+Info (12128): Elaborating entity "flopenr" for hierarchy "processor:procesador|asip:myProcessor|condLogic:conditional|flopenr:flagreg1" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/condLogic.sv Line: 9
 Warning (12125): Using design file registeraalu.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: registerAALU File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/registeraalu.sv Line: 1
-Info (12128): Elaborating entity "registerAALU" for hierarchy "processor:procesador|asip:myProcessor|registerAALU:regALU" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/asip.sv Line: 27
+    Info (12023): Found entity 1: registerAALU File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/registeraalu.sv Line: 1
+Info (12128): Elaborating entity "registerAALU" for hierarchy "processor:procesador|asip:myProcessor|registerAALU:regALU" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/asip.sv Line: 30
 Warning (12125): Using design file registeramem.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: registerAMem File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/registeramem.sv Line: 1
-Info (12128): Elaborating entity "registerAMem" for hierarchy "processor:procesador|asip:myProcessor|registerAMem:regMem" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/asip.sv Line: 35
-Info (12128): Elaborating entity "RAM" for hierarchy "processor:procesador|RAM:memdata" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/processor.sv Line: 14
-Info (12128): Elaborating entity "altsyncram" for hierarchy "processor:procesador|RAM:memdata|altsyncram:altsyncram_component" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/RAM.v Line: 86
-Info (12130): Elaborated megafunction instantiation "processor:procesador|RAM:memdata|altsyncram:altsyncram_component" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/RAM.v Line: 86
-Info (12133): Instantiated megafunction "processor:procesador|RAM:memdata|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/RAM.v Line: 86
+    Info (12023): Found entity 1: registerAMem File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/registeramem.sv Line: 1
+Info (12128): Elaborating entity "registerAMem" for hierarchy "processor:procesador|asip:myProcessor|registerAMem:regMem" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/asip.sv Line: 38
+Info (12128): Elaborating entity "RAM" for hierarchy "processor:procesador|RAM:memdata" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/processor.sv Line: 14
+Info (12128): Elaborating entity "altsyncram" for hierarchy "processor:procesador|RAM:memdata|altsyncram:altsyncram_component" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/RAM.v Line: 86
+Info (12130): Elaborated megafunction instantiation "processor:procesador|RAM:memdata|altsyncram:altsyncram_component" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/RAM.v Line: 86
+Info (12133): Instantiated megafunction "processor:procesador|RAM:memdata|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/RAM.v Line: 86
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
     Info (12134): Parameter "init_file" = "ram.mif"
@@ -678,17 +681,17 @@ Info (12133): Instantiated megafunction "processor:procesador|RAM:memdata|altsyn
     Info (12134): Parameter "width_a" = "24"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_u9o1.tdf
-    Info (12023): Found entity 1: altsyncram_u9o1 File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/db/altsyncram_u9o1.tdf Line: 34
+    Info (12023): Found entity 1: altsyncram_u9o1 File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/db/altsyncram_u9o1.tdf Line: 34
 Info (12128): Elaborating entity "altsyncram_u9o1" for hierarchy "processor:procesador|RAM:memdata|altsyncram:altsyncram_component|altsyncram_u9o1:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_dla.tdf
-    Info (12023): Found entity 1: decode_dla File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/db/decode_dla.tdf Line: 23
-Info (12128): Elaborating entity "decode_dla" for hierarchy "processor:procesador|RAM:memdata|altsyncram:altsyncram_component|altsyncram_u9o1:auto_generated|decode_dla:decode3" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/db/altsyncram_u9o1.tdf Line: 44
+    Info (12023): Found entity 1: decode_dla File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/db/decode_dla.tdf Line: 23
+Info (12128): Elaborating entity "decode_dla" for hierarchy "processor:procesador|RAM:memdata|altsyncram:altsyncram_component|altsyncram_u9o1:auto_generated|decode_dla:decode3" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/db/altsyncram_u9o1.tdf Line: 44
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "clk" is missing source, defaulting to GND File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/processor_tb.sv Line: 5
-Info (144001): Generated suppressed messages file C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/output_files/Alu.map.smsg
+    Warning (12110): Net "clk" is missing source, defaulting to GND File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/processor_tb.sv Line: 5
+Info (144001): Generated suppressed messages file C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/output_files/Alu.map.smsg
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 11 warnings
     Info: Peak virtual memory: 4810 megabytes
-    Info: Processing ended: Tue May 10 23:34:33 2022
+    Info: Processing ended: Thu May 12 10:23:24 2022
     Info: Elapsed time: 00:00:11
     Info: Total CPU time (on all processors): 00:00:27
 
@@ -696,6 +699,6 @@ Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 11 warnings
 +--------------------------------------------+
 ; Analysis & Elaboration Suppressed Messages ;
 +--------------------------------------------+
-The suppressed messages can be found in C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Arqui/ALU/output_files/Alu.map.smsg.
+The suppressed messages can be found in C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/output_files/Alu.map.smsg.
 
 

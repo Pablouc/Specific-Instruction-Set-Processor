@@ -1,5 +1,5 @@
-module asip(input logic clk, rst , input logic [23:0] inst, rdMemData, output logic[15:0] PC, aluRes,
-				output logic [23:0] resultW, memWD, output logic [15:0] A, output logic memWriteM);
+module asip(input logic clk, rst , input logic [23:0] instPrev, inst, rdMemData, output logic[15:0] PC, aluRes,
+				output logic [23:0] resultW, memWD, output logic [15:0] A, output logic memWriteM, stallF);
 				
 	logic aluSrc, immSrc, aluZero, memToReg, ra2Src,ra1Src, regWriteE, PCSrcE,memToRegE, 
 	PCS, regW, memWriteSrc,memWriteE, PCSrcE2, regWriteE2, memWriteE2,
@@ -13,7 +13,10 @@ module asip(input logic clk, rst , input logic [23:0] inst, rdMemData, output lo
 									memWriteSrc, aluControl);
 	
 	
-	datapath datapath(clk,rst,regW,regWriteW,aluSrc, PCS,immSrc,memToReg,memWriteSrc,ra2Src,ra1Src,PCSrcW, 
+	hazardUnit hazardU( PCS, PCSrcE, PCSrcM, PCSrcW, stallF);
+	
+	
+	datapath datapath(clk,rst,stallF,regW,regWriteW,aluSrc, PCS,immSrc,memToReg,memWriteSrc,ra2Src,ra1Src,PCSrcW, 
 							aluControl,inst,WA3W,resultW,srcB, aluRes,PC, aluZero, regWriteE, PCSrcE,
 							memToRegE, memWriteE, WA3E);
 	

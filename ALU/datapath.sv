@@ -1,4 +1,4 @@
-module datapath(input logic clk, rst, regWrite,regWriteW, aluSrc, PCSrc, immSrc,memToReg, memWrite,ra2Src,ra1Src,PCSrcW, 
+module datapath(input logic clk, rst,stallF, regWrite,regWriteW, aluSrc, PCSrc, immSrc,memToReg, memWrite,ra2Src,ra1Src,PCSrcW, 
 					input logic [1:0]  aluControl,input logic [23:0] inst,input logic [3:0] WA3W,
 					input logic [23:0] resultW,output logic [23:0] srcB, output logic [15:0] aluRes, PC, output logic cero, 
 					regWriteE, PCSrcE,memToRegE, memWriteE, output logic [3:0] WA3E );
@@ -19,7 +19,7 @@ module datapath(input logic clk, rst, regWrite,regWriteW, aluSrc, PCSrc, immSrc,
 	adder #(16)pcAdder(PC, 16'b1 , pcPlus1);
 	assign resultWwire=resultW[15:0];
 	mux2a1 #(16) muxPcSrc(pcPlus1,resultWwire ,PCSrcW, pcNext);
-	ffNextValue #(16) pcRegister(clk, rst, pcNext, PC);
+	ffNextValue #(16) pcRegister(clk, rst,stallF, pcNext, PC);
 	
 	//Extensión de signo
 	extendSign extSign(inst [11:0], immSrc,  extImm);
