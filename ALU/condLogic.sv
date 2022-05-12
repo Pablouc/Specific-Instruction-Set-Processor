@@ -10,7 +10,7 @@ module condLogic(input logic clk, reset, flagUpdate,aluZero, PCS, regW, memWrite
 	//flopenr #(2)flagreg0(clk, reset, FlagWrite[0], ALUFlags[1:0], Flags[1:0]);
 
 	assign memWrite = memWriteSrc & ~zeroFlag;
-	//assign PCSrc = PCS & zeroFlag;
+	assign PCSrc = PCS & ~zeroFlag;
 	assign RegWrite = regW & ~zeroFlag;
 	
 	
