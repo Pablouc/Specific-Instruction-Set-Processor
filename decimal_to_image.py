@@ -20,8 +20,6 @@ while True:
     if not line:
         break
 
-    
-    print(int(line))
 
     lista_imagen.append(int(line))
 
