@@ -1,5 +1,5 @@
 //a
-ld r1 0 
+ld r1 r2 0 
 ld r2 3
 
 mult r1 r1 2
@@ -96,8 +96,8 @@ str r3 11
 
 
 //d
-ld r1 p8 
-ld r2 p5
+ld r1 7 
+ld r2 4
 
 mult r1 r1 2
 div r1 r1 3
@@ -120,8 +120,8 @@ add r3 r2 r1
 str r3 6
 
 //h
-ld r1 02 
-ld r2 p9
+ld r1 2 
+ld r2 8
 
 mult r1 r1 2
 div r1 r1 3

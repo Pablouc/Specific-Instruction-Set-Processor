@@ -33,6 +33,8 @@ def register_num(num):
         return "1100"
     if(num=="r14"):
         return "1101"
+    else:
+        return getbinary(int(num), 12)
     
 
 
@@ -47,7 +49,7 @@ def interprete():
     count = 0
 
     #output file
-    output = open("output_binary.rbf", "a")
+    output = open("output_binary.rbf", "w")
 
     #read every line
     while True:
@@ -55,6 +57,7 @@ def interprete():
     
         # Get next line from file
         line = file1.readline()
+        list_line=line.split()
     
         # if line is empty
         # end of file is reached
@@ -63,7 +66,7 @@ def interprete():
 
         #mult
         if (line.find("mult")!=-1):
-            list_line=line.split()
+            
             
             #with immediate
             if(list_line[3].isnumeric()):
@@ -99,7 +102,7 @@ def interprete():
 
         #div
         if (line.find("div")!=-1):
-            list_line=line.split()
+            
             
             #with immediate
             if(list_line[3].isnumeric()):
@@ -135,7 +138,7 @@ def interprete():
 
         #add
         if (line.find("add")!=-1):
-            list_line=line.split()
+            
 
             #with immediate
             if(list_line[3].isnumeric()):
@@ -171,10 +174,25 @@ def interprete():
 
         #load
         if (line.find("ld")!=-1):
-            list_line=line.split()
             
-            #with immediate
-            if(len(list_line)>3):
+            
+            #1 register
+            if(len(list_line)<4):
+                #opcode
+                output.write("0101")
+                #rd
+                output.write(register_num(list_line[1]))
+                #rs1
+                output.write('0000')
+                #immediate
+                binary_num=getbinary(int(list_line[2]), 12)
+                output.write(str(binary_num))
+
+                #line jump (can be deleted)
+                output.write("\n")
+
+            #2 registers
+            else:
                 #opcode
                 output.write("0101")
                 #rd
@@ -184,29 +202,30 @@ def interprete():
                 #immediate
                 binary_num=getbinary(int(list_line[3]), 12)
                 output.write(str(binary_num))
-
-                #line jump (can be deleted)
-                output.write("\n")
-
-            #no immediate
-            else:
-                #opcode
-                output.write("0101")
-                #rd
-                output.write(register_num(list_line[1]))
-                #rs1
-                output.write(register_num(list_line[2]))
-                #immediate
-                output.write("000000000000")
                 #line jump (can be deleted)
                 output.write("\n")
 
         #store
         if (line.find("str")!=-1):
-            list_line=line.split()
             
-            #r-i
-            if(len(list_line)>3):
+            
+            #1 register
+            if(len(list_line)<4):
+                #opcode
+                output.write("0110")
+                #rd
+                output.write(register_num(list_line[1]))
+                #rs1
+                output.write('0000')
+                #immediate
+                binary_num=getbinary(int(list_line[2]), 12)
+                output.write(str(binary_num))
+
+                #line jump (can be deleted)
+                output.write("\n")
+
+            #2 registers
+            else:
                 #opcode
                 output.write("0110")
                 #rd
@@ -216,27 +235,13 @@ def interprete():
                 #immediate
                 binary_num=getbinary(int(list_line[3]), 12)
                 output.write(str(binary_num))
-
-                #line jump (can be deleted)
-                output.write("\n")
-
-            #r-r
-            else:
-                #opcode
-                output.write("0110")
-                #rd
-                output.write(register_num(list_line[1]))
-                #rs1
-                output.write(register_num(list_line[2]))
-                #immediate
-                output.write("000000000000")
                 #line jump (can be deleted)
                 output.write("\n")
 
 
         #branch 
         if (line.find("br")!=-1):
-            list_line=line.split()
+            
             #opcode
             output.write("0111")
             #rb
@@ -253,7 +258,7 @@ def interprete():
 
         #branch conditional
         if (line.find("bcnd")!=-1):
-            list_line=line.split()
+            
             #opcode
             output.write("1000")
             #rb
