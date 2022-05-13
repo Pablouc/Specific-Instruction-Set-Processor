@@ -5,34 +5,31 @@ getbinary = lambda x, n: format(x, 'b').zfill(n)
 #identify the register number
 
 def register_num(num):
-    if(num=="r1"):
+    if(num=="r0"):
         return "0000"
-    if(num=="r2"):
+    if(num=="r1"):
         return "0001"
-    if(num=="r3"):
+    if(num=="r2"):
         return "0010"
-    if(num=="r4"):
+    if(num=="r3"):
         return "0011"
-    if(num=="r5"):
+    if(num=="r4"):
         return "0100"
-    if(num=="r6"):
+    if(num=="r5"):
         return "0101"
-    if(num=="r7"):
+    if(num=="r6"):
         return "0110"
-    if(num=="r8"):
+    if(num=="r7"):
         return "0111"
-    if(num=="r9"):
+    if(num=="r8"):
         return "1000"
-    if(num=="r10"):
+    if(num=="r9"):
         return "1001"
-    if(num=="r11"):
+    if(num=="r10"):
         return "1010"
-    if(num=="r12"):
+    if(num=="r11"):
         return "1011"
-    if(num=="r13"):
-        return "1100"
-    if(num=="r14"):
-        return "1101"
+
     else:
         return getbinary(int(num), 12)
     
