@@ -92,7 +92,7 @@ add r10 r10 0
 add r10 r10 0
 add r10 r10 0
     
-str r3 4
+str r3 3
 
 add r10 r10 0
 add r10 r10 0
@@ -444,7 +444,7 @@ add r10 r10 0
 add r10 r10 0
 add r10 r10 0
     
-str r3 7
+str r3 6
 
 add r10 r10 0
 add r10 r10 0
