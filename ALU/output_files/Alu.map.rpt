@@ -1,5 +1,5 @@
 Analysis & Elaboration report for Alu
-Thu May 12 10:23:24 2022
+Sat May 14 13:17:15 2022
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -18,24 +18,30 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
  10. Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|datapath:datapath|ffNextValue:pcRegister
  11. Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|datapath:datapath|mux2a1:muxA1RegFile
  12. Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|datapath:datapath|mux2a1:muxA2RegFile
- 13. Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|datapath:datapath|mux2a1:muxALU
- 14. Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance
- 15. Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_full_adder:sum_instance
- 16. Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_multiplier:multInst
- 17. Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_divider:divInst
- 18. Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|condLogic:conditional|flopenr:flagreg1
- 19. Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|mux2a1:muxMemALU
- 20. Parameter Settings for User Entity Instance: processor:procesador|RAM:memdata|altsyncram:altsyncram_component
- 21. altsyncram Parameter Settings by Entity Instance
- 22. Analysis & Elaboration Settings
- 23. Port Connectivity Checks: "processor:procesador|asip:myProcessor|mux2a1:muxMemALU"
- 24. Port Connectivity Checks: "processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance"
- 25. Port Connectivity Checks: "processor:procesador|asip:myProcessor|datapath:datapath|adder:pcAdder"
- 26. Port Connectivity Checks: "processor:procesador|asip:myProcessor|controlUnit:controller|decoder:deco"
- 27. Port Connectivity Checks: "processor:procesador|asip:myProcessor"
- 28. Port Connectivity Checks: "processor:procesador"
- 29. Analysis & Elaboration Messages
- 30. Analysis & Elaboration Suppressed Messages
+ 13. Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|datapath:datapath|condLogic:conditional|flopenr:flagreg1
+ 14. Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|datapath:datapath|mux2a1:muxALU
+ 15. Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance
+ 16. Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_full_adder:sum_instance
+ 17. Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_multiplier:multInst
+ 18. Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_divider:divInst
+ 19. Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance|comp2:c_instance
+ 20. Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_full_adder:sub_instance
+ 21. Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|datapath:datapath|mux2a1:muxPostALU
+ 22. Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|mux2a1:muxMemALU
+ 23. Parameter Settings for User Entity Instance: processor:procesador|RAM:memdata|altsyncram:altsyncram_component
+ 24. altsyncram Parameter Settings by Entity Instance
+ 25. Analysis & Elaboration Settings
+ 26. Port Connectivity Checks: "processor:procesador|asip:myProcessor|mux2a1:muxMemALU"
+ 27. Port Connectivity Checks: "processor:procesador|asip:myProcessor|datapath:datapath|mux2a1:muxPostALU"
+ 28. Port Connectivity Checks: "processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_full_adder:sub_instance"
+ 29. Port Connectivity Checks: "processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_full_adder:sum_instance"
+ 30. Port Connectivity Checks: "processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance"
+ 31. Port Connectivity Checks: "processor:procesador|asip:myProcessor|datapath:datapath|adder:pcAdder"
+ 32. Port Connectivity Checks: "processor:procesador|asip:myProcessor|datapath:datapath"
+ 33. Port Connectivity Checks: "processor:procesador|asip:myProcessor"
+ 34. Port Connectivity Checks: "processor:procesador"
+ 35. Analysis & Elaboration Messages
+ 36. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -62,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Thu May 12 10:23:24 2022       ;
+; Analysis & Elaboration Status ; Successful - Sat May 14 13:17:15 2022       ;
 ; Quartus Prime Version         ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                 ; Alu                                         ;
 ; Top-level Entity Name         ; processor_tb                                ;
@@ -232,6 +238,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|datapath:datapath|condLogic:conditional|flopenr:flagreg1 ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                               ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------------+
+; M              ; 1     ; Signed Integer                                                                                                     ;
++----------------+-------+--------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +--------------------------------------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|datapath:datapath|mux2a1:muxALU ;
 +----------------+-------+-------------------------------------------------------------------------------------------+
@@ -282,13 +298,33 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|condLogic:conditional|flopenr:flagreg1 ;
-+----------------+-------+--------------------------------------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                                             ;
-+----------------+-------+--------------------------------------------------------------------------------------------------+
-; M              ; 1     ; Signed Integer                                                                                   ;
-+----------------+-------+--------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance|comp2:c_instance ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                          ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------+
+; WIDTH          ; 23    ; Signed Integer                                                                                                ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_full_adder:sub_instance ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                      ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------------------+
+; WIDTH          ; 24    ; Signed Integer                                                                                                            ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: processor:procesador|asip:myProcessor|datapath:datapath|mux2a1:muxPostALU ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                          ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
+; M              ; 24    ; Signed Integer                                                                                ;
++----------------+-------+-----------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -490,13 +526,40 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------+-------+----------+----------------------------------------------------+
 
 
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:procesador|asip:myProcessor|datapath:datapath|mux2a1:muxPostALU"               ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; q[23..16] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_full_adder:sub_instance" ;
++-------+--------+----------+-------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                               ;
++-------+--------+----------+-------------------------------------------------------------------------------------------------------+
+; s[24] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                   ;
+; co    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                   ;
++-------+--------+----------+-------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_full_adder:sum_instance" ;
++------+--------+----------+--------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                ;
++------+--------+----------+--------------------------------------------------------------------------------------------------------+
+; co   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                    ;
++------+--------+----------+--------------------------------------------------------------------------------------------------------+
+
+
 +--------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance"                     ;
 +----------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port           ; Type   ; Severity ; Details                                                                             ;
 +----------------+--------+----------+-------------------------------------------------------------------------------------+
 ; ci             ; Input  ; Info     ; Stuck at GND                                                                        ;
-; out[23..16]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; co             ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; negativo       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; acarreo        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
@@ -514,33 +577,34 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+-------+----------+---------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "processor:procesador|asip:myProcessor|controlUnit:controller|decoder:deco"                ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                             ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; flagUpdate ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:procesador|asip:myProcessor|datapath:datapath"                            ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cero ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "processor:procesador|asip:myProcessor"                                                 ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                             ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; resultW ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:procesador|asip:myProcessor"                                                          ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                             ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; resultW          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; outputDataForTxt ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; outputAddrForTxt ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "processor:procesador"                                                                 ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                             ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; aluRes ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; pc     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; inst   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "processor:procesador"                                                               ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; pc   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; inst ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +---------------------------------+
@@ -549,7 +613,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu May 12 10:23:13 2022
+    Info: Processing started: Sat May 14 13:17:04 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Alu -c Alu --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -597,6 +661,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file ram.v
     Info (12023): Found entity 1: RAM File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/RAM.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file hazardunit.sv
     Info (12023): Found entity 1: hazardUnit File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/hazardUnit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file comp2.sv
+    Info (12023): Found entity 1: comp2 File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/comp2.sv Line: 1
 Info (12127): Elaborating entity "processor_tb" for the top level hierarchy
 Warning (10755): Verilog HDL warning at processor_tb.sv(12): assignments to clk create a combinational loop File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/processor_tb.sv Line: 12
 Info (12128): Elaborating entity "processor" for hierarchy "processor:procesador" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/processor_tb.sv Line: 9
@@ -632,7 +698,7 @@ Warning (12125): Using design file registerarom.sv, which is not specified as a 
 Info (12128): Elaborating entity "registerAROM" for hierarchy "processor:procesador|registerAROM:reg1" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/processor.sv Line: 10
 Info (12128): Elaborating entity "asip" for hierarchy "processor:procesador|asip:myProcessor" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/processor.sv Line: 12
 Info (12128): Elaborating entity "controlUnit" for hierarchy "processor:procesador|asip:myProcessor|controlUnit:controller" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/asip.sv Line: 13
-Info (12128): Elaborating entity "decoder" for hierarchy "processor:procesador|asip:myProcessor|controlUnit:controller|decoder:deco" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/controlUnit.sv Line: 8
+Info (12128): Elaborating entity "decoder" for hierarchy "processor:procesador|asip:myProcessor|controlUnit:controller|decoder:deco" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/controlUnit.sv Line: 7
 Info (12128): Elaborating entity "hazardUnit" for hierarchy "processor:procesador|asip:myProcessor|hazardUnit:hazardU" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/asip.sv Line: 16
 Info (12128): Elaborating entity "datapath" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/asip.sv Line: 21
 Info (12128): Elaborating entity "regFile" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|regFile:regfile" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/datapath.sv Line: 15
@@ -645,22 +711,29 @@ Info (12128): Elaborating entity "mux2a1" for hierarchy "processor:procesador|as
 Warning (12125): Using design file registerareg.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: registerAReg File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/registerareg.sv Line: 1
 Info (12128): Elaborating entity "registerAReg" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|registerAReg:regARefFile" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/datapath.sv Line: 36
-Info (12128): Elaborating entity "mux2a1" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|mux2a1:muxALU" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/datapath.sv Line: 39
-Info (12128): Elaborating entity "alu" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/datapath.sv Line: 42
-Info (12128): Elaborating entity "nbit_full_adder" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_full_adder:sum_instance" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/alu.sv Line: 15
+Info (12128): Elaborating entity "condLogic" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|condLogic:conditional" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/datapath.sv Line: 40
+Info (12128): Elaborating entity "flopenr" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|condLogic:conditional|flopenr:flagreg1" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/condLogic.sv Line: 11
+Info (12128): Elaborating entity "mux2a1" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|mux2a1:muxALU" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/datapath.sv Line: 43
+Info (12128): Elaborating entity "alu" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/datapath.sv Line: 46
+Warning (10034): Output port "co" at alu.sv(2) has no driver File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/alu.sv Line: 2
+Warning (10034): Output port "negativo" at alu.sv(2) has no driver File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/alu.sv Line: 2
+Warning (10034): Output port "acarreo" at alu.sv(2) has no driver File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/alu.sv Line: 2
+Warning (10034): Output port "desbordamiento" at alu.sv(2) has no driver File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/alu.sv Line: 2
+Info (12128): Elaborating entity "nbit_full_adder" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_full_adder:sum_instance" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/alu.sv Line: 23
 Info (12128): Elaborating entity "full_adder" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_full_adder:sum_instance|full_adder:geninstance[0].f1_instance" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/nbit_full_adder.sv Line: 14
-Info (12128): Elaborating entity "nbit_multiplier" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_multiplier:multInst" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/alu.sv Line: 17
+Info (12128): Elaborating entity "nbit_multiplier" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_multiplier:multInst" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/alu.sv Line: 27
 Warning (10230): Verilog HDL assignment warning at nbit_multiplier.sv(5): truncated value with size 32 to match size of target (24) File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/nbit_multiplier.sv Line: 5
 Warning (10230): Verilog HDL assignment warning at nbit_multiplier.sv(7): truncated value with size 32 to match size of target (24) File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/nbit_multiplier.sv Line: 7
-Info (12128): Elaborating entity "nbit_divider" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_divider:divInst" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/alu.sv Line: 19
-Info (12128): Elaborating entity "condLogic" for hierarchy "processor:procesador|asip:myProcessor|condLogic:conditional" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/asip.sv Line: 25
-Info (12128): Elaborating entity "flopenr" for hierarchy "processor:procesador|asip:myProcessor|condLogic:conditional|flopenr:flagreg1" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/condLogic.sv Line: 9
+Info (12128): Elaborating entity "nbit_divider" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_divider:divInst" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/alu.sv Line: 31
+Info (12128): Elaborating entity "comp2" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance|comp2:c_instance" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/alu.sv Line: 35
+Warning (10230): Verilog HDL assignment warning at comp2.sv(11): truncated value with size 32 to match size of target (24) File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/comp2.sv Line: 11
+Info (12128): Elaborating entity "nbit_full_adder" for hierarchy "processor:procesador|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_full_adder:sub_instance" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/alu.sv Line: 37
 Warning (12125): Using design file registeraalu.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: registerAALU File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/registeraalu.sv Line: 1
-Info (12128): Elaborating entity "registerAALU" for hierarchy "processor:procesador|asip:myProcessor|registerAALU:regALU" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/asip.sv Line: 30
+Info (12128): Elaborating entity "registerAALU" for hierarchy "processor:procesador|asip:myProcessor|registerAALU:regALU" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/asip.sv Line: 26
 Warning (12125): Using design file registeramem.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: registerAMem File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/registeramem.sv Line: 1
-Info (12128): Elaborating entity "registerAMem" for hierarchy "processor:procesador|asip:myProcessor|registerAMem:regMem" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/asip.sv Line: 38
+Info (12128): Elaborating entity "registerAMem" for hierarchy "processor:procesador|asip:myProcessor|registerAMem:regMem" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/asip.sv Line: 36
 Info (12128): Elaborating entity "RAM" for hierarchy "processor:procesador|RAM:memdata" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/processor.sv Line: 14
 Info (12128): Elaborating entity "altsyncram" for hierarchy "processor:procesador|RAM:memdata|altsyncram:altsyncram_component" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/RAM.v Line: 86
 Info (12130): Elaborated megafunction instantiation "processor:procesador|RAM:memdata|altsyncram:altsyncram_component" File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/RAM.v Line: 86
@@ -689,11 +762,11 @@ Info (12128): Elaborating entity "decode_dla" for hierarchy "processor:procesado
 Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "clk" is missing source, defaulting to GND File: C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/processor_tb.sv Line: 5
 Info (144001): Generated suppressed messages file C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/output_files/Alu.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 4810 megabytes
-    Info: Processing ended: Thu May 12 10:23:24 2022
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 16 warnings
+    Info: Peak virtual memory: 4804 megabytes
+    Info: Processing ended: Sat May 14 13:17:15 2022
     Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:27
+    Info: Total CPU time (on all processors): 00:00:26
 
 
 +--------------------------------------------+

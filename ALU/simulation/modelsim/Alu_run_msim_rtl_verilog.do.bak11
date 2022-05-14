@@ -26,6 +26,7 @@ vlog -sv -work work +incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pab
 vlog -sv -work work +incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU {C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/ffNextValue.sv}
 vlog -sv -work work +incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU {C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/processor_tb.sv}
 vlog -sv -work work +incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU {C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/hazardUnit.sv}
+vlog -sv -work work +incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU {C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/comp2.sv}
 vlog -sv -work work +incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU {C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/registerarom.sv}
 vlog -sv -work work +incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU {C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/registerareg.sv}
 vlog -sv -work work +incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU {C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/registeraalu.sv}

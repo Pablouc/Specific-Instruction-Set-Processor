@@ -1,15 +1,15 @@
-module datapath(input logic clk, rst,stallF, regWrite,regWriteW, aluSrc, PCSrc, immSrc,memToReg, memWrite,ra2Src,ra1Src,PCSrcW, 
+module datapath(input logic clk, rst,stallF,flagUpdate, regWrite,regWriteW, aluSrc, PCSrc, immSrc,memToReg, memWrite,ra2Src,ra1Src,PCSrcW, 
 					input logic [1:0]  aluControl,input logic [23:0] inst,input logic [3:0] WA3W,
-					input logic [23:0] resultW,output logic [23:0] srcB, output logic [15:0] aluRes, PC, output logic cero, 
+					input logic [23:0] resultW,output logic [23:0] srcB, output logic [15:0] postAluRes, PC, output logic cero, 
 					regWriteE, PCSrcE,memToRegE, memWriteE, output logic [3:0] WA3E );
 	
 	
-	logic [23:0] srcA,aluResult, rd1,rd2, extImm, srcBAlu, extImmE;
+	logic [23:0] srcA,aluResult, rd1,rd2, extImm, srcBAlu, extImmE, postAluResult;
 	logic [15:0] pcNext, resultWwire, pcPlus1;
-	logic [3:0] ra2, ra1;
+	logic [3:0] ra2, ra1, opcodeE;
 	logic [1:0] aluControlE;
 	logic aluSrcE, 
-			ci, co, negativo, acarreo, desbordamiento;
+			ci, co, negativo, acarreo, desbordamiento,  PCSrcE1, regWriteE1, memWriteE1,postAluMuxSel;
 	
 	//llamando al register file
 	regFile regfile(clk, PC, regWriteW, ra1,ra2,WA3W,resultW, rd1, rd2);
@@ -31,9 +31,13 @@ module datapath(input logic clk, rst,stallF, regWrite,regWriteW, aluSrc, PCSrc, 
 	mux2a1 #(4) muxA2RegFile(inst[11:8],inst[19:16] ,ra2Src , ra2);
 	
 	//register
-	registerAReg regARefFile(rd1,rd2,inst[19:16], extImm,clk,rst, regWrite, aluSrc, PCSrc,memToReg, memWrite, 
-					aluControl,srcA,srcB, WA3E,extImmE,regWriteE, aluSrcE, PCSrcE,memToRegE, memWriteE, 
+	registerAReg regARefFile(rd1,rd2,inst[19:16],inst[23:20], extImm,clk,rst, regWrite, aluSrc, PCSrc,memToReg, memWrite, 
+					aluControl,srcA,srcB, WA3E,opcodeE, extImmE,regWriteE1, aluSrcE, PCSrcE1,memToRegE, memWriteE1, 
 					aluControlE);
+					
+	//Control Condicional
+	condLogic conditional(clk, rst, flagUpdate,cero, PCSrcE1, regWriteE1,memWriteE1, opcodeE, PCSrcE, regWriteE,
+								memWriteE, postAluMuxSel);
 	
 	//Mux entrada b ALU
 	mux2a1 #(24) muxALU(srcB, extImmE, aluSrcE, srcBAlu);
@@ -42,8 +46,12 @@ module datapath(input logic clk, rst,stallF, regWrite,regWriteW, aluSrc, PCSrc, 
 	alu #(23) alu_instance(srcA,srcBAlu,aluControlE,1'b0,aluResult,co,negativo, cero, acarreo, desbordamiento);
 	
 	//aluRes es para el pc.
-	assign aluRes= aluResult[15:0];
+	assign postAluRes= postAluResult[15:0];
 	//assign data = srcB;
+	
+	
+	//Mux para elegir entre la ALU y el Inmediato
+	mux2a1 #(24) muxPostALU(aluResult, extImmE, postAluMuxSel, postAluResult);
 		
 	
 	

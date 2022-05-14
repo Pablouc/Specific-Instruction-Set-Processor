@@ -128,11 +128,24 @@ case(opcode)
 	//extensión de signo[7:0]
 	immSrc=1'b0;
 	memWrite=1'b0;
-	ra2Src=1'b1;
+	ra2Src=1'b1; //--------------------------------------///////////////Revisar
 	ra1Src=1'b1;
 	end
 
-//4'b1000:
+4'b1000:begin
+   //Branch Equal
+	aluControl=2'b11;
+	regWrite=1'b0;
+	aluSrc= 1'b0;
+	PCSrc=1'b1;
+	flagUpdate=1'b1;
+	memToReg=1'b1;
+	//extensión de signo[7:0]
+	immSrc=1'b0;
+	memWrite=1'b0;
+	ra2Src=1'b0;
+	ra1Src=1'b0;
+	end
 
 //4'b1001:
 

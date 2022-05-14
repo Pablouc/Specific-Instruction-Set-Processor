@@ -3,10 +3,10 @@
 module processor_tb();
 
 logic clk, rst; 
-logic[15:0] aluRes,pc;
+logic[15:0] pc;
 logic [23:0]inst;
 
-processor procesador(clk, rst, aluRes,pc, inst);
+processor procesador(clk, rst,pc, inst);
 
 
 always #0.5 clk=~clk;

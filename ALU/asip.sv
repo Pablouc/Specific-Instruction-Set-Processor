@@ -1,37 +1,35 @@
-module asip(input logic clk, rst , input logic [23:0] instPrev, inst, rdMemData, output logic[15:0] PC, aluRes,
-				output logic [23:0] resultW, memWD, output logic [15:0] A, output logic memWriteM, stallF);
+module asip(input logic clk, rst , input logic [23:0]  inst, rdMemData, output logic[15:0] PC,
+				output logic [23:0] resultW, memWD, outputDataForTxt, output logic [15:0] A, outputAddrForTxt, output logic memWriteM, stallF);
 				
 	logic aluSrc, immSrc, aluZero, memToReg, ra2Src,ra1Src, regWriteE, PCSrcE,memToRegE, 
-	PCS, regW, memWriteSrc,memWriteE, PCSrcE2, regWriteE2, memWriteE2,
+	PCS, regW, memWriteSrc,memWriteE,
 	PCSrcM, regWriteM,memToRegM,PCSrcW, regWriteW,memToRegW , flagUpdate;
 	logic [1:0] regSrc, aluControl;
-	logic [3:0] WA3E,WA3M,WA3W;
+	logic [3:0] WA3E,WA3M,WA3W, opcodeE;
 	logic [23:0] RD, WD, srcB, AluOutWExtended;
-	logic [15:0] AluOutW;
+	logic [15:0] AluOutW, postAluRes;
 	
 	controlUnit controller(clk, rst, inst[23:20], aluSrc, immSrc,memToReg,ra2Src,ra1Src, PCS, regW, 
-									memWriteSrc, aluControl);
+									memWriteSrc,flagUpdate, aluControl);
 	
 	
 	hazardUnit hazardU( PCS, PCSrcE, PCSrcM, PCSrcW, stallF);
 	
 	
-	datapath datapath(clk,rst,stallF,regW,regWriteW,aluSrc, PCS,immSrc,memToReg,memWriteSrc,ra2Src,ra1Src,PCSrcW, 
-							aluControl,inst,WA3W,resultW,srcB, aluRes,PC, aluZero, regWriteE, PCSrcE,
+	datapath datapath(clk,rst,stallF,flagUpdate,regW,regWriteW,aluSrc, PCS,immSrc,memToReg,memWriteSrc,ra2Src,ra1Src,PCSrcW, 
+							aluControl,inst,WA3W,resultW,srcB, postAluRes,PC, aluZero, regWriteE, PCSrcE,
 							memToRegE, memWriteE, WA3E);
 	
 	
-	condLogic conditional(clk, rst, flagUpdate,aluZero, PCSrcE, regWriteE,memWriteE, PCSrcE2, regWriteE2,
-								memWriteE2);
 	
-	
-	
-	registerAALU regALU(aluRes,srcB, WA3E, clk,rst, PCSrcE2, regWriteE2, memWriteE2,memToRegE,
+	registerAALU regALU(postAluRes,srcB, WA3E, clk,rst, PCSrcE, regWriteE, memWriteE,memToRegE,
 	A, WD, WA3M, PCSrcM, regWriteM, memWriteM,memToRegM);
 	
-	//Asignandno el dato a escribir en la ram
+	//Asignando el dato a escribir en la ram
 	assign memWD=WD;
 	
+	assign outputDataForTxt= memWriteM ? memWD : 23'b0;
+	assign outputAddrForTxt= memWD ? A : 15'b0;
 	
 	
 	registerAMem regMem(rdMemData, A, WA3M, clk,rst, PCSrcM, regWriteM,memToRegM, 
