@@ -1,0 +1,12 @@
+module WriteMemory (input logic CLK,
+                        input logic  XX memory,
+                        input logic signal);
+
+
+    always_ff @(posedge CLK) 
+    begin
+        if(signal)
+            $writememh("C:\Users\Pablo\Desktop\Arqui\proyecto2\Proyecto2-Pablo\Proyecto2-Arqui\ALU\bitstream.txt", memory);
+
+    end
+endmodule

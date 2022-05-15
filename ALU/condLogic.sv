@@ -14,7 +14,7 @@ module condLogic(input logic clk, reset, flagUpdate,aluZero, PCS, regW, memWrite
 	assign memWrite = memWriteSrc & ~zeroFlag;
 	assign RegWrite = regW & ~zeroFlag;
 	
-	assign branchCond= (opcodeE==4'b1000) ? zeroFlag : 1'b0;
+	assign branchCond= (opcodeE==4'b1000) ? ~zeroFlag : 1'b0;///Not equal
 	assign branchType= (opcodeE==4'b0111) ? ~zeroFlag : branchCond; 
 	assign PCSrc = PCS & branchType;
 	
