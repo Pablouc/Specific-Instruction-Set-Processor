@@ -21,6 +21,54 @@ add r10 r10 0
 add r10 r10 0
 add r10 r10 0
 
+//guarda
+
+ld r7 1 
+add r10 r10 0
+add r10 r10 0
+add r10 r10 0
+add r10 r10 0
+str r7 1
+add r10 r10 0
+add r10 r10 0
+add r10 r10 0
+add r10 r10 0
+
+ld r7 4
+add r10 r10 0
+add r10 r10 0
+add r10 r10 0
+add r10 r10 0
+str r7 4
+add r10 r10 0
+add r10 r10 0
+add r10 r10 0
+add r10 r10 0
+
+ld r7 13 
+add r10 r10 0
+add r10 r10 0
+add r10 r10 0
+add r10 r10 0
+str r7 13
+add r10 r10 0
+add r10 r10 0
+add r10 r10 0
+add r10 r10 0
+
+ld r7 16 
+add r10 r10 0
+add r10 r10 0
+add r10 r10 0
+add r10 r10 0
+str r7 16
+
+
+add r10 r10 0
+add r10 r10 0
+add r10 r10 0
+add r10 r10 0
+
 
 //a
 ld r1 r5 1 
@@ -637,8 +685,8 @@ add r10 r10 0
 add r10 r10 0
 add r10 r10 0
 
-//6 donde vuelve
-bcnd r6 r5 11
+//back
+bcnd r6 r5 51
 
 add r10 r10 0
 add r10 r10 0
