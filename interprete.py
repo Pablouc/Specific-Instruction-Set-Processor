@@ -242,13 +242,14 @@ def interprete():
             #opcode
             output.write("0111")
             #rb
-            output.write(register_num(list_line[1]))
+            output.write("0000")
             #rs1
             output.write("0000")
             #rs2
             output.write("0000")
             #immediate
-            output.write("00000000")
+            binary_num=getbinary(int(list_line[3]), 8)
+            output.write(str(binary_num))
 
             #line jump (can be deleted)
             output.write("\n")
@@ -259,13 +260,16 @@ def interprete():
             #opcode
             output.write("1000")
             #rb
-            output.write(register_num(list_line[1]))
-            #rs1
-            output.write(register_num(list_line[2]))
-            #rs2
             output.write("0000")
+            #rs1
+            output.write(register_num(list_line[1]))
+            #rs2
+            output.write(register_num(list_line[2]))
+            
+
             #immediate
-            output.write("00000000")
+            binary_num=getbinary(int(list_line[3]), 8)
+            output.write(str(binary_num))
 
             #line jump (can be deleted)
             output.write("\n")

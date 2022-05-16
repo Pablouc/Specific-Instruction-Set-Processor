@@ -28,8 +28,11 @@ DATA_RADIX=UNS;
 
 CONTENT BEGIN\n""")
 
-cont=0
+cont=1
 posicion_matriz=0
+
+spaces="       :   "
+f.write("    "+str(0)+spaces+str(0)+";\n")
 
 for i in imagen_grises:
     for j in i:

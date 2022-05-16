@@ -1,5 +1,29 @@
+//conta
+add r5 r5 0
+
+add r10 r10 0
+add r10 r10 0
+add r10 r10 0
+add r10 r10 0
+
+add r6 r6 96
+
+add r10 r10 0
+add r10 r10 0
+add r10 r10 0
+add r10 r10 0
+
+//9216
+mult r6 r6 r6
+
+add r10 r10 0
+add r10 r10 0
+add r10 r10 0
+add r10 r10 0
+
+
 //a
-ld r1 1 
+ld r1 r5 1 
 
 add r10 r10 0
 add r10 r10 0
@@ -7,7 +31,7 @@ add r10 r10 0
 add r10 r10 0
 
 
-ld r2 4
+ld r2 r5 4
 
 add r10 r10 0
 add r10 r10 0
@@ -50,14 +74,14 @@ add r10 r10 0
 add r10 r10 0
 
 //b
-ld r1 1 
+ld r1 r5 1 
 
 add r10 r10 0
 add r10 r10 0
 add r10 r10 0
 add r10 r10 0
 
-ld r2 4
+ld r2 r5 4
 
 add r10 r10 0
 add r10 r10 0
@@ -100,14 +124,14 @@ add r10 r10 0
 add r10 r10 0
 
 //c
-ld r1 1 
+ld r1 r5 1 
 
 add r10 r10 0
 add r10 r10 0
 add r10 r10 0
 add r10 r10 0
 
-ld r2 13
+ld r2 r5 13
 
 add r10 r10 0
 add r10 r10 0
@@ -151,14 +175,14 @@ add r10 r10 0
 
 //g
 
-ld r1 1 
+ld r1 r5 1 
 
 add r10 r10 0
 add r10 r10 0
 add r10 r10 0
 add r10 r10 0
 
-ld r2 13
+ld r2 r5 13
 
 add r10 r10 0
 add r10 r10 0
@@ -201,14 +225,14 @@ add r10 r10 0
 add r10 r10 0
 
 //k
-ld r1 13 
+ld r1 r5 13 
 
 add r10 r10 0
 add r10 r10 0
 add r10 r10 0
 add r10 r10 0
 
-ld r2 16
+ld r2 r5 16
 
 add r10 r10 0
 add r10 r10 0
@@ -252,14 +276,14 @@ add r10 r10 0
 
 //l
 
-ld r1 13 
+ld r1 r5 13 
 
 add r10 r10 0
 add r10 r10 0
 add r10 r10 0
 add r10 r10 0
 
-ld r2 16
+ld r2 r5 16
 
 add r10 r10 0
 add r10 r10 0
@@ -303,14 +327,14 @@ add r10 r10 0
 add r10 r10 0
 
 //f
-ld r1 4 
+ld r1 r5 4 
 
 add r10 r10 0
 add r10 r10 0
 add r10 r10 0
 add r10 r10 0
 
-ld r2 16
+ld r2 r5 16
 
 add r10 r10 0
 add r10 r10 0
@@ -350,14 +374,14 @@ str r3 8
 
 //j
 
-ld r1 4 
+ld r1 r5 4 
 
 add r10 r10 0
 add r10 r10 0
 add r10 r10 0
 add r10 r10 0
 
-ld r2 16
+ld r2 r5 16
 
 add r10 r10 0
 add r10 r10 0
@@ -402,14 +426,14 @@ add r10 r10 0
 
 
 //d
-ld r1 5 
+ld r1 r5 5 
 
 add r10 r10 0
 add r10 r10 0
 add r10 r10 0
 add r10 r10 0
 
-ld r2 8
+ld r2 r5 8
 
 add r10 r10 0
 add r10 r10 0
@@ -453,14 +477,14 @@ add r10 r10 0
 
 //e
 
-ld r1 5 
+ld r1 r5 5 
 
 add r10 r10 0
 add r10 r10 0
 add r10 r10 0
 add r10 r10 0
 
-ld r2 8
+ld r2 r5 8
 
 add r10 r10 0
 add r10 r10 0
@@ -504,14 +528,14 @@ add r10 r10 0
 add r10 r10 0
 
 //h
-ld r1 9 
+ld r1 r5 9 
 
 add r10 r10 0
 add r10 r10 0
 add r10 r10 0
 add r10 r10 0
 
-ld r2 12
+ld r2 r5 12
 
 add r10 r10 0
 add r10 r10 0
@@ -556,14 +580,14 @@ add r10 r10 0
 
 //i
 
-ld r1 9 
+ld r1 r5 9 
 
 add r10 r10 0
 add r10 r10 0
 add r10 r10 0
 add r10 r10 0
 
-ld r2 12
+ld r2 r5 12
 
 add r10 r10 0
 add r10 r10 0
@@ -601,7 +625,25 @@ add r10 r10 0
     
 str r3 11
 
+add r10 r10 0
+add r10 r10 0
+add r10 r10 0
+add r10 r10 0
 
+add r5 r5 16
+
+add r10 r10 0
+add r10 r10 0
+add r10 r10 0
+add r10 r10 0
+
+//6 donde vuelve
+bcnd r6 r5 11
+
+add r10 r10 0
+add r10 r10 0
+add r10 r10 0
+add r10 r10 0
 
 
 
