@@ -70,11 +70,12 @@ while True:
     else:
         None
 
+
     count+=1
 
     #una vez que una matriz esta llena, agrege los espacios a cada una de las filas
-    if(count>=16):
-        print(matriz_inter)
+    if(count==16):
+        print(fila1)
         count=0
         fila1.append(matriz_inter[0])
         fila1.append(matriz_inter[1])
@@ -93,14 +94,15 @@ while True:
         fila4.append(matriz_inter[14])
         fila4.append(matriz_inter[15])
 
-        break
+        
 
 
 
 
     cont_filas+=1
     #Cantidad de pixeles en una "fila" de matrices
-    if(len(fila1)>=96):
+    if(len(fila1)==96):
+
         lista_imagen.append(fila1)
         lista_imagen.append(fila2)
         lista_imagen.append(fila3)
@@ -113,5 +115,5 @@ while True:
     
     
 print(lista_imagen)
-plt.imshow(np.array(lista_imagen), cmap='gray', vmin = 0, vmax = 255)
+plt.imshow(lista_imagen, cmap='gray', vmin = 0, vmax = 255, interpolation='None')
 plt.show()

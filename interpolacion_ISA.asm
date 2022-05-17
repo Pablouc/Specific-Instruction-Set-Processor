@@ -21,7 +21,7 @@ add r10 r10 0
 add r10 r10 0
 add r10 r10 0
 
-mult r6 r6 2
+mult r6 r6 4
 
 add r10 r10 0
 add r10 r10 0
@@ -695,10 +695,36 @@ add r10 r10 0
 //back
 bcnd r6 r5 17
 
+add r8 r8 255
+
 add r10 r10 0
 add r10 r10 0
 add r10 r10 0
 add r10 r10 0
+
+mult r8 r8 r8
+
+add r10 r10 0
+add r10 r10 0
+add r10 r10 0
+add r10 r10 0
+
+add r8 r8 255
+
+add r10 r10 0
+add r10 r10 0
+add r10 r10 0
+add r10 r10 0
+
+add r8 r8 255
+
+add r10 r10 0
+add r10 r10 0
+add r10 r10 0
+add r10 r10 0
+
+//end
+br r8 1
 
 
 

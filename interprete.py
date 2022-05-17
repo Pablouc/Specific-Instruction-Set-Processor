@@ -248,7 +248,7 @@ def interprete():
             #rs2
             output.write("0000")
             #immediate
-            binary_num=getbinary(int(list_line[3]), 8)
+            binary_num=getbinary(int(list_line[2]), 8)
             output.write(str(binary_num))
 
             #line jump (can be deleted)
