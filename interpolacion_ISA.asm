@@ -21,7 +21,7 @@ add r10 r10 0
 add r10 r10 0
 add r10 r10 0
 
-mult r6 r6 4
+mult r6 r6 2
 
 add r10 r10 0
 add r10 r10 0

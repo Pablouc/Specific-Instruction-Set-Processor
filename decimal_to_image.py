@@ -33,7 +33,6 @@ while True:
     binary_string=line[32:]
     number=int(binary_string,2)
 
-    print(number)
 
     #ordenar la matriz desde el orden de los store
     if(count==0):
@@ -94,10 +93,14 @@ while True:
         fila4.append(matriz_inter[14])
         fila4.append(matriz_inter[15])
 
+        break
+
+
+
 
     cont_filas+=1
     #Cantidad de pixeles en una "fila" de matrices
-    if(len(fila1)>=192):
+    if(len(fila1)>=96):
         lista_imagen.append(fila1)
         lista_imagen.append(fila2)
         lista_imagen.append(fila3)
@@ -109,6 +112,6 @@ while True:
         cont_filas=0
     
     
-
+print(lista_imagen)
 plt.imshow(np.array(lista_imagen), cmap='gray', vmin = 0, vmax = 255)
 plt.show()
