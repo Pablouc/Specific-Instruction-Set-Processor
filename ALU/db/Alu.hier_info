@@ -1,6 +1,10 @@
 |processor
 clk => clk.IN3
 reset => reset.IN2
+btn[0] => ~NO_FANOUT~
+btn[1] => ~NO_FANOUT~
+btn[2] => ~NO_FANOUT~
+btn[3] => ~NO_FANOUT~
 pc[0] << pc[0].DB_MAX_OUTPUT_PORT_TYPE
 pc[1] << pc[1].DB_MAX_OUTPUT_PORT_TYPE
 pc[2] << pc[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -41,6 +45,30 @@ inst[20] << inst[20].DB_MAX_OUTPUT_PORT_TYPE
 inst[21] << inst[21].DB_MAX_OUTPUT_PORT_TYPE
 inst[22] << inst[22].DB_MAX_OUTPUT_PORT_TYPE
 inst[23] << inst[23].DB_MAX_OUTPUT_PORT_TYPE
+result[0] << asip:myProcessor.port5
+result[1] << asip:myProcessor.port5
+result[2] << asip:myProcessor.port5
+result[3] << asip:myProcessor.port5
+result[4] << asip:myProcessor.port5
+result[5] << asip:myProcessor.port5
+result[6] << asip:myProcessor.port5
+result[7] << asip:myProcessor.port5
+result[8] << asip:myProcessor.port5
+result[9] << asip:myProcessor.port5
+result[10] << asip:myProcessor.port5
+result[11] << asip:myProcessor.port5
+result[12] << asip:myProcessor.port5
+result[13] << asip:myProcessor.port5
+result[14] << asip:myProcessor.port5
+result[15] << asip:myProcessor.port5
+result[16] << asip:myProcessor.port5
+result[17] << asip:myProcessor.port5
+result[18] << asip:myProcessor.port5
+result[19] << asip:myProcessor.port5
+result[20] << asip:myProcessor.port5
+result[21] << asip:myProcessor.port5
+result[22] << asip:myProcessor.port5
+result[23] << asip:myProcessor.port5
 data[0] << asip:myProcessor.port7
 data[1] << asip:myProcessor.port7
 data[2] << asip:myProcessor.port7
@@ -3854,17 +3882,17 @@ opcode[0] => Decoder0.IN3
 opcode[1] => Decoder0.IN2
 opcode[2] => Decoder0.IN1
 opcode[3] => Decoder0.IN0
-regWrite <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
-aluSrc <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+regWrite <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+aluSrc <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
 PCSrc <= PCSrc.DB_MAX_OUTPUT_PORT_TYPE
 immSrc <= immSrc.DB_MAX_OUTPUT_PORT_TYPE
-flagUpdate <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+flagUpdate <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
 memToReg <= immSrc.DB_MAX_OUTPUT_PORT_TYPE
 memWrite <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
 ra2Src <= ra2Src.DB_MAX_OUTPUT_PORT_TYPE
 ra1Src <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
-aluControl[0] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-aluControl[1] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+aluControl[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+aluControl[1] <= aluControl.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |processor|asip:myProcessor|hazardUnit:hazardU
@@ -6021,11 +6049,7 @@ out[20] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
 out[21] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
 out[22] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
 out[23] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
-co <= <GND>
-negativo <= <GND>
 cero <= Mux24.DB_MAX_OUTPUT_PORT_TYPE
-acarreo <= <GND>
-desbordamiento <= <GND>
 
 
 |processor|asip:myProcessor|datapath:datapath|alu:alu_instance|nbit_full_adder:sum_instance

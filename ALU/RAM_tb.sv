@@ -1,39 +1,38 @@
-`timescale 1 ps / 1 ps
+`timescale 1 ns / 1 ns
 
 module RAM_tb();
 
 logic [15:0] A;
 logic memWriteM,clk;
-logic [23:0] memWD,rdMemData
+logic [23:0] memWD,rdMemData;
 
-ram RAM(A,~clk, memWD, memWriteM, rdMemData);
+RAM ram(A,~clk, memWD, memWriteM, rdMemData);
 
-
+always #1 clk=~clk;
 
 initial begin
-clk=1;
+clk<=0;
 ////////////Primer caso, Escribir en memoria///////
-memWD=1;
-memWrite=1;
-A = 16'b0000000000000001;
-memWD= 24'b000000000000000000001111;
+memWriteM<=1'b0;
+A <= 16'b0000000000000001;
+
 
 
 $display("*******Cargando un resultado a la RAM*******");
 
 
-#5
-if(rdMemData==24'b000000000000000000001111) $display("resultado correcto de carga");
+#1
+if(rdMemData==24'b000000000000000000001111) $display("resultado correcto de lectura");
 else $display("resultado incorrecto de carga"); 
 
 
-#20
-memWD=1;
-memWrite=0;
-A = 16'b0000000000000001;
 
-#5
-if(rdMemData==24'b000000000000000000001111) $display("resultado correcto de lectura");
+memWriteM<=1'b1;
+memWD<= 24'b000000000000000000001100;
+A <= 16'b0000000000000001;
+
+#2
+if(rdMemData==24'b000000000000000000001100) $display("resultado correcto de escritura");
 else $display("resultado incorrecto de lectura"); 
-
+end
 endmodule 

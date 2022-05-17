@@ -1,5 +1,5 @@
 module alu#(parameter WIDTH=3)(input [WIDTH:0] a, input [WIDTH:0] b, input [1:0] opCode, input ci, 
-							output logic [WIDTH:0] out, output logic co, negativo, cero, acarreo, desbordamiento);
+							output logic [WIDTH:0] out, output logic  cero);
 
 logic [WIDTH:0] outMult;
 logic [WIDTH:0] outDiv;
@@ -101,11 +101,9 @@ end
 
 default:begin 
 	  out=2'b00;
-	  acarreo=1'b0;
-	  desbordamiento=1'b0;
-	  negativo=1'b0;
+	  
 	  cero=1'b0;
-	  co=1'b0;
+
 		  end
 
 

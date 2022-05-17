@@ -11,7 +11,7 @@ cModel Technology
 Z0 dC:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/simulation/modelsim
 vadder
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1652651134
+Z2 !s110 1652817605
 !i10b 1
 !s100 dH4hz?_2?AD199JC?Z4AW0
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -28,7 +28,7 @@ Z7 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z8 !s108 1652651134.000000
+Z8 !s108 1652817605.000000
 !s107 C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/adder.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU|C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/adder.sv|
 !i113 1
@@ -39,17 +39,17 @@ valu
 R1
 R2
 !i10b 1
-!s100 TS3SeZ2k[H2i_1Q6P?Ico1
+!s100 mf789lOn]JXO_X3;mKXHE2
 R3
-IS2Gfj0QHJE:IfA2C9A^nU3
+ID?5g^eMUj8PzL_<1aHijR0
 R4
 S1
 R0
-w1652407267
+w1652808255
 8C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/alu.sv
 FC:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/alu.sv
 !i122 7
-L0 1 115
+L0 1 113
 R7
 r1
 !s85 0
@@ -63,7 +63,7 @@ R10
 R11
 vasip
 R1
-Z12 !s110 1652651135
+Z12 !s110 1652817606
 !i10b 1
 !s100 @ejG]<i`i6]m[eBc[36o^0
 R3
@@ -71,7 +71,7 @@ IE5lVeAfDJnVBH45dH68@Y1
 R4
 S1
 R0
-w1652555823
+Z13 w1652802990
 8C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/asip.sv
 FC:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/asip.sv
 !i122 11
@@ -80,7 +80,7 @@ R7
 r1
 !s85 0
 31
-Z13 !s108 1652651135.000000
+Z14 !s108 1652817606.000000
 !s107 C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/asip.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU|C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/asip.sv|
 !i113 1
@@ -89,7 +89,7 @@ R10
 R11
 vcomp2
 R1
-Z14 !s110 1652651136
+Z15 !s110 1652817607
 !i10b 1
 !s100 _?n:dRhP^TJ;h<K@zU7`>1
 R3
@@ -97,7 +97,7 @@ I6<>6X<?2>Q[dAf7dkjOhT1
 R4
 S1
 R0
-w1652401998
+R13
 8C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/comp2.sv
 FC:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/comp2.sv
 !i122 20
@@ -106,7 +106,7 @@ R7
 r1
 !s85 0
 31
-Z15 !s108 1652651136.000000
+Z16 !s108 1652817607.000000
 !s107 C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/comp2.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU|C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/comp2.sv|
 !i113 1
@@ -123,16 +123,16 @@ IW^N6P1D=]29;]SX53dYGb1
 R4
 S1
 R0
-w1652641602
+R13
 8C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/condLogic.sv
 FC:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/condLogic.sv
 !i122 16
-Z16 L0 1 24
+Z17 L0 1 24
 R7
 r1
 !s85 0
 31
-R13
+R14
 !s107 C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/condLogic.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU|C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/condLogic.sv|
 !i113 1
@@ -150,16 +150,16 @@ IDTWn1a2>]MLFokWGKg9YD1
 R4
 S1
 R0
-w1652411246
+R13
 8C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/controlUnit.sv
 FC:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/controlUnit.sv
 !i122 12
-Z17 L0 1 10
+Z18 L0 1 10
 R7
 r1
 !s85 0
 31
-R13
+R14
 !s107 C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/controlUnit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU|C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/controlUnit.sv|
 !i113 1
@@ -171,13 +171,13 @@ vdatapath
 R1
 R12
 !i10b 1
-!s100 4nel@7TXdgY[m_Yg:g:gZ0
+!s100 W0;VgJ9=`;g<o=VeN<kTm3
 R3
-IVGlJ`l0Fo>QglJkkTb_543
+Iel8WbHb0>eBmGJ20oR>7]1
 R4
 S1
 R0
-w1652406694
+w1652808256
 8C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/datapath.sv
 FC:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/datapath.sv
 !i122 15
@@ -186,7 +186,7 @@ R7
 r1
 !s85 0
 31
-R13
+R14
 !s107 C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/datapath.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU|C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/datapath.sv|
 !i113 1
@@ -197,13 +197,13 @@ vdecoder
 R1
 R12
 !i10b 1
-!s100 4Z@ZZ4lPBECPGeWN1@L2A2
+!s100 ODBa:[1^X50XA878f0?Z>3
 R3
-IfCS:VezlZ>C66Qfkogh`m0
+ILmcngUEGT23XBzU[g;_=D2
 R4
 S1
 R0
-w1652402922
+w1652814973
 8C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/decoder.sv
 FC:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/decoder.sv
 !i122 13
@@ -212,7 +212,7 @@ R7
 r1
 !s85 0
 31
-R13
+R14
 !s107 C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/decoder.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU|C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/decoder.sv|
 !i113 1
@@ -233,7 +233,7 @@ R5
 8C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/extendSign.sv
 FC:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/extendSign.sv
 !i122 9
-Z18 L0 1 13
+Z19 L0 1 13
 R7
 r1
 !s85 0
@@ -248,7 +248,7 @@ R11
 nextend@sign
 vffNextValue
 R1
-R14
+R15
 !i10b 1
 !s100 dCh@9[]I20?m7R_@@e:cV1
 R3
@@ -256,7 +256,7 @@ IAVhczXiknWMF6I[fgkDXk2
 R4
 S1
 R0
-w1652368440
+R13
 8C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/ffNextValue.sv
 FC:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/ffNextValue.sv
 !i122 18
@@ -265,7 +265,7 @@ R7
 r1
 !s85 0
 31
-R15
+R16
 !s107 C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/ffNextValue.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU|C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/ffNextValue.sv|
 !i113 1
@@ -275,7 +275,7 @@ R11
 nff@next@value
 vflopenr
 R1
-R14
+R15
 !i10b 1
 !s100 ND:?31V6anIgMCfb9noI_3
 R3
@@ -283,7 +283,7 @@ I9n^H7;UUWA>E>Kl?ngiCY0
 R4
 S1
 R0
-w1652457229
+R13
 8C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/flopenr.sv
 FC:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/flopenr.sv
 !i122 17
@@ -292,7 +292,7 @@ R7
 r1
 !s85 0
 31
-R13
+R14
 !s107 C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/flopenr.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU|C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/flopenr.sv|
 !i113 1
@@ -301,7 +301,7 @@ R10
 R11
 vfull_adder
 R1
-Z19 !s110 1652651133
+Z20 !s110 1652817604
 !i10b 1
 !s100 WB9A;0`^<^F4J]zefKT=`3
 R3
@@ -318,7 +318,7 @@ R7
 r1
 !s85 0
 31
-Z20 !s108 1652651133.000000
+Z21 !s108 1652817604.000000
 !s107 C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/full_adder.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU|C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/full_adder.sv|
 !i113 1
@@ -327,7 +327,7 @@ R10
 R11
 vhazardUnit
 R1
-R14
+R15
 !i10b 1
 !s100 GUEEYiK>X7z5E?RWAF:kD3
 R3
@@ -335,7 +335,7 @@ IdkkfOfe4URofJA>eQ]?d=1
 R4
 S1
 R0
-w1652372592
+R13
 8C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/hazardUnit.sv
 FC:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/hazardUnit.sv
 !i122 19
@@ -344,7 +344,7 @@ R7
 r1
 !s85 0
 31
-R15
+R16
 !s107 C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/hazardUnit.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU|C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/hazardUnit.sv|
 !i113 1
@@ -371,7 +371,7 @@ R7
 r1
 !s85 0
 31
-R13
+R14
 !s107 C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/mux2a1.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU|C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/mux2a1.sv|
 !i113 1
@@ -406,7 +406,7 @@ R10
 R11
 vnbit_full_adder
 R1
-R19
+R2
 !i10b 1
 !s100 R^1S04MLTS_Kf>NLdMQ3Y2
 R3
@@ -418,12 +418,12 @@ R5
 8C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/nbit_full_adder.sv
 FC:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/nbit_full_adder.sv
 !i122 3
-R16
+R17
 R7
 r1
 !s85 0
 31
-R20
+R21
 !s107 C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/nbit_full_adder.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU|C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/nbit_full_adder.sv|
 !i113 1
@@ -444,12 +444,12 @@ R5
 8C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/nbit_multiplier.sv
 FC:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/nbit_multiplier.sv
 !i122 4
-R18
+R19
 R7
 r1
 !s85 0
 31
-R20
+R8
 !s107 C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/nbit_multiplier.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU|C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/nbit_multiplier.sv|
 !i113 1
@@ -460,17 +460,17 @@ vprocessor
 R1
 R2
 !i10b 1
-!s100 :MQk5S10:k8gzDVGjbMha1
+!s100 ?a_ePj@c2kz5<^e>Ga<@;1
 R3
-IJKN_j2NRnMf8;HOf<1dDm3
+IU2F0H3K>hYn?TWn2=YOz@3
 R4
 S1
 R0
-w1652649015
+w1652810393
 8C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/processor.sv
 FC:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/processor.sv
 !i122 10
-Z21 L0 1 22
+L0 1 23
 R7
 r1
 !s85 0
@@ -484,24 +484,24 @@ R10
 R11
 vprocessor_tb
 R1
-Z22 !s110 1652651137
+Z22 !s110 1652817608
 !i10b 1
-!s100 ]5IRc=PmXT>g4]TCH1i`00
+!s100 zEk;R;PS10YIB]_28^h9z0
 R3
-IgT^W>CDB>k8a@0iejXdBE0
+IWGm:LgkGCZ`4RbCC^>K5n2
 R4
 S1
 R0
-w1652651097
+w1652815966
 8C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/processor_tb.sv
 FC:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/processor_tb.sv
 !i122 25
-L0 3 47
+L0 3 97
 R7
 r1
 !s85 0
 31
-!s108 1652651137.000000
+Z23 !s108 1652817608.000000
 !s107 C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/processor_tb.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU|C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/processor_tb.sv|
 !i113 1
@@ -509,7 +509,7 @@ R9
 R10
 R11
 vRAM
-R19
+R20
 !i10b 1
 !s100 O>gDm4nZ^GVCb[eWj:n2F3
 R3
@@ -525,12 +525,12 @@ R7
 r1
 !s85 0
 31
-R20
+R21
 !s107 C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/RAM.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU|C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/RAM.v|
 !i113 1
-Z23 o-vlog01compat -work work
-Z24 !s92 -vlog01compat -work work +incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU
+Z24 o-vlog01compat -work work
+Z25 !s92 -vlog01compat -work work +incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU
 R11
 n@r@a@m
 vregFile
@@ -547,7 +547,7 @@ R5
 8C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/regFile.sv
 FC:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/regFile.sv
 !i122 6
-R16
+R17
 R7
 r1
 !s85 0
@@ -562,7 +562,7 @@ R11
 nreg@file
 vregisterAALU
 R1
-R14
+R22
 !i10b 1
 !s100 4X2c^BMkX9i[AP?LLCbOD0
 R3
@@ -570,7 +570,7 @@ Idk9]EJg??5lLI=5XkcHaX2
 R4
 S1
 R0
-Z25 w1652323565
+R13
 8C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/registeraalu.sv
 FC:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/registeraalu.sv
 !i122 23
@@ -579,7 +579,7 @@ R7
 r1
 !s85 0
 31
-R15
+R16
 !s107 C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/registeraalu.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU|C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/registeraalu.sv|
 !i113 1
@@ -597,7 +597,7 @@ IHJeeWiD[mI[]<lh2F:@9_2
 R4
 S1
 R0
-R25
+R13
 8C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/registeramem.sv
 FC:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/registeramem.sv
 !i122 24
@@ -606,7 +606,7 @@ R7
 r1
 !s85 0
 31
-R15
+R23
 !s107 C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/registeramem.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU|C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/registeramem.sv|
 !i113 1
@@ -616,7 +616,7 @@ R11
 nregister@a@mem
 vregisterAReg
 R1
-R14
+R15
 !i10b 1
 !s100 bQ8P]g6o3_M@3M80VDO[11
 R3
@@ -624,16 +624,16 @@ ICHUI_:XlOTZ0@JHA<dGYc3
 R4
 S1
 R0
-w1652403413
+R13
 8C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/registerareg.sv
 FC:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/registerareg.sv
 !i122 22
-R21
+L0 1 22
 R7
 r1
 !s85 0
 31
-R15
+R16
 !s107 C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/registerareg.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU|C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/registerareg.sv|
 !i113 1
@@ -643,7 +643,7 @@ R11
 nregister@a@reg
 vregisterAROM
 R1
-R14
+R15
 !i10b 1
 !s100 Md4FGo?ZaE]lk9`>YIVZM0
 R3
@@ -651,16 +651,16 @@ I9e:nDX[ALR`gASmAkdAFd0
 R4
 S1
 R0
-w1652368439
+R13
 8C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/registerarom.sv
 FC:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/registerarom.sv
 !i122 21
-R17
+R18
 R7
 r1
 !s85 0
 31
-R15
+R16
 !s107 C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/registerarom.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU|C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/registerarom.sv|
 !i113 1
@@ -669,7 +669,7 @@ R10
 R11
 nregister@a@r@o@m
 vROM
-R19
+R20
 !i10b 1
 !s100 WT7HXEg`^8WXGI7R7@OE72
 R3
@@ -685,11 +685,11 @@ R7
 r1
 !s85 0
 31
-R20
+R21
 !s107 C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/ROM.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU|C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/ROM.v|
 !i113 1
-R23
 R24
+R25
 R11
 n@r@o@m

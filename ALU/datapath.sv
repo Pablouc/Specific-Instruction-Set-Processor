@@ -9,7 +9,7 @@ module datapath(input logic clk, rst,stallF,flagUpdate, regWrite,regWriteW, aluS
 	logic [3:0] ra2, ra1, opcodeE;
 	logic [1:0] aluControlE;
 	logic aluSrcE, 
-			ci, co, negativo, acarreo, desbordamiento,  PCSrcE1, regWriteE1, memWriteE1,postAluMuxSel;
+			ci,  PCSrcE1, regWriteE1, memWriteE1,postAluMuxSel;
 	
 	//llamando al register file
 	regFile regfile(clk, PC, regWriteW, ra1,ra2,WA3W,resultW, rd1, rd2);
@@ -43,7 +43,7 @@ module datapath(input logic clk, rst,stallF,flagUpdate, regWrite,regWriteW, aluS
 	mux2a1 #(24) muxALU(srcB, extImmE, aluSrcE, srcBAlu);
 
 	//El parametro debe ir en 23, no 24.
-	alu #(23) alu_instance(srcA,srcBAlu,aluControlE,1'b0,aluResult,co,negativo, cero, acarreo, desbordamiento);
+	alu #(23) alu_instance(srcA,srcBAlu,aluControlE,1'b0,aluResult, cero);
 	
 	//aluRes es para el pc.
 	assign postAluRes= postAluResult[15:0];

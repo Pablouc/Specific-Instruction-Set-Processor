@@ -39,20 +39,20 @@ case(opcode)
 	ra1Src=1'b0;
 	end
 
-4'b0010:begin
-	//div solo con registros
-	aluControl=2'b10;
-	regWrite=1'b1;
-	aluSrc= 1'b0;
-	PCSrc=1'b0;
-	flagUpdate=1'b1;
-	memToReg=1'b1;
-	ra2Src=1'b0;
-	//para que no hayan latches
-	immSrc=1'b0;
-	memWrite=1'b0;
-	ra1Src=1'b0;
-	end
+//4'b0010:begin
+//	//div solo con registros
+//	aluControl=2'b10;
+//	regWrite=1'b1;
+//	aluSrc= 1'b0;
+//	PCSrc=1'b0;
+//	flagUpdate=1'b1;
+//	memToReg=1'b1;
+//	ra2Src=1'b0;
+//	//para que no hayan latches
+//	immSrc=1'b0;
+//	memWrite=1'b0;
+//	ra1Src=1'b0;
+//	end
 
 4'b0011:begin
 	//div con imm
