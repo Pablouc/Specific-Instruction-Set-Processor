@@ -140,3 +140,4 @@ set_location_assignment PIN_AK27 -to aluRes[12]
 set_location_assignment PIN_AJ26 -to aluRes[13]
 set_location_assignment PIN_AK26 -to aluRes[14]
 set_location_assignment PIN_AH25 -to aluRes[15]
+set_global_assignment -name SYSTEMVERILOG_FILE RAM_tb.sv
