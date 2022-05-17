@@ -7,10 +7,11 @@ logic[15:0] pc;
 logic [23:0]inst;
 logic [39:0] data;
 logic [39:0] memory [11:0];
+logic [3:0] btn;
 integer f, i;
 
 
-processor procesador(clk, rst,pc, inst, data,enable);
+processor procesador(clk, rst,btn, pc, inst, data,enable);
 
 
 always #0.5 clk=~clk;
@@ -18,6 +19,7 @@ always #0.5 clk=~clk;
 initial begin
 clk<=0;
 rst<=1;
+btn<=4'b0001;
 
 #0.5
 rst<=0;

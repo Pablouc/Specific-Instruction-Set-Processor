@@ -1,4 +1,4 @@
-module processor(input logic clk, reset, output logic[15:0] pc, output logic [23:0]inst, output logic [39:0] data, output logic enable);
+module processor(input logic clk, reset, input[3:0] btn, output logic[15:0] pc, output logic [23:0]inst, output logic [39:0] data, output logic enable);
 
 	
 	logic [23:0] instrD,rdMemData,memWD, result, outputDataForTxt, value;
