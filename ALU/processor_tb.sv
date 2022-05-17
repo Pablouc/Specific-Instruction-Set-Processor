@@ -11,7 +11,7 @@ logic [3:0] btn;
 integer f, i;
 
 
-processor procesador(clk, rst,btn, pc, inst, data,enable);
+processor procesador(clk, rst,btn,aluRes, pc, inst, data,enable);
 
 
 always #0.5 clk=~clk;
