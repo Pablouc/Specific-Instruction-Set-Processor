@@ -16,7 +16,7 @@ fila2=[]
 fila3=[]
 fila4=[]
 
-matriz_inter=[0]*16
+matriz_inter=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
 
 
@@ -32,6 +32,8 @@ while True:
 
     binary_string=line[32:]
     number=int(binary_string,2)
+
+    print(number)
 
     #ordenar la matriz desde el orden de los store
     if(count==0):
@@ -72,7 +74,8 @@ while True:
     count+=1
 
     #una vez que una matriz esta llena, agrege los espacios a cada una de las filas
-    if(count>=15):
+    if(count>=16):
+        print(matriz_inter)
         count=0
         fila1.append(matriz_inter[0])
         fila1.append(matriz_inter[1])
@@ -91,8 +94,10 @@ while True:
         fila4.append(matriz_inter[14])
         fila4.append(matriz_inter[15])
 
+
+    cont_filas+=1
     #Cantidad de pixeles en una "fila" de matrices
-    if(cont_filas>=768):
+    if(len(fila1)>=192):
         lista_imagen.append(fila1)
         lista_imagen.append(fila2)
         lista_imagen.append(fila3)
@@ -103,8 +108,7 @@ while True:
         fila4=[]
         cont_filas=0
     
-    cont_filas+=1
+    
 
-
-plt.imshow(lista_imagen, cmap='gray', vmin = 0, vmax = 255)
+plt.imshow(np.array(lista_imagen), cmap='gray', vmin = 0, vmax = 255)
 plt.show()

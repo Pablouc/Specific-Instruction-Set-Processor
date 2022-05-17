@@ -21,6 +21,13 @@ add r10 r10 0
 add r10 r10 0
 add r10 r10 0
 
+mult r6 r6 4
+
+add r10 r10 0
+add r10 r10 0
+add r10 r10 0
+add r10 r10 0
+
 //guarda
 
 ld r7 1 
@@ -686,7 +693,7 @@ add r10 r10 0
 add r10 r10 0
 
 //back
-bcnd r6 r5 51
+bcnd r6 r5 17
 
 add r10 r10 0
 add r10 r10 0
