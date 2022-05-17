@@ -1,4 +1,4 @@
-module processor(input logic clk, reset, output logic[15:0] aluRes,pc, output logic [23:0]inst);
+module processor(input logic clk, reset, input[3:0] btn, output logic[15:0] aluRes,pc, output logic [23:0]inst);
 
 	
 	logic [23:0] instrD,rdMemData,memWD, result;
