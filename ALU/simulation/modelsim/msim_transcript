@@ -12,269 +12,269 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU {C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/ROM.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:45:33 on May 15,2022
+# Start time: 18:16:57 on May 16,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU" C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/ROM.v 
 # -- Compiling module ROM
 # 
 # Top level modules:
 # 	ROM
-# End time: 15:45:33 on May 15,2022, Elapsed time: 0:00:00
+# End time: 18:16:57 on May 16,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU {C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/RAM.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:45:33 on May 15,2022
+# Start time: 18:16:57 on May 16,2022
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU" C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/RAM.v 
 # -- Compiling module RAM
 # 
 # Top level modules:
 # 	RAM
-# End time: 15:45:33 on May 15,2022, Elapsed time: 0:00:00
+# End time: 18:16:58 on May 16,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU {C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/full_adder.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:45:33 on May 15,2022
+# Start time: 18:16:58 on May 16,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU" C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/full_adder.sv 
 # -- Compiling module full_adder
 # 
 # Top level modules:
 # 	full_adder
-# End time: 15:45:33 on May 15,2022, Elapsed time: 0:00:00
+# End time: 18:16:58 on May 16,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU {C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/nbit_full_adder.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:45:33 on May 15,2022
+# Start time: 18:16:58 on May 16,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU" C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/nbit_full_adder.sv 
 # -- Compiling module nbit_full_adder
 # 
 # Top level modules:
 # 	nbit_full_adder
-# End time: 15:45:33 on May 15,2022, Elapsed time: 0:00:00
+# End time: 18:16:58 on May 16,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU {C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/nbit_multiplier.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:45:33 on May 15,2022
+# Start time: 18:16:58 on May 16,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU" C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/nbit_multiplier.sv 
 # -- Compiling module nbit_multiplier
 # 
 # Top level modules:
 # 	nbit_multiplier
-# End time: 15:45:34 on May 15,2022, Elapsed time: 0:00:01
+# End time: 18:16:58 on May 16,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU {C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/nbit_divider.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:45:34 on May 15,2022
+# Start time: 18:16:58 on May 16,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU" C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/nbit_divider.sv 
 # -- Compiling module nbit_divider
 # 
 # Top level modules:
 # 	nbit_divider
-# End time: 15:45:34 on May 15,2022, Elapsed time: 0:00:00
+# End time: 18:16:58 on May 16,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU {C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/regFile.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:45:34 on May 15,2022
+# Start time: 18:16:58 on May 16,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU" C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/regFile.sv 
 # -- Compiling module regFile
 # 
 # Top level modules:
 # 	regFile
-# End time: 15:45:34 on May 15,2022, Elapsed time: 0:00:00
+# End time: 18:16:58 on May 16,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU {C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/alu.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:45:34 on May 15,2022
+# Start time: 18:16:58 on May 16,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU" C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/alu.sv 
 # -- Compiling module alu
 # 
 # Top level modules:
 # 	alu
-# End time: 15:45:34 on May 15,2022, Elapsed time: 0:00:00
+# End time: 18:16:58 on May 16,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU {C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/adder.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:45:34 on May 15,2022
+# Start time: 18:16:58 on May 16,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU" C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/adder.sv 
 # -- Compiling module adder
 # 
 # Top level modules:
 # 	adder
-# End time: 15:45:34 on May 15,2022, Elapsed time: 0:00:00
+# End time: 18:16:58 on May 16,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU {C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/extendSign.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:45:34 on May 15,2022
+# Start time: 18:16:59 on May 16,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU" C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/extendSign.sv 
 # -- Compiling module extendSign
 # 
 # Top level modules:
 # 	extendSign
-# End time: 15:45:34 on May 15,2022, Elapsed time: 0:00:00
+# End time: 18:16:59 on May 16,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU {C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/processor.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:45:34 on May 15,2022
+# Start time: 18:16:59 on May 16,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU" C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/processor.sv 
 # -- Compiling module processor
 # 
 # Top level modules:
 # 	processor
-# End time: 15:45:34 on May 15,2022, Elapsed time: 0:00:00
+# End time: 18:16:59 on May 16,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU {C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/asip.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:45:35 on May 15,2022
+# Start time: 18:16:59 on May 16,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU" C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/asip.sv 
 # -- Compiling module asip
 # 
 # Top level modules:
 # 	asip
-# End time: 15:45:35 on May 15,2022, Elapsed time: 0:00:00
+# End time: 18:16:59 on May 16,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU {C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/controlUnit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:45:35 on May 15,2022
+# Start time: 18:16:59 on May 16,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU" C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/controlUnit.sv 
 # -- Compiling module controlUnit
 # 
 # Top level modules:
 # 	controlUnit
-# End time: 15:45:35 on May 15,2022, Elapsed time: 0:00:00
+# End time: 18:16:59 on May 16,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU {C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/decoder.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:45:35 on May 15,2022
+# Start time: 18:16:59 on May 16,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU" C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/decoder.sv 
 # -- Compiling module decoder
 # 
 # Top level modules:
 # 	decoder
-# End time: 15:45:35 on May 15,2022, Elapsed time: 0:00:00
+# End time: 18:16:59 on May 16,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU {C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/mux2a1.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:45:35 on May 15,2022
+# Start time: 18:16:59 on May 16,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU" C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/mux2a1.sv 
 # -- Compiling module mux2a1
 # 
 # Top level modules:
 # 	mux2a1
-# End time: 15:45:35 on May 15,2022, Elapsed time: 0:00:00
+# End time: 18:16:59 on May 16,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU {C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/datapath.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:45:35 on May 15,2022
+# Start time: 18:16:59 on May 16,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU" C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/datapath.sv 
 # -- Compiling module datapath
 # 
 # Top level modules:
 # 	datapath
-# End time: 15:45:35 on May 15,2022, Elapsed time: 0:00:00
+# End time: 18:16:59 on May 16,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU {C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/condLogic.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:45:35 on May 15,2022
+# Start time: 18:16:59 on May 16,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU" C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/condLogic.sv 
 # -- Compiling module condLogic
 # 
 # Top level modules:
 # 	condLogic
-# End time: 15:45:35 on May 15,2022, Elapsed time: 0:00:00
+# End time: 18:17:00 on May 16,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU {C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/flopenr.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:45:35 on May 15,2022
+# Start time: 18:17:00 on May 16,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU" C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/flopenr.sv 
 # -- Compiling module flopenr
 # 
 # Top level modules:
 # 	flopenr
-# End time: 15:45:36 on May 15,2022, Elapsed time: 0:00:01
+# End time: 18:17:00 on May 16,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU {C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/ffNextValue.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:45:36 on May 15,2022
+# Start time: 18:17:00 on May 16,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU" C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/ffNextValue.sv 
 # -- Compiling module ffNextValue
 # 
 # Top level modules:
 # 	ffNextValue
-# End time: 15:45:36 on May 15,2022, Elapsed time: 0:00:00
+# End time: 18:17:00 on May 16,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU {C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/hazardUnit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:45:36 on May 15,2022
+# Start time: 18:17:00 on May 16,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU" C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/hazardUnit.sv 
 # -- Compiling module hazardUnit
 # 
 # Top level modules:
 # 	hazardUnit
-# End time: 15:45:36 on May 15,2022, Elapsed time: 0:00:00
+# End time: 18:17:00 on May 16,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU {C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/comp2.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:45:36 on May 15,2022
+# Start time: 18:17:00 on May 16,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU" C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/comp2.sv 
 # -- Compiling module comp2
 # 
 # Top level modules:
 # 	comp2
-# End time: 15:45:36 on May 15,2022, Elapsed time: 0:00:00
+# End time: 18:17:00 on May 16,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU {C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/registerarom.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:45:36 on May 15,2022
+# Start time: 18:17:00 on May 16,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU" C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/registerarom.sv 
 # -- Compiling module registerAROM
 # 
 # Top level modules:
 # 	registerAROM
-# End time: 15:45:36 on May 15,2022, Elapsed time: 0:00:00
+# End time: 18:17:00 on May 16,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU {C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/registerareg.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:45:36 on May 15,2022
+# Start time: 18:17:00 on May 16,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU" C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/registerareg.sv 
 # -- Compiling module registerAReg
 # 
 # Top level modules:
 # 	registerAReg
-# End time: 15:45:36 on May 15,2022, Elapsed time: 0:00:00
+# End time: 18:17:00 on May 16,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU {C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/registeraalu.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:45:36 on May 15,2022
+# Start time: 18:17:00 on May 16,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU" C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/registeraalu.sv 
 # -- Compiling module registerAALU
 # 
 # Top level modules:
 # 	registerAALU
-# End time: 15:45:36 on May 15,2022, Elapsed time: 0:00:00
+# End time: 18:17:01 on May 16,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU {C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/registeramem.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:45:36 on May 15,2022
+# Start time: 18:17:01 on May 16,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU" C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/registeramem.sv 
 # -- Compiling module registerAMem
 # 
 # Top level modules:
 # 	registerAMem
-# End time: 15:45:37 on May 15,2022, Elapsed time: 0:00:01
+# End time: 18:17:01 on May 16,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -sv -work work +incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU {C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/processor_tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:45:37 on May 15,2022
+# Start time: 18:17:01 on May 16,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU" C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/processor_tb.sv 
 # -- Compiling module processor_tb
 # 
 # Top level modules:
 # 	processor_tb
-# End time: 15:45:37 on May 15,2022, Elapsed time: 0:00:00
+# End time: 18:17:01 on May 16,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  test1
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" test1 
-# Start time: 15:45:37 on May 15,2022
+# Start time: 18:17:01 on May 16,2022
 # ** Error: (vsim-3170) Could not find 'test1'.
 #         Searched libraries:
 #             C:/intelFPGA_lite/20.1/modelsim_ase/altera/verilog/altera
@@ -293,7 +293,7 @@
 # MACRO ./Alu_run_msim_rtl_verilog.do PAUSED at line 36
 vsim -L altera_mf_ver -L lpm_ver processor_tb
 # vsim -L altera_mf_ver -L lpm_ver processor_tb 
-# Start time: 15:45:37 on May 15,2022
+# Start time: 18:17:01 on May 16,2022
 # Loading sv_std.std
 # Loading work.processor_tb
 # Loading work.processor
@@ -328,19 +328,13 @@ vsim -L altera_mf_ver -L lpm_ver processor_tb
 add wave -position end sim:/processor_tb/*
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: Pablo  Hostname: DESKTOP-6U9CR88  ProcessID: 6432
-#           Attempting to use alternate WLF file "./wlftx3gxib".
+#           Attempting to use alternate WLF file "./wlftkeqjdv".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftx3gxib
-run
-run
-run
-run
-run
-run
-run
-run
-run
+#           Using alternate file: ./wlftkeqjdv
+run -all
 # ** Note: $finish    : C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/processor_tb.sv(40)
-#    Time: 843 ps  Iteration: 1  Instance: /processor_tb
+#    Time: 2240003 ps  Iteration: 1  Instance: /processor_tb
 # 1
 # Break in Module processor_tb at C:/Users/Pablo/Desktop/Arqui/proyecto2/Proyecto2-Pablo/Proyecto2-Arqui/ALU/processor_tb.sv line 40
+# End time: 09:51:14 on May 17,2022, Elapsed time: 15:34:13
+# Errors: 1, Warnings: 2
